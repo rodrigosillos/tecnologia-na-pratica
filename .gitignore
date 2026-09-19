@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+config.local.env
+**/node_modules/
+**/.pgpass
+**/pgpass
+*.dump
+*.backup
