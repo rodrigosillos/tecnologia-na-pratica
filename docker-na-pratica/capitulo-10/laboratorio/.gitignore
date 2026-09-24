@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+backup-*/
+entrega-*/
+__pycache__/
+*.tar
+*.log

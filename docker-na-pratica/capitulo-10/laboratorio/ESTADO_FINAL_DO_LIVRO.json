@@ -1,0 +1,123 @@
+{
+  "natureza": "Estado ESPERADO após a execução e verificação pelo leitor. Não é captura de Docker Engine.",
+  "capitulo": 10,
+  "projeto": "tnp-catalogo",
+  "compose": "compose.yaml, com .env; modelo de execução sem build",
+  "servicos": {
+    "catalogo": {
+      "imagem": "tnp-catalogo:1.6",
+      "estado": "parado",
+      "usuario": "node",
+      "porta_interna": 3000,
+      "publicacao_host": null,
+      "env_file": "catalogo-estudos/.env.cap08",
+      "montagem": {
+        "tipo": "volume",
+        "nome": "tnp-catalogo-dados",
+        "destino": "/app/dados",
+        "gravavel": true
+      },
+      "healthcheck": [
+        "CMD",
+        "node",
+        "diagnostico.js"
+      ],
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "mem_limit": "256m",
+      "cpus": 1.0,
+      "pids_limit": 128
+    },
+    "entrada": {
+      "imagem": "tnp-entrada:1.0",
+      "estado": "parado",
+      "usuario": "nginx",
+      "porta_interna": 8080,
+      "publicacao_host": "127.0.0.1:8084:8080",
+      "destino_http": "http://catalogo:3000",
+      "tmpfs": {
+        "destino": "/tmp",
+        "size": 16777216,
+        "mode": "01777"
+      },
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "mem_limit": "128m",
+      "cpus": 0.5,
+      "pids_limit": 64
+    }
+  },
+  "logging_ambos": {
+    "driver": "local",
+    "options": {
+      "max-size": "10m",
+      "max-file": "3"
+    }
+  },
+  "restart_ambos": "no",
+  "rede": "tnp-catalogo_rede",
+  "volume_externo": "tnp-catalogo-dados",
+  "aplicacao": {
+    "pagina": "Edição 4",
+    "temas": [
+      "Git e GitHub",
+      "SQL",
+      "Docker",
+      "Docker Compose"
+    ],
+    "fontes_execucao": "Somente index.html e temas.json mudam em relação ao capítulo 9; módulos JavaScript preservados.",
+    "anotacoes": "Conteúdo original preservado. Não promover as anotações produzidas no volume de aceite."
+  },
+  "preservar": [
+    "tnp-catalogo:1.6, artefato efetivamente aceito",
+    "tnp-catalogo:1.5, artefato de retorno; não reconstruir sob o mesmo nome a partir dos fontes novos",
+    "tnp-entrada:1.0 e demais imagens anteriores úteis",
+    "tnp-catalogo-dados, volume externo original",
+    "instâncias principais paradas e rede tnp-catalogo_rede",
+    "todos os backups anteriores e backup-cap10 conferido",
+    "fontes, .env, arquivos de retorno, env_file da aplicação e definição Compose",
+    "registro de entrega preenchido apenas com evidências reais",
+    "imagens.tar, somente se a etapa opcional de transporte foi executada"
+  ],
+  "restaurar_antes_de_encerrar": [
+    "PORT=3000 no catálogo; nenhum compose.falha.yaml aplicado",
+    "publicação principal 127.0.0.1:8084:8080",
+    "tmpfs do proxy e controles de execução preservados",
+    "healthcheck correto; principal verificado antes da parada final"
+  ],
+  "nao_presumir": [
+    "Estado esperado equivale a homologação executada",
+    "Trocar nome do projeto isola um volume externo com nome explícito",
+    "Saúde local comprova o caminho pelo proxy",
+    "Retornar uma imagem restaura ou apaga dados",
+    "Modelo resolvido com caminhos absolutos é arquivo portátil",
+    "ZIP ou imagens.tar contêm as anotações reais do leitor",
+    "O laboratório é uma arquitetura completa de produção"
+  ],
+  "observacao_proxy": "Após substituir somente catalogo com entrada ativa, verificar destino e validar/recarregar Nginx conforme capítulos 7 e 8.",
+  "recursos_de_aceite_a_retirar_somente_apos_verificacao": {
+    "projeto": "tnp-cap10-aceite",
+    "porta": 8096,
+    "volume": "tnp-cap10-dados",
+    "condicao": "Identificação confirmada, nenhuma informação a preservar, nenhuma dependência desconhecida. Remoção explícita, sem prune."
+  },
+  "estado_alternativo_de_retorno": {
+    "somente_se_decidido": true,
+    "imagem": "tnp-catalogo:1.5",
+    "arquivo_selecionado": ".env.retorno",
+    "pagina": "Edição 3",
+    "quantidade_temas": 3,
+    "dados": "Anotações atuais preservadas; não restaurar automaticamente backup antigo.",
+    "entrega_1_6": "Não aceita no principal; registrar causa e manter seleção de retorno nas próximas operações."
+  }
+}

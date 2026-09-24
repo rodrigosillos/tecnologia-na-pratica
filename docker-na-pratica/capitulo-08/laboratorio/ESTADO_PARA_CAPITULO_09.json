@@ -1,0 +1,131 @@
+{
+  "natureza": "Estado esperado após o leitor executar e verificar o Capítulo 8. Não é captura de Docker Engine nesta entrega.",
+  "pasta_comandos": "laboratorio",
+  "plataforma": "containers Linux, mesmo Engine local",
+  "projeto_compose": "tnp-catalogo",
+  "arquivo_compose": "compose.yaml",
+  "servicos": {
+    "catalogo": {
+      "imagem": "tnp-catalogo:1.4",
+      "estado_final": "parado",
+      "usuario": "node",
+      "publicacoes_host": [],
+      "arquivo_ambiente": "catalogo-estudos/.env.cap08",
+      "montagens": [
+        {
+          "tipo": "volume",
+          "chave_modelo": "dados",
+          "origem": "tnp-catalogo-dados",
+          "destino": "/app/dados",
+          "somente_leitura": false
+        }
+      ],
+      "rede": "tnp-catalogo_rede",
+      "nome_dns": "catalogo",
+      "healthcheck_definido_no_compose": {
+        "test": [
+          "CMD",
+          "node",
+          "diagnostico.js"
+        ],
+        "interval": "5s",
+        "timeout": "4s",
+        "retries": 6,
+        "start_period": "5s"
+      },
+      "stop_grace_period": "10s",
+      "restart": "no"
+    },
+    "entrada": {
+      "imagem": "tnp-entrada:1.0",
+      "estado_final": "parado",
+      "usuario": "nginx",
+      "publicacoes_host": [
+        {
+          "endereco": "127.0.0.1",
+          "porta_host": 8084,
+          "porta_container": 8080,
+          "protocolo": "tcp"
+        }
+      ],
+      "montagens": [],
+      "rede": "tnp-catalogo_rede",
+      "destino_proxy": "http://catalogo:3000",
+      "depends_on": {
+        "catalogo": "service_healthy"
+      },
+      "healthcheck_docker": false,
+      "stop_grace_period": "10s",
+      "restart": "no"
+    }
+  },
+  "identificadores": "Não há IDs ou nomes concretos de instância pré-fixados. Use compose ps e inspect no seu Engine.",
+  "rede": {
+    "chave_modelo": "rede",
+    "nome": "tnp-catalogo_rede",
+    "driver": "bridge",
+    "gerenciada_pelo_compose": true,
+    "external": false
+  },
+  "volume": {
+    "chave_modelo": "dados",
+    "nome": "tnp-catalogo-dados",
+    "external": true,
+    "arquivo": "anotacoes.json",
+    "conteudo": "Anotações reais produzidas pelo leitor e preservadas; o ZIP não contém esses dados."
+  },
+  "ambiente_interpolacao": {
+    "arquivo": ".env",
+    "TNP_PORTA_HTTP": "8084"
+  },
+  "ambiente_aplicacao": {
+    "APP_ENV": "desenvolvimento",
+    "HOST": "0.0.0.0",
+    "PORT": "3000",
+    "DATA_DIR": "/app/dados"
+  },
+  "aplicacao": {
+    "pagina": "Edição 3",
+    "temas": [
+      "Git e GitHub",
+      "SQL",
+      "Docker"
+    ],
+    "rotas": [
+      "/",
+      "/health",
+      "/api/config",
+      "/api/temas",
+      "/api/anotacoes"
+    ],
+    "arquivos_alterados_em_relacao_ao_cap07": []
+  },
+  "retirados_somente_apos_validacao": [
+    "container manual catalogo-web",
+    "container manual catalogo-entrada",
+    "rede manual tnp-catalogo-rede"
+  ],
+  "preservar": [
+    "serviços Compose parados e sua rede gerenciada",
+    "volume tnp-catalogo-dados e anotações",
+    "imagens tnp-catalogo 1.0, 1.1, 1.3 e 1.4",
+    "imagem tnp-entrada:1.0",
+    "laboratorio/compose.yaml e arquivos de ambiente",
+    "fontes da aplicação e da entrada",
+    "dados-host e backups dos capítulos anteriores e backup-cap08 do leitor"
+  ],
+  "retomada": [
+    "Confirmar contexto e projeto; não assumir volume ausente como vazio.",
+    "Validar modelo com docker compose config.",
+    "Se configuração não mudou e containers existem, iniciar catálogo e aguardar saúde; depois iniciar entrada. Se for preciso criar ou aplicar configuração, usar up com verificações.",
+    "Após recriação isolada do catálogo, confirmar resposta e recarregar entrada; configuração Nginx permanece com resolução estática ao carregar.",
+    "Verificar página, configuração, anotações e montagem antes de declarar sucesso."
+  ],
+  "alertas": [
+    "A rede nova usa underscore antes de rede; a rede antiga usava hífen.",
+    "O nome do projeto não isola automaticamente um volume externo de nome fixo.",
+    "Down preserva volume externo, mas não é backup.",
+    "Healthy da sonda /health não comprova conteúdo das anotações nem acesso via proxy.",
+    "Não escalar gravadores do JSON nem manter duas execuções com escrita concorrente."
+  ]
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de Estudos</title>
+  <style>
+    body { font: 18px/1.6 system-ui; background: #f4f7fb;
+      color: #102744; margin: 0; padding: 32px 20px; }
+    main { max-width: 720px; margin: auto; padding: 24px;
+      background: white; border-radius: 12px; }
+    h1 { line-height: 1.2; }
+    .serie { color: #a44110; font-weight: bold; }
+    li { margin: 8px 0; }
+    a { color: #174e87; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="serie">Tecnologia na Prática</p>
+    <h1>Catálogo de Estudos</h1>
+    <p id="edicao">Edição 1</p>
+    <p>Temas para organizar sua trilha de aprendizado.</p>
+    <ul id="temas"><li>Carregando temas...</li></ul>
+    <p><a href="/api/temas">Ver dados da API</a></p>
+    <p><a href="/health">Ver resposta de saúde</a></p>
+  </main>
+  <script>
+    async function carregar() {
+      const lista = document.getElementById('temas');
+      try {
+        const resposta = await fetch('/api/temas');
+        if (!resposta.ok) throw new Error('API indisponível.');
+        const temas = await resposta.json();
+        lista.replaceChildren();
+        for (const tema of temas) {
+          const item = document.createElement('li');
+          item.textContent = tema.nome;
+          lista.appendChild(item);
+        }
+      } catch {
+        lista.textContent = 'Não foi possível carregar os temas.';
+      }
+    }
+    carregar();
+  </script>
+</body>
+</html>

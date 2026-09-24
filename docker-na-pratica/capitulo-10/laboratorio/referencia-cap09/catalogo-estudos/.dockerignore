@@ -1,0 +1,10 @@
+*
+!Dockerfile
+!.dockerignore
+!app.js
+!diagnostico.js
+!armazenamento.js
+!anotar.js
+!index.html
+!temas.json
+!validar-build.cjs

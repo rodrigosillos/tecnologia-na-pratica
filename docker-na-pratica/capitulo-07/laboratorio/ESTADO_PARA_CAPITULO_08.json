@@ -1,0 +1,119 @@
+{
+  "natureza": "Estado esperado depois de o leitor executar e verificar o Capítulo 7. Não é uma captura de um Engine nesta entrega.",
+  "pasta_comandos": "laboratorio",
+  "plataforma": "containers Linux no mesmo Docker Engine local",
+  "containers": [
+    {
+      "nome": "catalogo-web",
+      "imagem": "tnp-catalogo:1.4",
+      "estado_final": "parado",
+      "redes": [
+        {
+          "nome": "tnp-catalogo-rede",
+          "aliases": [
+            "catalogo"
+          ]
+        }
+      ],
+      "publicacoes_host": [],
+      "arquivo_ambiente": "catalogo-estudos/.env.cap06",
+      "montagens": [
+        {
+          "tipo": "volume",
+          "origem": "tnp-catalogo-dados",
+          "destino": "/app/dados",
+          "somente_leitura": false
+        }
+      ]
+    },
+    {
+      "nome": "catalogo-entrada",
+      "imagem": "tnp-entrada:1.0",
+      "estado_final": "parado",
+      "redes": [
+        {
+          "nome": "tnp-catalogo-rede"
+        }
+      ],
+      "publicacoes_host": [
+        {
+          "endereco": "127.0.0.1",
+          "porta_host": 8084,
+          "porta_container": 8080,
+          "protocolo": "tcp"
+        }
+      ],
+      "montagens": [],
+      "destino_proxy": "http://catalogo:3000",
+      "usuario": "nginx",
+      "entrypoint": [
+        "nginx"
+      ],
+      "cmd": [
+        "-g",
+        "daemon off;"
+      ]
+    }
+  ],
+  "rede": {
+    "nome": "tnp-catalogo-rede",
+    "driver": "bridge",
+    "escopo": "local",
+    "interna": false,
+    "enderecos_fixos": false
+  },
+  "volume": {
+    "nome": "tnp-catalogo-dados",
+    "driver_esperado": "local",
+    "arquivo": "anotacoes.json",
+    "conteudo": "Anotações reais preservadas pelo leitor; não há valor fixo inventado no manifesto."
+  },
+  "aplicacao": {
+    "pagina": "Edição 3",
+    "temas": [
+      "Git e GitHub",
+      "SQL",
+      "Docker"
+    ],
+    "rotas": [
+      "/",
+      "/health",
+      "/api/config",
+      "/api/temas",
+      "/api/anotacoes"
+    ],
+    "healthcheck_docker_definido": false
+  },
+  "ambiente": {
+    "APP_ENV": "desenvolvimento",
+    "HOST": "0.0.0.0",
+    "PORT": "3000",
+    "DATA_DIR": "/app/dados"
+  },
+  "preservar": [
+    "imagens do catálogo 1.0, 1.1, 1.3 e 1.4",
+    "tnp-entrada:1.0",
+    "tnp-catalogo-rede",
+    "tnp-catalogo-dados",
+    "arquivos de aplicação e entrada",
+    "dados-host e backups do leitor no host"
+  ],
+  "auxiliares_que_nao_devem_permanecer": [
+    "catalogo-revisao",
+    "tnp-rede-revisao"
+  ],
+  "retomada": [
+    "Confirmar contexto, volume e identidade dos containers.",
+    "Iniciar catalogo-web e comprovar resposta por catalogo:3000 antes da entrada.",
+    "Iniciar catalogo-entrada; validar resposta pelo host e anotações.",
+    "Após recriação ou alteração de endpoint do catálogo: confirmar saúde e recarregar a configuração Nginx.",
+    "Não tratar um ID devolvido por run -d como prova de prontidão."
+  ],
+  "alertas_compose": [
+    "Não criar volume vazio sob outro nome por conveniência.",
+    "O nome persistente tnp-catalogo-dados precisa ser reutilizado explicitamente.",
+    "A porta 8084 agora pertence à entrada, não à publicação direta do catálogo.",
+    "Não remover volumes durante a migração; verificar e proteger dados antes de substituir instâncias.",
+    "A configuração Nginx atual resolve o destino ao carregar; reconexão e prontidão exigem verificação."
+  ]
+}

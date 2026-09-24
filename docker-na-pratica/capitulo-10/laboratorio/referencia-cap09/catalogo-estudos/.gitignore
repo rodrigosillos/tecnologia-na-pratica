@@ -1,0 +1,7 @@
+.env
+.env.*
+node_modules
+dados/
+dados-host/
+backup-cap06/
+*.log
