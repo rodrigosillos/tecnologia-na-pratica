@@ -1,0 +1,54 @@
+{
+  "capitulo": 6,
+  "projeto": "Catálogo de Estudos",
+  "tag_principal": "tnp-catalogo:1.4",
+  "container_principal": "catalogo-web",
+  "estado_final_esperado": "exited",
+  "publicacao": "127.0.0.1:8084:3000",
+  "env_file": ".env.cap06",
+  "configuracao": {
+    "APP_ENV": "desenvolvimento",
+    "HOST": "0.0.0.0",
+    "PORT": "3000",
+    "DATA_DIR": "/app/dados"
+  },
+  "volume_preservado": {
+    "nome": "tnp-catalogo-dados",
+    "driver": "local",
+    "destino": "/app/dados",
+    "arquivo": "anotacoes.json",
+    "conteudo_minimo_esperado": [
+      "Esta anotacao pertence ao volume."
+    ]
+  },
+  "html": "Edição 3",
+  "temas": 3,
+  "rotas": [
+    "/",
+    "/api/temas",
+    "/health",
+    "/api/config",
+    "/api/anotacoes"
+  ],
+  "gravador": "node anotar.js \"texto\"; apenas um processo gravador por vez",
+  "nao_e_banco_de_dados": true,
+  "api_somente_leitura": true,
+  "preservar_imagens": [
+    "tnp-catalogo:1.0",
+    "tnp-catalogo:1.1",
+    "tnp-catalogo:1.3",
+    "tnp-catalogo:1.4"
+  ],
+  "base": "node:24-bookworm-slim",
+  "usuario": "node",
+  "diretorio": "/app",
+  "comando": [
+    "node",
+    "app.js"
+  ],
+  "preservar_no_host": [
+    "dados-host/anotacoes.json",
+    "backup-cap06/anotacoes.json"
+  ],
+  "aviso": "Estado esperado após execução pelo leitor. Não é registro de uma execução Docker nesta entrega."
+}

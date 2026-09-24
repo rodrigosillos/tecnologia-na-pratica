@@ -1,0 +1,80 @@
+{
+  "natureza": "MODELO NÃO PREENCHIDO. Substituir null somente depois de observar o ambiente real. Não contém resultado de homologação.",
+  "status_da_entrega": null,
+  "data_hora_com_fuso": null,
+  "responsavel": null,
+  "ferramentas": {
+    "docker_client": null,
+    "docker_server": null,
+    "compose": null,
+    "node_na_imagem": null,
+    "nginx_na_imagem": null
+  },
+  "ambiente": {
+    "contexto": null,
+    "host_do_engine": null,
+    "plataforma": null,
+    "projeto_principal": null,
+    "projeto_aceite": null
+  },
+  "artefatos": {
+    "candidata": {
+      "referencia": null,
+      "id_local_observado": null,
+      "repo_digests_observados": null,
+      "id_na_promocao": null
+    },
+    "retorno": {
+      "referencia": null,
+      "id_local_observado": null
+    },
+    "entrada": {
+      "referencia": null,
+      "id_local_observado": null
+    },
+    "fonte_e_configuracao": {
+      "local": null,
+      "sha256_manifesto": null,
+      "modelo_resolvido": null
+    }
+  },
+  "dados": {
+    "volume_original": null,
+    "destino_no_container": null,
+    "volume_aceite": null,
+    "backup_local": null,
+    "backup_sha256": null,
+    "gravacoes_interrompidas_durante_copia": null,
+    "restauracao_em_outro_volume_verificada": null,
+    "anotacoes_preservadas_no_retorno": null,
+    "anotacoes_originais_preservadas_apos_promocao": null
+  },
+  "verificacoes": {
+    "config_real": null,
+    "containers_ids": null,
+    "healthcheck": null,
+    "acesso_pelo_host": null,
+    "pagina_edicao": null,
+    "temas": null,
+    "api_config": null,
+    "api_anotacoes": null,
+    "montagem_e_permissoes": null,
+    "falha_de_porta_e_recuperacao": null,
+    "retorno_ensaiado": null,
+    "mesmo_artefato_promovido": null,
+    "browser_real": null,
+    "save_load_se_aplicavel": null
+  },
+  "decisao": {
+    "aprovada": null,
+    "versao_ativa": null,
+    "motivos_de_recusa": null,
+    "arquivo_de_ambiente_em_uso": null
+  },
+  "encerramento": {
+    "aceite_retirado": null,
+    "volume_original_preservado": null,
+    "principal_parado_conforme_capitulo": null
+  },
+  "evidencias_e_pendencias": []
+}

@@ -1,0 +1,4 @@
+services:
+  catalogo:
+    environment:
+      PORT: "4000"

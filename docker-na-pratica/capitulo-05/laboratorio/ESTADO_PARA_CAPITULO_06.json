@@ -1,0 +1,39 @@
+{
+  "capitulo": 5,
+  "projeto": "Catálogo de Estudos",
+  "tag_principal": "tnp-catalogo:1.3",
+  "container_principal": "catalogo-web",
+  "estado_final_esperado": "exited",
+  "publicacao": "127.0.0.1:8084:3000",
+  "env_file": ".env.cap05",
+  "configuracao": {
+    "APP_ENV": "desenvolvimento",
+    "HOST": "0.0.0.0",
+    "PORT": "3000"
+  },
+  "html": "Edição 2",
+  "temas": 3,
+  "rotas": [
+    "/",
+    "/api/temas",
+    "/health",
+    "/api/config"
+  ],
+  "gravacao_de_dados": false,
+  "volumes": false,
+  "preservar_imagens": [
+    "tnp-catalogo:1.0",
+    "tnp-catalogo:1.1",
+    "tnp-catalogo:1.3"
+  ],
+  "nao_reutilizar_tag_exercicio": "tnp-catalogo:1.2",
+  "base": "node:24-bookworm-slim",
+  "usuario": "node",
+  "diretorio": "/app",
+  "entrada": "herdada da imagem oficial Node.js",
+  "comando": [
+    "node",
+    "app.js"
+  ],
+  "aviso": "Estado esperado após a prática pelo leitor; não é captura do seu Engine. O alcance da execução de referência está em LEIA_PRIMEIRO.md, na raiz do pacote."
+}

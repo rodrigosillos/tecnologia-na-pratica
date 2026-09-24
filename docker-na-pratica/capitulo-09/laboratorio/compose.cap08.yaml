@@ -1,0 +1,48 @@
+name: tnp-catalogo
+
+services:
+  catalogo:
+    image: tnp-catalogo:1.4
+    build:
+      context: ./catalogo-estudos
+    pull_policy: never
+    env_file:
+      - ./catalogo-estudos/.env.cap08
+    volumes:
+      - type: volume
+        source: dados
+        target: /app/dados
+    networks:
+      - rede
+    healthcheck:
+      test: ["CMD", "node", "diagnostico.js"]
+      interval: 5s
+      timeout: 4s
+      retries: 6
+      start_period: 5s
+    stop_grace_period: 10s
+    restart: "no"
+
+  entrada:
+    image: tnp-entrada:1.0
+    build:
+      context: ./entrada
+    pull_policy: never
+    ports:
+      - "127.0.0.1:${TNP_PORTA_HTTP:?Defina TNP_PORTA_HTTP no .env}:8080"
+    networks:
+      - rede
+    depends_on:
+      catalogo:
+        condition: service_healthy
+    stop_grace_period: 10s
+    restart: "no"
+
+networks:
+  rede:
+    driver: bridge
+
+volumes:
+  dados:
+    external: true
+    name: tnp-catalogo-dados

@@ -1,0 +1,11 @@
+.git
+node_modules
+.env
+.env.*
+*.log
+coverage
+tmp
+README.md
+dados
+dados-host
+backup-cap06

@@ -1,0 +1,105 @@
+{
+  "natureza": "Estado esperado após o leitor executar e verificar o capítulo; não é captura de um Engine.",
+  "capitulo": 9,
+  "proximo_capitulo": 10,
+  "projeto": "tnp-catalogo",
+  "compose": "compose.yaml",
+  "servicos": {
+    "catalogo": {
+      "imagem": "tnp-catalogo:1.5",
+      "estado": "parado",
+      "usuario": "node",
+      "porta_interna": 3000,
+      "publicacao_host": null,
+      "env_file": "catalogo-estudos/.env.cap08",
+      "montagem": {
+        "tipo": "volume",
+        "nome": "tnp-catalogo-dados",
+        "destino": "/app/dados",
+        "gravavel": true
+      },
+      "healthcheck": [
+        "CMD",
+        "node",
+        "diagnostico.js"
+      ],
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "mem_limit": "256m",
+      "cpus": 1.0,
+      "pids_limit": 128
+    },
+    "entrada": {
+      "imagem": "tnp-entrada:1.0",
+      "estado": "parado",
+      "usuario": "nginx",
+      "porta_interna": 8080,
+      "publicacao_host": "127.0.0.1:8084:8080",
+      "destino_http": "http://catalogo:3000",
+      "tmpfs": {
+        "destino": "/tmp",
+        "size": 16777216,
+        "mode": "01777"
+      },
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "mem_limit": "128m",
+      "cpus": 0.5,
+      "pids_limit": 64
+    }
+  },
+  "logging_ambos": {
+    "driver": "local",
+    "options": {
+      "max-size": "10m",
+      "max-file": "3"
+    }
+  },
+  "restart_ambos": "no",
+  "rede": "tnp-catalogo_rede",
+  "volume_externo": "tnp-catalogo-dados",
+  "aplicacao": {
+    "pagina": "Edição 3",
+    "temas": [
+      "Git e GitHub",
+      "SQL",
+      "Docker"
+    ],
+    "fontes_execucao": "Seis arquivos preservados byte a byte do capítulo 8.",
+    "anotacoes": "Preservar todas as anteriores e a anotação didática do capítulo 9, se houve capacidade para a escrita."
+  },
+  "preservar": [
+    "imagens anteriores",
+    "tnp-catalogo:1.5",
+    "tnp-entrada:1.0",
+    "volume externo original",
+    "backups anteriores",
+    "backup-cap09 ou destino novo equivalente",
+    "arquivos de bind mount do leitor",
+    "compose.cap08.yaml para referência, sem build por esse arquivo"
+  ],
+  "restaurar_antes_de_encerrar": [
+    "tmpfs da entrada",
+    "sonda correta",
+    "porta 8084 no .env",
+    "sem falha controlada ativa"
+  ],
+  "nao_presumir": [
+    "ZIP contém anotações reais",
+    "arquivos temporários sobrevivem à parada",
+    "inspeção dos limites equivale a teste de carga, saturação ou segurança",
+    "estágio verificacao é a imagem de execução",
+    "trocar projeto isola o volume externo explícito"
+  ],
+  "observacao_proxy": "Após substituir somente catalogo com entrada ativa, verificar destino e validar/recarregar Nginx conforme capítulos 7 e 8."
+}
