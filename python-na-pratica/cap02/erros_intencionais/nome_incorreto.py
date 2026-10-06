@@ -1,0 +1,1 @@
+Print("Assistente de despesas")

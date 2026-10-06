@@ -1,0 +1,46 @@
+{
+  "origem": "sintetica",
+  "observacao": "Caso escrito para o laboratório. Não é resposta de inferência real. Uso e identificadores são fictícios.",
+  "input_sha256": "f0fdcda472dc259aa48b429fa2eccb2f138cc1c69a742a3286c818320b3378ca",
+  "instructions_sha256": "884d5ddd09ef96d6ac4b6fc834c441df66f30460560071069617ac03a3f0fc7b",
+  "resposta": {
+    "id": "resp_sintetica_cap07_data_inventada",
+    "object": "response",
+    "created_at": 0,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "status": "completed",
+    "error": null,
+    "incomplete_details": null,
+    "parallel_tool_calls": false,
+    "tool_choice": "none",
+    "tools": [],
+    "output": [
+      {
+        "id": "msg_sintetica_cap07",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "A despesa de transporte, no valor de R$ 35,00, ocorreu em 10/09/2026.",
+            "annotations": [],
+            "logprobs": []
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 210,
+      "output_tokens": 65,
+      "total_tokens": 275,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+}

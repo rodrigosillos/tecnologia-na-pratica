@@ -1,0 +1,45 @@
+{
+  "natureza": "sintetica_nao_inferencia",
+  "nota": "Texto e uso fictícios, não medidos em serviço.",
+  "recuperacao_sha256": "6e525cc9ac3f3300832fe651ad124fdab9f2b2ab264eb85b86eb0efee64df39e",
+  "pedido_sha256": "194de695fa73616f396862927acb7c11aa9cc0c8e1425417e572d868e0283ebe",
+  "resposta": {
+    "id": "resp_sintetica_cap09",
+    "object": "response",
+    "created_at": 0,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "status": "completed",
+    "error": null,
+    "incomplete_details": null,
+    "parallel_tool_calls": false,
+    "tool_choice": "auto",
+    "tools": [],
+    "output": [
+      {
+        "id": "msg_sintetica",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O assistente não pode aprovar despesas nem efetuar pagamentos. A decisão cabe ao responsável designado após a revisão.\", \"fontes\": [{\"trecho_id\": \"POL-004\", \"citacao\": \"A decisão de aprovação de despesas cabe ao responsável designado, após a revisão dos documentos e da finalidade profissional. O assistente de IA pode organizar informações e indicar trechos desta política; não pode aprovar despesas nem efetuar pagamentos.\"}]}]}",
+            "annotations": []
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 100,
+      "output_tokens": 60,
+      "total_tokens": 160,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+}

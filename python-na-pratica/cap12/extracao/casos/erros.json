@@ -1,0 +1,520 @@
+[
+  {
+    "nome": "categoria_fora_da_lista",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_categoria_fora_da_lista",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_categoria_fora_da_lista",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"18.50\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Outros\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "data_impossivel",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_data_impossivel",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_data_impossivel",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-02-30\",\n  \"valor\": \"18.50\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "valor_numerico",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_valor_numerico",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_valor_numerico",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": 18.5,\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "valor_divergente",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_valor_divergente",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_valor_divergente",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"20.00\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "citacao_inexistente",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_citacao_inexistente",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_citacao_inexistente",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"18.50\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Táxi amarelo\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "categoria_sem_suporte",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_categoria_sem_suporte",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_categoria_sem_suporte",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"18.50\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Materiais\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "subtotal_como_total",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_subtotal_como_total",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_subtotal_como_total",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"20.00\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 20,00\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "resposta_incompleta",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_resposta_incompleta",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "incomplete",
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_resposta_incompleta",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"18.50\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "recusa",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_recusa",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_recusa",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "refusal",
+              "refusal": "Recusa sintética para exercício."
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "json_malformado",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_json_malformado",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_json_malformado",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"data\":",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "chave_duplicada",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_chave_duplicada",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_chave_duplicada",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"data\":null,\"data\":\"2026-09-12\"}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 500,
+        "output_tokens": 120,
+        "total_tokens": 620,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "uso_ausente",
+    "origem": "sintetica",
+    "origem_id": "T002",
+    "resposta": {
+      "id": "resp_sintetica_cap08_uso_ausente",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "none",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica_uso_ausente",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\n  \"data\": \"2026-09-12\",\n  \"valor\": \"18.50\",\n  \"descricao\": \"Café e lanche em reunião\",\n  \"categoria\": \"Alimentação\",\n  \"evidencias\": {\n    \"data\": \"12/09/2026\",\n    \"valor\": \"R$ 18,50\",\n    \"descricao\": \"Café e lanche em reunião\",\n    \"categoria\": \"Café e lanche\"\n  }\n}\n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": null
+    }
+  }
+]

@@ -1,0 +1,1 @@
+print("Assistente de despesas)

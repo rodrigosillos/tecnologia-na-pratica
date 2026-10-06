@@ -1,0 +1,6 @@
+-- Executar UMA VEZ no psql, como administrador do PostgreSQL local.
+-- Interrompe no primeiro erro; não apaga nem recria objetos existentes.
+\set ON_ERROR_STOP on
+CREATE ROLE python_leitor LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE;
+\password python_leitor
+CREATE DATABASE python_na_pratica OWNER python_leitor ENCODING 'UTF8' TEMPLATE template0;

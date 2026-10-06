@@ -1,0 +1,16 @@
+[
+  {
+    "id": "D005",
+    "data": "2026-09-11",
+    "descricao": "Marcador para quadro",
+    "categoria": "Materiais",
+    "valor": "10.00"
+  },
+  {
+    "id": "D002",
+    "data": "2026-09-10",
+    "descricao": "Corrida para visitar cliente",
+    "categoria": "Transporte",
+    "valor": "35.00"
+  }
+]

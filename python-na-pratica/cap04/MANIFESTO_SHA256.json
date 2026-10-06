@@ -1,0 +1,33 @@
+{
+  "capitulo": 4,
+  "revisao": "R01",
+  "algoritmo": "SHA-256",
+  "arquivos": {
+    "01_funcoes.py": "2dd40fe4a6266b0accb7cc82d3c01dc8e43ffeb586c3d8ba27d28f86b349140f",
+    "02_objetos.py": "62ec3212d93a451768eea334229028743a5d148456e4a43f49fb48c520155b7e",
+    "03_importacao_escopo.py": "f18231909c4b439769289eb79b7d9ab7a7e5174b1188f40b26e62b92b726b83b",
+    "04_tratar_erro.py": "33dd12e65a67bb45c70379ac500ad9360dae28a2e828daeaac80ebc3dc4b84e2",
+    "05_ler_csv.py": "c2ab0a1cff2fe781031412180ec54eeb2f23910ae15162fe401c682b15a54f37",
+    "06_ler_json.py": "4cb38eb4cc4a82bb21846c1974c09fce58318e5593ee9a6d915a48205404754c",
+    "07_resumo_csv.py": "addc827c26da6d3eddf15f1ecc81cfcd739617ff4bc2f0fca9afd61ab6a52da0",
+    "08_resumo_json.py": "d263fb357283f51d91fb03be5f123214e8a05344e4cbcb64a31aec1dbc5e4fea",
+    "09_lote_invalido.py": "3841148016f712087b19219c0a6ce6e4384fd7f613281594e77e59e810b2cd60",
+    "10_primeiro_teste.py": "4eca5934fd6a0922e54676aae7e912b29dd4c9eff4d3c76914603d65100f0e54",
+    "aplicacao.py": "ba5680bf72c2ad89f5feb37ac4b0dfad9179fd1e8d56cf3750720c7480eaa45b",
+    "arquivos.py": "ba84f318338dd9391a8af00ccdf2b2fd36a9d602570012c2050a8192a9d458fd",
+    "calculos.py": "bc07698f79d550bda470c072e5cba545b50c30838b83c38c0830b34d3b7d9f05",
+    "dados/desafio.json": "099753441e296dabdab72e1999c03b6d7a7f18b33836cc31e9704b441b54e68c",
+    "dados/descricao_com_virgula.csv": "af189fa192c9e6c1ec4d22ef390d237a666c24b3feeda1337e9d0744c1b05e82",
+    "dados/invalidas.csv": "1bed1c8dfdf1294e4fb657c785b201240ce4bc91e8df36aac468385b113fc35b",
+    "dados/repetidas.json": "66d36c57d54f034c75f89e9e6a022a405768b1500f42c7762b426ff41c37ec0b",
+    "dados/validas.csv": "01b6ed4fb1af03429c5356d151f07f1398ad6035fa241fc0471ea81a772e99f9",
+    "dados/validas.json": "138f7ee68e3bc12d11c07adc818be0aeb7e2e50773d57e21c3288ef0626f9edd",
+    "dados/valor_numerico.json": "5436f4953c4568b32b9111e1b891cda8a861608ebfe1fbfade51b744168aaf49",
+    "erros_intencionais/data_impossivel.py": "e82433c8c3746767f30f587d4a9be82dd50b13a9bc6113dc604f9d616db8994a",
+    "regras.py": "09788f661f01785a62ebd1b27e68d531d41341901c6cf99d25c32b22ed9ec18b",
+    "solucao_desafio.py": "42de4bb639b7dac7a28f60d9e768a92d39eb6e74d74140f9634f9a9686c1ab7e",
+    "solucao_exercicio_02.py": "440d3f102fc2485f98c91c5117916970722156af76e147188f2d495f3582b403",
+    "solucao_exercicio_03.py": "9d5fc52a0779cd270b80891eb2916154e30d77fcee7d19445ef50f7c7bb9e9e8",
+    "verificar_capitulo.py": "605b981ff32deda5594718c28b27dc7277151bbcf430160991f1beb2ad958e5f"
+  }
+}

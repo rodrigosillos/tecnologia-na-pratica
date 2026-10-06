@@ -1,0 +1,17 @@
+[
+  {
+    "origem_id": "T001",
+    "id_destino": "D101",
+    "texto": "Corrida de aplicativo para reunião com cliente, R$ 35,00."
+  },
+  {
+    "origem_id": "T002",
+    "id_destino": "D102",
+    "texto": "Comprovante sintético B. Data: 12/09/2026. Café e lanche em reunião. Subtotal: R$ 20,00. Desconto: R$ 1,50. Total pago: R$ 18,50."
+  },
+  {
+    "origem_id": "T003",
+    "id_destino": "D103",
+    "texto": "Comprovante sintético C. Data: 13/09/2026. Kit para evento. Total pago: R$ 80,00. Sem detalhe dos itens."
+  }
+]

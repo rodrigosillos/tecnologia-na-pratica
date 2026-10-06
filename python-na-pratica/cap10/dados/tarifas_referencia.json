@@ -1,0 +1,10 @@
+{
+  "modelo": "gpt-4.1-mini-2025-04-14",
+  "moeda": "USD",
+  "entrada_por_milhao": "0.40",
+  "saida_por_milhao": "1.60",
+  "consultado_em": "2026-10-04",
+  "fonte": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+  "perfil": "texto_padrao_sem_desconto_de_cache",
+  "nota": "Referência consultada, não fatura. Sem descontos, ferramentas, impostos, câmbio ou particularidades da conta. Conferir antes de uso real."
+}
