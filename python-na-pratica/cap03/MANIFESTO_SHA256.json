@@ -1,0 +1,26 @@
+{
+  "capitulo": 3,
+  "revisao": "R01",
+  "algoritmo": "SHA-256",
+  "arquivos": {
+    "01_tipos.py": "537e87934b0e767843d3ac1d205d7e00231ff40cb20e8f07bb75498cb85b8c9b",
+    "02_conversoes.py": "c191ad20058c603b7cf8f991aa7c283720fc53d8aa0ad183bf08214cffbb052c",
+    "03_dinheiro.py": "ac2ed558f9c51b60c4b57e4ce5293082c2bfd61d18f4b1a13ae30c5bd1c9ac6f",
+    "04_datas.py": "c12502665a8cf30e9a8de8067bb10ce7fe5c86f68df21b0f187bbf03cc81815c",
+    "05_listas.py": "5ace64711229263649c7a38657b502f971f5bac01ede9468e1be18a39c6a2a84",
+    "06_dicionarios.py": "cda67e1216860fab10d12e12b929dbc650223bf0e959e862f9cfaab9123d3dc4",
+    "07_condicoes.py": "977d6f75362c068e9ee32efebb4e7b0ef804e6d63b7bb77301cd283521edc84d",
+    "08_repeticoes.py": "cb9c9364d7811d333294751135cea934545d7332d2e37b1060a4c6b87811dab0",
+    "09_selecao.py": "2e8baa0bd5c4b0b15cae21d20288bc686a02d84711037562491f411f976b241c",
+    "10_resumo.py": "8003c910d71fefdbaa99052cdcdba7020c2a0803670f2cce5bd56f446d4b59f3",
+    "desafio_base.py": "ab4e450d41652804469d30edaf1ee74a8f6bbc24ac8cec1cfd9ed89c86a995ec",
+    "erros_intencionais/chave_ausente.py": "d0bd2b6f66d06b0629563cddd3dc389e1ba90ee08c7caecf4108af2da4a6c0dd",
+    "erros_intencionais/data_impossivel.py": "e82433c8c3746767f30f587d4a9be82dd50b13a9bc6113dc604f9d616db8994a",
+    "erros_intencionais/texto_com_inteiro.py": "08d50b4d0b92a6bb6d35359e28314703e2d79e427b30ed369de8c659923c9d43",
+    "solucoes/desafio.py": "5411d04950aef3a4a9b31995cf6416a2ecc213f3f011d94509e81e62f83d2940",
+    "solucoes/exercicio_01.py": "6fca50b0299bba28f2fdad27a4d0926291abe37f21f1a6bd0c889a816fade814",
+    "solucoes/exercicio_02.py": "803fd34f83805329dbdc1330264f158973011edfd6a799194931dbf973938529",
+    "solucoes/exercicio_03.py": "694714850d5fbcde94bbfee0a4bdab2f7cb94bf86fc014450ca0b8114bc31b8b",
+    "verificar_capitulo.py": "1dd0d06fa50fcba2b08b3d42ebde94de0fd36638ab2e1460bae91d1e699b341b"
+  }
+}

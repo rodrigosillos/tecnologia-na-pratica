@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P01",
+    "pergunta": "Qual é o limite de alimentação por pessoa por dia?"
+  },
+  {
+    "id": "P02",
+    "pergunta": "Qual o prazo para enviar a solicitação e o comprovante?"
+  },
+  {
+    "id": "P03",
+    "pergunta": "Qual é o valor de reembolso por quilômetro?"
+  },
+  {
+    "id": "P04",
+    "pergunta": "Quanto posso gastar com almoço?"
+  },
+  {
+    "id": "P05",
+    "pergunta": "O assistente de IA pode aprovar despesas?"
+  }
+]

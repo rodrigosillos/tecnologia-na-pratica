@@ -1,0 +1,8 @@
+{
+  "versao": "2026.09-r01",
+  "natureza": "politica_ficticia_para_estudo",
+  "documentos": [
+    {"arquivo": "politica.md", "titulo": "Política fictícia de despesas"},
+    {"arquivo": "procedimentos.md", "titulo": "Procedimentos fictícios de prestação de contas"}
+  ]
+}

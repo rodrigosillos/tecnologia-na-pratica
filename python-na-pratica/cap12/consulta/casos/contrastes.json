@@ -1,0 +1,465 @@
+[
+  {
+    "nome": "id_existe_no_corpus_mas_nao_no_contexto",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-001\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "id_inventado",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-999\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "citacao_inventada",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"Não precisa de comprovante.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "sem_fontes",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": []}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "abstencao_com_afirmacao",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"sem_cobertura\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "unidade_alterada",
+    "esperado": "aguarda_revisao",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"É permitido gastar R$ 60,00 por refeição.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "condicao_invertida",
+    "esperado": "aguarda_revisao",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O comprovante é dispensável para alimentação.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "incompleta",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "incomplete",
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "uso_ausente",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": null
+    }
+  },
+  {
+    "nome": "recusada",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "refusal",
+              "refusal": "Recusa sintética"
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  {
+    "nome": "json_duplicado",
+    "esperado": "bloqueada",
+    "resposta": {
+      "id": "resp_sintetica_cap09",
+      "object": "response",
+      "created_at": 0,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "error": null,
+      "incomplete_details": null,
+      "parallel_tool_calls": false,
+      "tool_choice": "auto",
+      "tools": [],
+      "output": [
+        {
+          "id": "msg_sintetica",
+          "type": "message",
+          "role": "assistant",
+          "status": "completed",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "{\"situacao\":\"respondida\",\"situacao\":\"sem_cobertura\",\"afirmacoes\":[]}",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 60,
+        "total_tokens": 160,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "versao": 1,
+  "pacote_sha256": "b335b764d4ef42f6cc1e6bcfb9768a79c1fa4408849b519c1db5e554672204f8",
+  "revisor": "Exemplo didático — substituir na revisão própria",
+  "decisoes": [
+    {
+      "origem_id": "T001",
+      "acao": "aceitar",
+      "motivo": "Aceite incorreto para testar bloqueio da data ausente.",
+      "correcoes": {},
+      "complemento": null
+    },
+    {
+      "origem_id": "T002",
+      "acao": "aceitar",
+      "motivo": "Data, descrição, Alimentação e total pago de 18,50 conferidos.",
+      "correcoes": {},
+      "complemento": null
+    },
+    {
+      "origem_id": "T003",
+      "acao": "rejeitar",
+      "motivo": "Kit sem composição; não há dados para escolher a categoria.",
+      "correcoes": {},
+      "complemento": null
+    }
+  ]
+}

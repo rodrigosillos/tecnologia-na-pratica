@@ -1,0 +1,45 @@
+{
+  "origem": "sintetica",
+  "aviso": "Texto, identificadores e tokens fictícios; nenhuma inferência executada.",
+  "origem_id": "T003",
+  "pedido_sha256": "c3450016f18332d2d662b82fc65f0326aa86f5bad97073bf5a9fb936417b0530",
+  "resposta": {
+    "id": "resp_sintetica_cap08_T003",
+    "object": "response",
+    "created_at": 0,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "status": "completed",
+    "error": null,
+    "incomplete_details": null,
+    "parallel_tool_calls": false,
+    "tool_choice": "none",
+    "tools": [],
+    "output": [
+      {
+        "id": "msg_sintetica_T003",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "{\n  \"data\": \"2026-09-13\",\n  \"valor\": \"80.00\",\n  \"descricao\": \"Kit para evento\",\n  \"categoria\": null,\n  \"evidencias\": {\n    \"data\": \"13/09/2026\",\n    \"valor\": \"R$ 80,00\",\n    \"descricao\": \"Kit para evento\",\n    \"categoria\": null\n  }\n}\n",
+            "annotations": []
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 500,
+      "output_tokens": 120,
+      "total_tokens": 620,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+}

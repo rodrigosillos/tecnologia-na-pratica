@@ -1,0 +1,45 @@
+{
+  "natureza": "sintetica_nao_inferencia",
+  "nota": "Texto e uso fictícios, não medidos em serviço.",
+  "recuperacao_sha256": "e9b5b0a2fc55b5dafdde6d99290f0352dd1dee6764c43501b1195e6011c34c5c",
+  "pedido_sha256": "1787e2b99b4437ec48e15b23758317c3af5da538e2d7d53b74ae0817811aa1a8",
+  "resposta": {
+    "id": "resp_sintetica_cap09",
+    "object": "response",
+    "created_at": 0,
+    "model": "gpt-4.1-mini-2025-04-14",
+    "status": "completed",
+    "error": null,
+    "incomplete_details": null,
+    "parallel_tool_calls": false,
+    "tool_choice": "auto",
+    "tools": [],
+    "output": [
+      {
+        "id": "msg_sintetica",
+        "type": "message",
+        "role": "assistant",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "{\"situacao\": \"respondida\", \"afirmacoes\": [{\"texto\": \"O limite é R$ 60,00 por pessoa por dia em atividade profissional, somando as despesas de alimentação desse dia. Comprovante e finalidade profissional continuam obrigatórios.\", \"fontes\": [{\"trecho_id\": \"POL-002\", \"citacao\": \"O limite de alimentação é de R$ 60,00 por pessoa por dia em atividade profissional. Somam-se as despesas de alimentação da mesma pessoa e do mesmo dia para comparar com o limite. O limite não dispensa o comprovante e a descrição da finalidade profissional exigidos em POL-001.\"}]}]}",
+            "annotations": []
+          }
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 100,
+      "output_tokens": 60,
+      "total_tokens": 160,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "D001",
+    "data": "2026-09-10",
+    "descricao": "Café em reunião",
+    "categoria": "Alimentação",
+    "valor": "12.50"
+  },
+  {
+    "id": "D002",
+    "data": "2026-09-10",
+    "descricao": "Corrida para visitar cliente",
+    "categoria": "Transporte",
+    "valor": "35.00"
+  },
+  {
+    "id": "D003",
+    "data": "2026-09-10",
+    "descricao": "Cabo para o escritório",
+    "categoria": "Materiais",
+    "valor": "80.00"
+  }
+]
