@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5cc70aa7ae9224f81a274ca284e12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Ruinas.Runtime::TecnologiaNaPratica.BancoArte
+  ambiente:
+  - {fileID: -744184898, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 1074648079, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 1446249832, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: -1478136703, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 406997114, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: -967444472, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 1549155892, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 687664099, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: -176963458, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  atores:
+  - {fileID: -212341596, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -686732343, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 2115722602, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 76876180, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -281956661, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 103418194, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -1724267506, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -450190566, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 2117058515, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -503735781, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 238099720, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 260922308, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -1192933269, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: -1100643766, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 1423237489, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}
+  - {fileID: 151099090, guid: 807dc2333d115fc4e908cace6e1575d7, type: 3}

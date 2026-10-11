@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45420501d4113e4185026169d5843a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Ruinas.Runtime::TecnologiaNaPratica.BancoArte
+  ambiente:
+  - {fileID: -744184898, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 1074648079, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 1446249832, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: -1478136703, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 406997114, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: -967444472, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 1549155892, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: 687664099, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  - {fileID: -176963458, guid: d79613b2f72291f47b6d4e00c0b86c14, type: 3}
+  atores:
+  - {fileID: 104043146, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: 1625262538, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: 354378914, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: 543371765, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: 654809317, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -1646802103, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -160061845, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -77345447, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -161508886, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -1163021794, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -945812202, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: 1198008744, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -2115439699, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -2078117660, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: 514847881, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}
+  - {fileID: -1017283666, guid: 9437f2a8f7a070d43900bb6627e8fac9, type: 3}

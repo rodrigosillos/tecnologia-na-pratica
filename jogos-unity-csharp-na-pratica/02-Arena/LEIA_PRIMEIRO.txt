@@ -1,0 +1,30 @@
+Arena das Ruínas - Tecnologia na Prática
+Rodrigo Sillos | Laboratório de Jogos com Unity e C# na Prática
+Versão candidata 1.0.0-rc.1 | Unity 6000.3.15f1 | Windows 64 bits
+
+EXECUTAR
+Extraia o ZIP inteiro e abra ArenaDasRuinas.exe. Preserve a pasta de dados e os arquivos de suporte ao lado dele.
+WASD/setas: mover. Mouse: mirar. Clique esquerdo: disparar. Esc: pausa.
+Menus: mouse ou setas e Enter. Configurações: efeitos, música e modo de tela.
+
+OBJETIVO
+Conclua cinco ondas e escolha melhorias entre elas. Cada nova partida restaura os atributos.
+
+ABRIR O PROJETO
+Use Unity Hub, Add project from disk, e selecione a pasta 02-Arena.
+Não misture os projetos Assets em uma mesma pasta. Aguarde os pacotes e abra Assets/Scenes/Arena.unity.
+Assets, Packages e ProjectSettings são necessários. Conserve os arquivos .meta.
+O menu Tecnologia na Pratica reconstrói as cenas de referência e pode substituir alterações suas nessas cenas; duplique antes de experimentar.
+
+VALIDAÇÃO
+Os testes de regras ficam em Assets/Tests/EditMode. O roteiro automatizado do player só é ativado com --tnp-verificar seguido de uma pasta de resultados.
+Consulte o relatório de validação que acompanha a entrega. Verificação automatizada não equivale a aprovação humana de balanceamento.
+
+CRÉDITOS
+Direção e coleção: Rodrigo Sillos. Código e arte desenvolvidos com geração por IA e integração técnica em Unity.
+Arte: atlas de ruínas compartilhado, folha de atores e panorama da plataforma. Música e efeitos: síntese original no código do laboratório.
+Unity e demais marcas pertencem aos respectivos titulares. Publicação independente.
+O manuscrito e a capa comercial do livro não integram este projeto de estudo.
+
+PERMISSÕES L01
+Código e documentação originais sob MIT; ilustrações conforme LICENCA_RECURSOS.md. Leia LICENSE, LICENCA_ESCOPO.md e CREDITOS.md. O texto comercial e a capa não integram estas permissões.

@@ -1,0 +1,1 @@
+{"name":"QuebraBlocos.Runtime","rootNamespace":"TecnologiaNaPratica.QuebraBlocos","references":["QuebraBlocos.Core","Unity.InputSystem","Unity.ugui"],"autoReferenced":true}

@@ -1,0 +1,1 @@
+{"name":"QuebraBlocos.Tests","references":["QuebraBlocos.Core","QuebraBlocos.Runtime"],"optionalUnityReferences":["TestAssemblies"],"includePlatforms":["Editor"]}

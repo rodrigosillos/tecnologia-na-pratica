@@ -11,6 +11,7 @@ Cada livro tem sua pasta. O leitor baixa o material, prepara o ambiente descrito
 | [`sql-na-pratica/`](sql-na-pratica/) | **SQL na Prática** — Do primeiro SELECT às consultas profissionais | `1.0.0-rc.1` (candidata; homologação nativa e pgAdmin ainda pendentes) |
 | [`docker-na-pratica/`](docker-na-pratica/) | **Docker na Prática** — Containers do zero ao ambiente profissional | `laboratorio-v1.0.0-rc.1` (pré-release; revisão MIT-R01) |
 | [`python-na-pratica/`](python-na-pratica/) | **Python na Prática** — Automatize tarefas, integre IA e transforme dados em relatórios | `laboratorio-v1.0.0-rc.1` (pré-release; pasta + ZIP da release) |
+| [`jogos-unity-csharp-na-pratica/`](jogos-unity-csharp-na-pratica/) | **Jogos com Unity e C# na Prática** — Crie três jogos 2D completos, da programação à publicação | `laboratorio-v1.0.0-rc.1` (pré-release; licenças L01; projetos e jogos Windows) |
 
 ## Como obter o laboratório de SQL
 
@@ -35,6 +36,14 @@ O código e as configurações do laboratório de Docker usam MIT de escopo limi
 3. Extraia `cap02` a `cap12` lado a lado em `projetos\python-na-pratica` e siga o capítulo 2 para criar a `.venv` (Python 3.14.7).
 
 Prefira a página da **release** com o ZIP versionado como endereço estável no livro. A pasta do repositório acompanha o mesmo conteúdo para consulta. SHA-256 do ZIP: `b9266cd1b9bc26f21ea804b772bb6591776b9412c2c6deffec5866b54b2e9d74`.
+
+## Como obter os laboratórios de Jogos com Unity e C#
+
+1. Abra [`jogos-unity-csharp-na-pratica/`](jogos-unity-csharp-na-pratica/) ou a [release dos três jogos](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/tag/jogos-unity-csharp-laboratorio-v1.0.0-rc.1).
+2. Escolha o pacote de projetos Unity ou os executáveis Windows e leia o README.
+3. Use Unity 6000.3.15f1 para estudar os projetos. Abra cada jogo separadamente.
+
+Código original sob MIT; ilustrações autorizadas para uso nos jogos dos leitores, inclusive comercialmente, com crédito. O escopo está nos arquivos de licença desse volume e não altera as condições dos demais livros.
 
 ## O que este repositório não contém
 

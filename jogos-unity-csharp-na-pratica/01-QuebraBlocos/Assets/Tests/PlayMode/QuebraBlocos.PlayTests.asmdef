@@ -1,0 +1,1 @@
+{"name":"QuebraBlocos.PlayTests","references":["QuebraBlocos.Core","QuebraBlocos.Runtime","Unity.InputSystem"],"optionalUnityReferences":["TestAssemblies"]}

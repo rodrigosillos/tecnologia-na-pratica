@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/QuebraBlocos.unity
+    guid: 3620ef5406d6ef747b76cfbb3140443f
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

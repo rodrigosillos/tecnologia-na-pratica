@@ -1,0 +1,52 @@
+RUÍNAS EM JOGO — LABORATÓRIO R02
+Jogos com Unity e C# na Prática | Rodrigo Sillos
+
+Unity 6000.3.15f1. Pacotes registrados em Packages/manifest.json e packages-lock.json.
+Esta revisão corresponde ao primeiro jogo e aos capítulos 5 a 8.
+Este jogo integra a candidata completa 1.0.0-rc.1 dos três laboratórios.
+
+COMO ABRIR
+1. Extraia a pasta inteira.
+2. No Unity Hub, adicione a pasta 01-QuebraBlocos como projeto existente.
+3. Use 6000.3.15f1 e uma licença aplicável já ativada no Hub.
+4. Aguarde a restauração dos pacotes e abra Assets/Scenes/QuebraBlocos.unity.
+5. Pressione Play. Não apague os arquivos .meta.
+
+CONTROLES
+A/D ou setas: mover. Espaço: lançar. Esc: pausar/continuar.
+Mouse ou setas e Enter nos menus. O jogo pausa ao perder o foco.
+
+O QUE FOI VERIFICADO
+8 testes de regras no Edit Mode e 6 cenários no Play Mode, sem falhas.
+Build Windows 64 bits/Mono sem Development Build, extraído do ZIP e executado.
+11 verificações no WindowsPlayer: inicialização, formação, teclado, lançamento,
+colisão física, pausa, derrota, transições, pontuação, reinício e volume zero.
+As capturas da entrega editorial vieram desse executável.
+A vitória automatizada verifica transições; o balanceamento humano continua pendente.
+
+PASTAS
+Art: atlas e recortes. Dados: três fases e material físico.
+Prefabs: bloco. Scripts/Core: regras sem dependência do motor.
+Scripts: entrada, movimento, interface, som e efeitos.
+Editor: montagem da referência, build e captura de revisão.
+Tests: testes Edit Mode e Play Mode.
+
+ESTUDO
+RaqueteBasica.cs pertence à cena isolada do capítulo 5.
+Não use RaqueteBasica e Raquete no mesmo objeto.
+Os capítulos 6 a 8 usam a cena integrada QuebraBlocos.unity.
+O comando Tecnologia na Pratica > Criar cena do quebra-blocos recria a referência,
+os dados e o prefab em caminhos fixos. Guarde suas alterações em cópias antes de usá-lo.
+
+VALIDAÇÃO DO EXECUTÁVEL
+ValidacaoExecutavel só inicia com o argumento --tnp-verificar seguido de uma pasta
+de resultados. Ele usa teclado virtual, registra verificações e captura telas.
+Não participa da partida normal e restaura as preferências locais usadas no teste.
+
+ARTE E SOM
+Arte gerada por IA para a direção visual aprovada. Som sintetizado no projeto.
+Consulte os créditos e as condições que acompanham a distribuição do laboratório.
+Library, Temp, Logs, UserSettings e bastidores do manuscrito não integram o ZIP.
+
+PERMISSÕES L01
+Código e documentação originais sob MIT; ilustrações conforme LICENCA_RECURSOS.md. Leia LICENSE, LICENCA_ESCOPO.md e CREDITOS.md. O texto comercial e a capa não integram estas permissões.
