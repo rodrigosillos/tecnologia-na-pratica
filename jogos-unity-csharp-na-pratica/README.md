@@ -1,19 +1,21 @@
 # Jogos com Unity e C# na Prática
 
 Material de apoio da coleção Tecnologia na Prática, de Rodrigo Sillos.
-Versão candidata: **1.0.0-rc.1**. Editor de referência: **Unity 6000.3.15f1**.
+Versão candidata: **1.0.0-rc.2**. Editor de referência: **Unity 6000.3.15f1**.
 
 Três projetos independentes: **Ruínas em Jogo**, **Arena das Ruínas** e **Caminho do Portal**.
 O percurso principal utiliza Windows de 64 bits, renderização Built-in e backend Mono.
 Input System 1.19.0, uGUI 2.0.0 e Test Framework 1.6.0 estão registrados nos projetos.
 
-## Downloads da versão 1.0.0-rc.1
+## Downloads da versão 1.0.0-rc.2
 
-- [Projetos Unity completos](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/download/jogos-unity-csharp-laboratorio-v1.0.0-rc.1/Jogos_Unity_CSharp_Tres_Projetos_RC1_L01.zip) — para estudar e modificar.
-- [Três jogos para Windows](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/download/jogos-unity-csharp-laboratorio-v1.0.0-rc.1/Jogos_Unity_CSharp_Tres_Windows_RC1_L01.zip) — para jogar sem o Editor.
-- [Página desta versão](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/tag/jogos-unity-csharp-laboratorio-v1.0.0-rc.1) — arquivos e SHA-256.
+- [Projetos Unity completos](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/download/jogos-unity-csharp-laboratorio-v1.0.0-rc.2/Jogos_Unity_CSharp_Tres_Projetos_RC2.zip) — para estudar e modificar.
+- [Três jogos para Windows](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/download/jogos-unity-csharp-laboratorio-v1.0.0-rc.2/Jogos_Unity_CSharp_Tres_Windows_RC2.zip) — para jogar sem o Editor.
+- [Página desta versão](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/tag/jogos-unity-csharp-laboratorio-v1.0.0-rc.2) — arquivos e SHA-256.
 
-Revisão documental **L01**: aplica as permissões aprovadas pelo autor; código, cenas, recursos e binários preservam a versão tecnicamente verificada. Esta é uma pré-release; os limites dos testes estão em VALIDACAO.json.
+Atualização **RC2**: passos articulados na plataforma e na arena, com cadência ligada à velocidade, usando as ilustrações originais. Projetos e executáveis Windows atualizados. As licenças L01 foram preservadas. Esta é uma pré-release; resultados e limites estão em VALIDACAO.json.
+
+Veja [ATUALIZACOES.md](ATUALIZACOES.md) para os detalhes e a relação com os capítulos do livro.
 
 ## Comece aqui
 

@@ -1,121 +1,190 @@
 {
-  "versao": "1.0.0-rc.1",
-  "data": "2026-10-10",
+  "versao": "1.0.0-rc.2",
+  "data": "2026-10-11",
   "unity": "6000.3.15f1",
   "plataforma": "Windows 64 bits",
   "backend": "Mono",
-  "jogos": [
-    {
-      "jogo": "Ruínas em Jogo",
-      "pasta": "01-QuebraBlocos",
-      "editMode": {
-        "aprovados": 8,
-        "falhas": 0
-      },
-      "windowsPlayer": {
-        "unity": "6000.3.15f1",
-        "plataforma": "WindowsPlayer",
-        "erro": "",
-        "aprovado": true,
-        "verificacoes": [
-          "Cena inicial e componentes presentes",
-          "Menu inicial",
-          "Primeira formação com 22 pedras",
-          "Teclado e limite da raquete",
-          "Lançamento pela ação de entrada",
-          "Colisão física pontua no executável",
-          "Pausa conserva posição",
-          "Três quedas encerram em derrota",
-          "Transições das três fases e pontuação total 8400",
-          "Reinício após vitória",
-          "Volume zero no AudioSource"
-        ]
-      },
-      "playMode": {
-        "aprovados": 6,
-        "falhas": 0
-      },
-      "embalagem": "Binários da revisão R02 verificada; somente documentação atualizada na embalagem RC1."
+  "alteracao": "Animação procedural das pernas com a textura original na arena e plataforma.",
+  "verificacoesAtuais": {
+    "02-Arena": {
+      "unity": "6000.3.15f1",
+      "plataforma": "WindowsPlayer",
+      "erro": "",
+      "aprovado": true,
+      "verificacoes": [
+        "Menu inicial carregado",
+        "Movimento diagonal normalizado por entrada real",
+        "Mouse dispara projéteis pela ação de entrada",
+        "Escape pausa a arena",
+        "Pausa congela movimento e geração de inimigos",
+        "Invulnerabilidade bloqueia dano duplicado",
+        "Vida zero encerra em derrota",
+        "Onda 1 abre melhoria uma vez",
+        "Onda 2 abre melhoria uma vez",
+        "Onda 3 abre melhoria uma vez",
+        "Onda 4 abre melhoria uma vez",
+        "Cinco ondas, 48 abates e vitória por dano controlado",
+        "Reinício restaura progressão e saúde",
+        "Reserva reutiliza projéteis sem criação adicional no ciclo"
+      ]
     },
-    {
-      "jogo": "Arena das Ruínas",
-      "pasta": "02-Arena",
-      "editMode": {
-        "aprovados": 8,
-        "falhas": 0
-      },
-      "windowsPlayer": {
-        "unity": "6000.3.15f1",
-        "plataforma": "WindowsPlayer",
-        "erro": "",
-        "aprovado": true,
-        "verificacoes": [
-          "Menu inicial carregado",
-          "Movimento diagonal normalizado por entrada real",
-          "Mouse dispara projéteis pela ação de entrada",
-          "Escape pausa a arena",
-          "Pausa congela movimento e geração de inimigos",
-          "Invulnerabilidade bloqueia dano duplicado",
-          "Vida zero encerra em derrota",
-          "Onda 1 abre melhoria uma vez",
-          "Onda 2 abre melhoria uma vez",
-          "Onda 3 abre melhoria uma vez",
-          "Onda 4 abre melhoria uma vez",
-          "Cinco ondas, 48 abates e vitória por dano controlado",
-          "Reinício restaura progressão e saúde",
-          "Reserva reutiliza projéteis sem criação adicional no ciclo"
-        ]
-      },
-      "importacaoLimpa": "Pacote fonte extraído em nova pasta, sem Library; importação e testes EditMode aprovados."
-    },
-    {
-      "jogo": "Caminho do Portal",
-      "pasta": "03-Plataforma",
-      "editMode": {
-        "aprovados": 12,
-        "falhas": 0
-      },
-      "windowsPlayer": {
-        "unity": "6000.3.15f1",
-        "plataforma": "WindowsPlayer",
-        "erro": "",
-        "aprovado": true,
-        "verificacoes": [
-          "Menu inicial",
-          "Personagem assenta no Tilemap com Composite Collider; pos=(2.00, -0.40) vel=(0.00, 0.00) gravity=(0.00, -27.00) paths=3",
-          "Aceleração e freio por teclado; inicio=2,018 fim=(5.02, -0.40) vel=(0.00, 0.00) estado=Jogando escala=1",
-          "Salto físico por Espaço",
-          "Aterrissagem após salto variável",
-          "Salto atravessa a plataforma por baixo e aterrissa por cima",
-          "Disparo horizontal por J",
-          "Queda retorna ao checkpoint com vida restaurada",
-          "Checkpoint e morte persistem no arquivo isolado",
-          "Pausa congela o personagem",
-          "Portal carrega a segunda cena e zera checkpoint",
-          "Plataforma móvel percorre a rota",
-          "Terceira cena carregada",
-          "Guardião bloqueia a saída enquanto está ativo",
-          "Guardião desativado por dano controlado libera a vitória salva",
-          "Travessia automatizada integral das três fases por teclado, sem teletransporte nem dano forçado"
-        ]
-      },
-      "importacaoLimpa": "Pacote fonte extraído em nova pasta, sem Library; importação e testes EditMode aprovados."
+    "03-Plataforma": {
+      "unity": "6000.3.15f1",
+      "plataforma": "WindowsPlayer",
+      "erro": "",
+      "aprovado": true,
+      "verificacoes": [
+        "Menu inicial",
+        "Personagem assenta no Tilemap com Composite Collider; pos=(2.00, -0.40) vel=(0.00, 0.00) gravity=(0.00, -27.00) paths=3",
+        "Aceleração e freio por teclado; inicio=2,018 fim=(5.02, -0.40) vel=(0.00, 0.00) estado=Jogando escala=1",
+        "Salto físico por Espaço",
+        "Aterrissagem após salto variável",
+        "Salto atravessa a plataforma por baixo e aterrissa por cima",
+        "Disparo horizontal por J",
+        "Queda retorna ao checkpoint com vida restaurada",
+        "Checkpoint e morte persistem no arquivo isolado",
+        "Pausa congela o personagem",
+        "Portal carrega a segunda cena e zera checkpoint",
+        "Plataforma móvel percorre a rota",
+        "Terceira cena carregada",
+        "Guardião bloqueia a saída enquanto está ativo",
+        "Guardião desativado por dano controlado libera a vitória salva",
+        "Travessia automatizada integral das três fases por teclado, sem teletransporte nem dano forçado"
+      ]
     }
-  ],
+  },
+  "totaisAtuais": {
+    "verificacoesWindows": 30,
+    "falhas": 0
+  },
+  "inspecaoVisual": "Quadros sucessivos dos passos conferidos; nova captura usada no anúncio aprovado pelo autor.",
   "limites": [
     "Não houve sessão humana completa de balanceamento registrada.",
     "Quebra-blocos e arena verificam suas vitórias por impactos ou dano controlados.",
     "A plataforma inclui um percurso separado por teclado, sem teletransporte nem dano forçado, concluído com zero mortes nesta execução.",
     "Não foram homologados navegador, Linux, macOS, consoles, mobile ou gamepad.",
-    "Os testes de áudio verificam configuração; não equivalem a uma avaliação auditiva."
+    "Os testes de áudio verificam configuração; não equivalem a uma avaliação auditiva.",
+    "EditMode, PlayMode e importação limpa não foram repetidos nesta atualização visual; resultados anteriores abaixo."
   ],
-  "totais": {
-    "editMode": 28,
-    "playMode": 6,
-    "verificacoesWindows": 41,
-    "falhas": 0
-  },
-  "revisaoDocumentacao": "L01",
-  "permissoes": "Aprovadas pelo autor: MIT no código original; ilustrações conforme LICENCA_RECURSOS.md.",
-  "integridade": "Os arquivos técnicos de cada pacote publicado foram comparados byte a byte com a candidata verificada. Somente documentos de distribuição e licenças foram acrescentados ou atualizados."
+  "historicoRC1": {
+    "versao": "1.0.0-rc.1",
+    "data": "2026-10-10",
+    "unity": "6000.3.15f1",
+    "plataforma": "Windows 64 bits",
+    "backend": "Mono",
+    "jogos": [
+      {
+        "jogo": "Ruínas em Jogo",
+        "pasta": "01-QuebraBlocos",
+        "editMode": {
+          "aprovados": 8,
+          "falhas": 0
+        },
+        "windowsPlayer": {
+          "unity": "6000.3.15f1",
+          "plataforma": "WindowsPlayer",
+          "erro": "",
+          "aprovado": true,
+          "verificacoes": [
+            "Cena inicial e componentes presentes",
+            "Menu inicial",
+            "Primeira formação com 22 pedras",
+            "Teclado e limite da raquete",
+            "Lançamento pela ação de entrada",
+            "Colisão física pontua no executável",
+            "Pausa conserva posição",
+            "Três quedas encerram em derrota",
+            "Transições das três fases e pontuação total 8400",
+            "Reinício após vitória",
+            "Volume zero no AudioSource"
+          ]
+        },
+        "playMode": {
+          "aprovados": 6,
+          "falhas": 0
+        },
+        "embalagem": "Binários da revisão R02 verificada; somente documentação atualizada na embalagem RC1."
+      },
+      {
+        "jogo": "Arena das Ruínas",
+        "pasta": "02-Arena",
+        "editMode": {
+          "aprovados": 8,
+          "falhas": 0
+        },
+        "windowsPlayer": {
+          "unity": "6000.3.15f1",
+          "plataforma": "WindowsPlayer",
+          "erro": "",
+          "aprovado": true,
+          "verificacoes": [
+            "Menu inicial carregado",
+            "Movimento diagonal normalizado por entrada real",
+            "Mouse dispara projéteis pela ação de entrada",
+            "Escape pausa a arena",
+            "Pausa congela movimento e geração de inimigos",
+            "Invulnerabilidade bloqueia dano duplicado",
+            "Vida zero encerra em derrota",
+            "Onda 1 abre melhoria uma vez",
+            "Onda 2 abre melhoria uma vez",
+            "Onda 3 abre melhoria uma vez",
+            "Onda 4 abre melhoria uma vez",
+            "Cinco ondas, 48 abates e vitória por dano controlado",
+            "Reinício restaura progressão e saúde",
+            "Reserva reutiliza projéteis sem criação adicional no ciclo"
+          ]
+        },
+        "importacaoLimpa": "Pacote fonte extraído em nova pasta, sem Library; importação e testes EditMode aprovados."
+      },
+      {
+        "jogo": "Caminho do Portal",
+        "pasta": "03-Plataforma",
+        "editMode": {
+          "aprovados": 12,
+          "falhas": 0
+        },
+        "windowsPlayer": {
+          "unity": "6000.3.15f1",
+          "plataforma": "WindowsPlayer",
+          "erro": "",
+          "aprovado": true,
+          "verificacoes": [
+            "Menu inicial",
+            "Personagem assenta no Tilemap com Composite Collider; pos=(2.00, -0.40) vel=(0.00, 0.00) gravity=(0.00, -27.00) paths=3",
+            "Aceleração e freio por teclado; inicio=2,018 fim=(5.02, -0.40) vel=(0.00, 0.00) estado=Jogando escala=1",
+            "Salto físico por Espaço",
+            "Aterrissagem após salto variável",
+            "Salto atravessa a plataforma por baixo e aterrissa por cima",
+            "Disparo horizontal por J",
+            "Queda retorna ao checkpoint com vida restaurada",
+            "Checkpoint e morte persistem no arquivo isolado",
+            "Pausa congela o personagem",
+            "Portal carrega a segunda cena e zera checkpoint",
+            "Plataforma móvel percorre a rota",
+            "Terceira cena carregada",
+            "Guardião bloqueia a saída enquanto está ativo",
+            "Guardião desativado por dano controlado libera a vitória salva",
+            "Travessia automatizada integral das três fases por teclado, sem teletransporte nem dano forçado"
+          ]
+        },
+        "importacaoLimpa": "Pacote fonte extraído em nova pasta, sem Library; importação e testes EditMode aprovados."
+      }
+    ],
+    "limites": [
+      "Não houve sessão humana completa de balanceamento registrada.",
+      "Quebra-blocos e arena verificam suas vitórias por impactos ou dano controlados.",
+      "A plataforma inclui um percurso separado por teclado, sem teletransporte nem dano forçado, concluído com zero mortes nesta execução.",
+      "Não foram homologados navegador, Linux, macOS, consoles, mobile ou gamepad.",
+      "Os testes de áudio verificam configuração; não equivalem a uma avaliação auditiva."
+    ],
+    "totais": {
+      "editMode": 28,
+      "playMode": 6,
+      "verificacoesWindows": 41,
+      "falhas": 0
+    },
+    "revisaoDocumentacao": "L01",
+    "permissoes": "Aprovadas pelo autor: MIT no código original; ilustrações conforme LICENCA_RECURSOS.md.",
+    "integridade": "Os arquivos técnicos de cada pacote publicado foram comparados byte a byte com a candidata verificada. Somente documentos de distribuição e licenças foram acrescentados ou atualizados."
+  }
 }

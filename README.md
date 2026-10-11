@@ -11,7 +11,7 @@ Cada livro tem sua pasta. O leitor baixa o material, prepara o ambiente descrito
 | [`sql-na-pratica/`](sql-na-pratica/) | **SQL na Prática** — Do primeiro SELECT às consultas profissionais | `1.0.0-rc.1` (candidata; homologação nativa e pgAdmin ainda pendentes) |
 | [`docker-na-pratica/`](docker-na-pratica/) | **Docker na Prática** — Containers do zero ao ambiente profissional | `laboratorio-v1.0.0-rc.1` (pré-release; revisão MIT-R01) |
 | [`python-na-pratica/`](python-na-pratica/) | **Python na Prática** — Automatize tarefas, integre IA e transforme dados em relatórios | `laboratorio-v1.0.0-rc.1` (pré-release; pasta + ZIP da release) |
-| [`jogos-unity-csharp-na-pratica/`](jogos-unity-csharp-na-pratica/) | **Jogos com Unity e C# na Prática** — Crie três jogos 2D completos, da programação à publicação | `laboratorio-v1.0.0-rc.1` (pré-release; licenças L01; projetos e jogos Windows) |
+| [`jogos-unity-csharp-na-pratica/`](jogos-unity-csharp-na-pratica/) | **Jogos com Unity e C# na Prática** — Crie três jogos 2D completos, da programação à publicação | `laboratorio-v1.0.0-rc.2` (pré-release; passos animados; passos animados; licenças L01; projetos e jogos Windows) |
 
 ## Como obter o laboratório de SQL
 
@@ -39,7 +39,7 @@ Prefira a página da **release** com o ZIP versionado como endereço estável no
 
 ## Como obter os laboratórios de Jogos com Unity e C#
 
-1. Abra [`jogos-unity-csharp-na-pratica/`](jogos-unity-csharp-na-pratica/) ou a [release dos três jogos](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/tag/jogos-unity-csharp-laboratorio-v1.0.0-rc.1).
+1. Abra [`jogos-unity-csharp-na-pratica/`](jogos-unity-csharp-na-pratica/) ou a [release dos três jogos](https://github.com/rodrigosillos/tecnologia-na-pratica/releases/tag/jogos-unity-csharp-laboratorio-v1.0.0-rc.2).
 2. Escolha o pacote de projetos Unity ou os executáveis Windows e leia o README.
 3. Use Unity 6000.3.15f1 para estudar os projetos. Abra cada jogo separadamente.
 

@@ -73,10 +73,11 @@ namespace TecnologiaNaPratica
             mira = entrada.Mira - Corpo.position;
             if (mira.sqrMagnitude < .001f)
                 mira = Vector2.right;
-            int indice = Mathf.Abs(mira.y) > Mathf.Abs(mira.x) ? (mira.y > 0 ? 5 : 4) : (movimento.sqrMagnitude > .1f && (int)(Time.time * 9) % 2 == 1 ? 7 : 6);
+            int indice = Mathf.Abs(mira.y) > Mathf.Abs(mira.x) ? (mira.y > 0 ? 5 : 4) : 6;
             visual.sprite = BancoArte.Atual.atores[indice];
             visual.flipX = mira.x < 0 && (indice == 6 || indice == 7);
             visual.color = Time.time < Saude.ProtegidoAte && (int)(Time.time * 16) % 2 == 0 ? new Color(1, .65f, .35f) : Color.white;
+            CicloPassos.Aplicar(visual, movimento.sqrMagnitude > .01f, movimento.magnitude * (5 + controle.Regras.Agilidade * .5f), indice == 6);
             if (entrada.Atirando && Time.time >= proximo)
             {
                 controle.Projeteis.Disparar(Corpo.position + mira.normalized * .55f, mira, 1 + controle.Regras.Potencia, false);

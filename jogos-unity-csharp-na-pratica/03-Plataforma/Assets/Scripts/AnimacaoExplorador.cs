@@ -19,7 +19,7 @@ namespace TecnologiaNaPratica
             else if (Mathf.Abs(motor.Corpo.linearVelocity.x) > .2f)
             {
                 Estado = "Correndo";
-                quadro = 1 + (int)(Time.time * 10) % 2;
+                quadro = 0;
             }
             else
                 Estado = "Parado";
@@ -29,6 +29,7 @@ namespace TecnologiaNaPratica
             visual.flipX = motor.Direcao < 0;
             visual.transform.localScale = Vector3.one * (1.4f / visual.sprite.bounds.size.y);
             visual.color = Time.time < motor.Saude.ProtegidoAte && !motor.controle.EfeitosReduzidos ? new Color(1, .7f, .4f) : Color.white;
+            CicloPassos.Aplicar(visual, Estado == "Correndo", Mathf.Abs(motor.Corpo.linearVelocity.x));
         }
     }
 }
