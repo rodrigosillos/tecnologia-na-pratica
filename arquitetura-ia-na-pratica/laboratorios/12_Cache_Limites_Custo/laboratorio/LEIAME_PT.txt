@@ -1,0 +1,50 @@
+CAPÍTULO 12 - CACHE, LIMITES E CUSTO POR TAREFA
+Rodrigo Sillos | Tecnologia na Prática | R01 | 15/10/2026
+
+REQUISITOS
+Python 3.10+ e biblioteca padrão com sqlite3. Sem API, rede ou modelos pagos.
+Abra um terminal nesta pasta laboratorio e execute:
+
+python -m unittest discover -v
+python cache_scenarios.py
+python cache_exercises.py
+
+283 testes: 227 herdados e 56 novos. 28 cenários, 14 em cada idioma.
+A coorte adicional compara dez solicitações por estratégia (20 execuções).
+Saídas: results/scenarios.json e results/exercises.json.
+Os comandos novos começam com cache_; os demais pertencem aos capítulos anteriores.
+
+ARQUIVOS NOVOS
+cache_cost.py: cache SQLite, ledger transacional e gate local.
+cache_scenarios.py: cenários PT/EN e coorte com/sem cache.
+cache_exercises.py: exercícios 23 e 24 resolvidos e executáveis.
+test_cache_cost.py: autorização, identidade, invalidação, orçamento,
+concorrência com threads/conexões separadas, persistência e reconciliação.
+
+LEITURA DOS VALORES
+Unidades fictícias, não reais nem dólares. Cada tarefa admitida tem encargo
+fixo de 4; chamadas compact/large custam 20/70. Fria completa = 24;
+quente = 4; timeout conhecido seguido de alternativa completa = 94.
+No miss, reserva-se 4 + máximo de geração da política. A reserva de
+resultado incerto não expira automaticamente nem é liberada por reinício.
+O relatório de cenário mostra a última solicitação; spent inclui aquecimentos.
+No custo desconhecido, chamadas confirmadas = 0 significa falta de relatório,
+não evidência de que nenhuma chamada ocorreu.
+
+LIMITES
+Gate: apenas threads do mesmo processo, capacidade global e sem fila justa.
+Single flight: adia duplicata; não entrega automaticamente a resposta externa.
+Ledger: SQLite com transação de escrita; testes de conexões concorrentes.
+Cache: exato, por usuário, somente respostas completas; TTL de tempo lógico.
+64 entradas; 16.384 bytes por payload; não é limite do tamanho do arquivo.
+As funções administrativas e de liquidação pressupõem um chamador confiável.
+Não há integração com fatura, controle distribuído, token bucket, chamadas
+remotas, benchmark de carga, criptografia, nem integração no worker do cap. 10.
+Autenticação inicial, recusas antes da admissão e infraestrutura não entram
+na convenção de custo. Os valores não representam custo total de propriedade.
+
+TESTES E PERSISTÊNCIA
+Os testes criam subpastas próprias em scratch/ e as removem ao terminar.
+Cache e ledger aceitam caminhos SQLite para testes locais. Tempo lógico deve
+usar a mesma referência ao reabrir um cache persistente.
+O laboratório não modifica dados de capítulos anteriores.

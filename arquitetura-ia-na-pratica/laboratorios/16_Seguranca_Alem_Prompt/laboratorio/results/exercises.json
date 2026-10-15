@@ -1,0 +1,18 @@
+{
+  "exercise31": {
+    "states": [
+      "blocked",
+      "blocked",
+      "pending",
+      "blocked"
+    ],
+    "pending_intents": 1,
+    "effects": 0
+  },
+  "exercise32": {
+    "markup_encoded": true,
+    "poisoned_fact_accepted": true,
+    "conflicting_fact_blocked": true,
+    "truth_verified": false
+  }
+}

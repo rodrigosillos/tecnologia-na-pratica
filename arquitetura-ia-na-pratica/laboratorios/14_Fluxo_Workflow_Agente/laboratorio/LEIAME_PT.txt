@@ -1,0 +1,54 @@
+CAPÍTULO 14 - FLUXO DETERMINÍSTICO, WORKFLOW OU AGENTE?
+Rodrigo Sillos | Tecnologia na Prática | R01 | 15/10/2026
+
+REQUISITOS E EXECUÇÃO
+Python 3.11+ com biblioteca padrão e sqlite3. Sem API, rede ou modelos pagos.
+Abra um terminal nesta pasta laboratorio:
+
+python -m unittest discover -v
+python control_scenarios.py
+python control_exercises.py
+
+400 testes: 339 herdados e 61 novos. 32 cenários: 16 por idioma.
+Comparação adicional: 10 tarefas por modo (20 execuções).
+Os comandos sobrescrevem results/scenarios.json e results/exercises.json.
+Os comandos control_ pertencem a este capítulo; os anteriores permanecem.
+
+ARQUIVOS NOVOS
+control.py: parser estrito, sessão, ferramentas, medidor, workflow,
+planejador simulado e controlador limitado.
+control_scenarios.py: propostas adversas, validação de fontes e comparação.
+control_exercises.py: exercícios 27 e 28 resolvidos.
+test_control.py: 61 testes de contratos e resultados.
+
+RESULTADOS DA COMPARAÇÃO
+Workflow: 10/10 completas, 42 ferramentas, 0 planejamentos,
+42 u, 4,2 u por completa e p95 virtual de 20 ms.
+Planejador simulado: 10/10 completas, 42 ferramentas, 42 planejamentos,
+126 u, 12,6 u por completa e p95 virtual de 55 ms.
+Oito tarefas normais e duas com uma leitura transitória por modo.
+As duas abordagens permitem uma repetição limitada de leitura.
+Nenhum LLM foi executado: as propostas são regras/scripts controlados.
+
+CONTRATOS
+JSON de até 512 bytes, chaves únicas, campos exatos e strings curtas.
+Ferramentas: read, compare, finish, stop. Sem código, URLs ou escrita externa.
+Tenant, usuário, documentos, idioma e limites são definidos pelo host.
+Capturas e resultado ficam no host; finalização exige evidência e revalidação.
+Sessão só aceita uma execução. Não reusar Session em uma nova solicitação.
+Padrão: 8 propostas, 30 unidades, 150 ms virtuais e até 2 propostas idênticas.
+Tarifas: planejamento 2 u/7 ms; read 1/5; compare 1/3; finish 1/2;
+stop 0/0. Ferramentas admitidas que falham também são contabilizadas.
+São unidades próprias do capítulo; não misturar com tarifas anteriores.
+
+LIMITES
+Laço de agente com planejador simulado, sem aprendizagem ou modelo real.
+Fronteira lógica de propostas; não é sandbox para código Python hostil.
+Execução local e sequencial, sem persistência/replay, worker ou ledger
+integrado. Os arquivos cumulativos não significam integração automática.
+Prazos virtuais não interrompem funções bloqueadas. Cancelamento é cooperativo.
+Detector conta propostas canônicas repetidas, não todos os tipos de ciclo.
+Versão e permissão são verificadas no limite de leitura, não para sempre.
+Exceções inesperadas de armazenamento podem propagar. Não há efeitos externos,
+faturamento real, garantia exatamente uma vez nem avaliação de LLM em produção.
+Hooks de falha são código confiável do ensaio, não ferramentas do planejador.

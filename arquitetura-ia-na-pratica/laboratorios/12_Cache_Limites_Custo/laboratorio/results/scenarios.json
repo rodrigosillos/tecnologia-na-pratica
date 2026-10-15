@@ -1,0 +1,333 @@
+{
+  "cases": 28,
+  "language_pairs": 14,
+  "runs": [
+    {
+      "case": "cold",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 24
+    },
+    {
+      "case": "hot",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "cache",
+      "hit": true,
+      "calls": 0,
+      "units": 4,
+      "held": 0,
+      "spent": 28
+    },
+    {
+      "case": "ttl_expired",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "other_user",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "acl_revoked",
+      "language": "pt-BR",
+      "state": "abstain",
+      "reason": "access",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 24
+    },
+    {
+      "case": "source_revised",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "prompt_revised",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "corrupt_cache",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "partial_uncached",
+      "language": "pt-BR",
+      "state": "partial",
+      "reason": "budget_or_deadline",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "timeout_fallback",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 2,
+      "units": 94,
+      "held": 0,
+      "spent": 94
+    },
+    {
+      "case": "unknown_charge",
+      "language": "pt-BR",
+      "state": "abstain",
+      "reason": "cost_unknown",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 94,
+      "spent": 0
+    },
+    {
+      "case": "budget_denied",
+      "language": "pt-BR",
+      "state": "deferred",
+      "reason": "budget",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 0
+    },
+    {
+      "case": "capacity",
+      "language": "pt-BR",
+      "state": "deferred",
+      "reason": "capacity",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 0
+    },
+    {
+      "case": "singleflight",
+      "language": "pt-BR",
+      "state": "deferred",
+      "reason": "in_flight",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 24
+    },
+    {
+      "case": "cold",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 24
+    },
+    {
+      "case": "hot",
+      "language": "en-US",
+      "state": "full",
+      "reason": "cache",
+      "hit": true,
+      "calls": 0,
+      "units": 4,
+      "held": 0,
+      "spent": 28
+    },
+    {
+      "case": "ttl_expired",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "other_user",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "acl_revoked",
+      "language": "en-US",
+      "state": "abstain",
+      "reason": "access",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 24
+    },
+    {
+      "case": "source_revised",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "prompt_revised",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "corrupt_cache",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "partial_uncached",
+      "language": "en-US",
+      "state": "partial",
+      "reason": "budget_or_deadline",
+      "hit": false,
+      "calls": 1,
+      "units": 24,
+      "held": 0,
+      "spent": 48
+    },
+    {
+      "case": "timeout_fallback",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "hit": false,
+      "calls": 2,
+      "units": 94,
+      "held": 0,
+      "spent": 94
+    },
+    {
+      "case": "unknown_charge",
+      "language": "en-US",
+      "state": "abstain",
+      "reason": "cost_unknown",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 94,
+      "spent": 0
+    },
+    {
+      "case": "budget_denied",
+      "language": "en-US",
+      "state": "deferred",
+      "reason": "budget",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 0
+    },
+    {
+      "case": "capacity",
+      "language": "en-US",
+      "state": "deferred",
+      "reason": "capacity",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 0
+    },
+    {
+      "case": "singleflight",
+      "language": "en-US",
+      "state": "deferred",
+      "reason": "in_flight",
+      "hit": false,
+      "calls": 0,
+      "units": 0,
+      "held": 0,
+      "spent": 24
+    }
+  ],
+  "cohort": {
+    "without_cache": {
+      "requests": 10,
+      "full": 10,
+      "hits": 0,
+      "calls": 10,
+      "units": 240,
+      "held": 0
+    },
+    "with_cache": {
+      "requests": 10,
+      "full": 10,
+      "hits": 9,
+      "calls": 1,
+      "units": 60,
+      "held": 0
+    }
+  },
+  "measurement": "Authored offline fixtures; fictional units; cohort intentionally repeats one authorized task. Not a load, savings, quality, or commercial price forecast."
+}

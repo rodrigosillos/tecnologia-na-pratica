@@ -1,0 +1,83 @@
+CAPÍTULO 3 - UMA ARQUITETURA MÍNIMA QUE PODEMOS TESTAR
+Rodrigo Sillos | Tecnologia na Prática
+
+Requisitos: Python 3.10+, apenas biblioteca padrão.
+Validação editorial: Python 3.12.14. Sem pacotes ou credenciais externas.
+Extraia o ZIP. Abra um terminal na pasta laboratorio.
+
+1. TESTES E RESOLUÇÕES
+python -m unittest discover -v
+python experiments.py
+python solutions.py
+
+30 testes: 18 de arquitetura/política e 12 de HTTP. Os testes HTTP abrem
+portas efêmeras em 127.0.0.1 e encerram seus servidores ao terminar.
+Nenhuma conexão externa é feita. Um ambiente que bloqueie loopback impede
+os testes HTTP; resolva a permissão local, sem expor o servidor na rede.
+
+2. SERVIDOR (primeiro terminal)
+python http_api.py --port 8765 --mode good
+
+Se a porta estiver ocupada, use outra, por exemplo 8766, e passe --port 8766
+também ao cliente. O servidor fica exclusivamente em 127.0.0.1.
+Interrompa com Ctrl+C. Não há serviço instalado em segundo plano.
+
+3. CLIENTE (segundo terminal, na mesma pasta)
+python client.py --topic returns
+python client.py --topic refund --language en-US
+python client.py --topic refund --token zen-demo
+python client.py --topic sunday
+
+Resultados: devolução Acme 30 dias; reembolso Acme 5 dias úteis; Zen 2 dias
+úteis; sunday produz abstain. Textos são fictícios. O primeiro comando
+retorna HTTP 200, status answer, acme-returns-v2, custo sintético 660.
+request_id e elapsed_ms variam nas chamadas reais locais.
+
+4. FALHAS CONTROLADAS
+Pare o servidor, reinicie com --mode timeout e consulte returns.
+Esperado: HTTP 504, dependency_timeout, cost_microusd null.
+O modo simula uma exceção imediatamente; não mede nem espera um provedor.
+Outros modos: malformed, unsupported, unavailable, unexpected,
+unknown_usage, expensive, incomplete, refused. Restaure good ao terminar.
+O cliente não pode selecionar modos pelo corpo da requisição.
+
+ARQUITETURA
+contracts.py: valores imutáveis e erro normalizado.
+ports.py: contratos de repositório, gerador e relógio.
+policy.py: seleção e validação da evidência/saída.
+service.py: caso de uso sem HTTP, arquivos ou SDK.
+adapters.py: JSON/memória, stub, relógios e identidades de demonstração.
+bootstrap.py: ponto de composição.
+http_api.py / client.py: servidor e cliente locais.
+documents.json: 13 documentos originais, sem gabarito de avaliação.
+experiments.py: matriz de 12 cenários e resoluções.
+solutions.py: exercícios 5 e 6, incluindo doubles de tempo virtual.
+
+CONTRATO HTTP
+POST /v1/answers
+Content-Type: application/json
+Authorization: Bearer acme-demo (ou zen-demo)
+Corpo: {"topic":"refund","language":"en-US"}
+Campos extras são rejeitados. Assuntos: returns, refund, retention, p1,
+safety, limit, hours, payroll, sunday, emergency. Nem todo assunto tem
+documento autorizado para toda identidade. GET /health só indica processo.
+As identidades são públicas e didáticas, NÃO uma autenticação de produção.
+O corpo é limitado a 2048 bytes; o cliente padrão envia Content-Length.
+
+EXPERIMENTOS
+results/experiments.json contém 12 cenários: 1 resposta, 3 abstenções,
+8 erros. Tempo da matriz: virtual. Exercício 5 compara dois repositórios.
+Exercício 6 verifica 1600+901=2501 ms (rejeita), 1600+900=2500 (aceita),
+e busca de 2500 ms que impede iniciar a geração. Todos os custos são
+fictícios: 2 micro-USD/token de entrada e 6/token de saída. Não são tarifas.
+
+LIMITES
+API didática, sem modelo real, TLS, autenticação real, limitação global de
+concorrência, persistência ou observabilidade de produção. http.server não
+é servidor recomendado para produção. O assunto já vem classificado.
+O texto retornado é canônico, extraído do documento validado; não é prosa
+livre. O JSON é carregado na inicialização: reinicie após alterar o corpus.
+Snapshot fixo em 14/10/2026. Timeout do serviço é cooperativo e conferido
+após retorno; não interrompe uma função bloqueada. Rejeição por orçamento
+não desfaz gasto: o stub expensive registra 1560 mesmo sendo rejeitado.
+Somente o custo de modelo é representado, não o custo de infraestrutura.

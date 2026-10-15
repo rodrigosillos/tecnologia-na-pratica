@@ -1,0 +1,12 @@
+{
+  "exercise15": {
+    "valid": "complete",
+    "truncated": "rejected",
+    "duplicate": "rejected"
+  },
+  "exercise16": {
+    "revoked_item": "abstain",
+    "retained_item": "answer",
+    "cancelled": "cancelled"
+  }
+}

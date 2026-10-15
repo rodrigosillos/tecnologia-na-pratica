@@ -1,0 +1,13 @@
+{
+  "exercise9": {
+    "version": 2,
+    "rollback_preserved_v1": true,
+    "retry_idempotent": true,
+    "total_changes_not_commit_count": true
+  },
+  "exercise10": {
+    "blocked_after_revoke": true,
+    "purged_documents": 1,
+    "cache_entries": 0
+  }
+}

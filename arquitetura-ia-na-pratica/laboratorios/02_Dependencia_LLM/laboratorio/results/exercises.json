@@ -1,0 +1,50 @@
+{
+  "exercise3": {
+    "output_512": {
+      "selected": [
+        "A",
+        "B"
+      ],
+      "omitted": [
+        "C"
+      ],
+      "input_tokens": 3100,
+      "reserved_output": 512,
+      "margin": 128,
+      "slack": 356
+    },
+    "output_1024": {
+      "selected": [
+        "A"
+      ],
+      "omitted": [
+        "B",
+        "C"
+      ],
+      "input_tokens": 2100,
+      "reserved_output": 1024,
+      "margin": 128,
+      "slack": 844
+    },
+    "overflow_if_all_included": 544
+  },
+  "exercise4": {
+    "complete_json_incomplete_event": [
+      "incomplete",
+      null
+    ],
+    "valid_shape_unsupported_fact": [
+      "unsupported",
+      null
+    ],
+    "changed_serialization_same_fact": [
+      "accepted",
+      {
+        "reason": null,
+        "citation": "acme-returns-v2",
+        "fact_id": "return_30d",
+        "status": "answer"
+      }
+    ]
+  }
+}

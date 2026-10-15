@@ -1,0 +1,265 @@
+{
+  "cases": 22,
+  "language_pairs": 11,
+  "runs": [
+    {
+      "case": "complete",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "replay",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20,
+      "same_job": true
+    },
+    {
+      "case": "conflict",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20,
+      "conflict": true
+    },
+    {
+      "case": "duplicate",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "restart_checkpoint",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 2,
+      "checkpoint_at_stop": 1,
+      "result_rows": 1,
+      "pending": 0,
+      "process_exits": [
+        75,
+        0
+      ],
+      "virtual_ms": 110
+    },
+    {
+      "case": "restart_result",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 1,
+      "checkpoint_at_stop": 2,
+      "result_rows": 1,
+      "pending": 0,
+      "process_exits": [
+        75,
+        0
+      ],
+      "virtual_ms": 100
+    },
+    {
+      "case": "retry",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 2,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 220
+    },
+    {
+      "case": "dead_letter",
+      "language": "pt-BR",
+      "state": "failed",
+      "attempts": 3,
+      "completed_steps": 0,
+      "has_result": false,
+      "result_rows": 0,
+      "pending": 0,
+      "virtual_ms": 600
+    },
+    {
+      "case": "cancelled",
+      "language": "pt-BR",
+      "state": "cancelled",
+      "attempts": 0,
+      "completed_steps": 0,
+      "has_result": false,
+      "result_rows": 0,
+      "pending": 0,
+      "virtual_ms": 0
+    },
+    {
+      "case": "expired",
+      "language": "pt-BR",
+      "state": "expired",
+      "attempts": 0,
+      "completed_steps": 0,
+      "has_result": false,
+      "result_rows": 0,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "revoked_read",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": false,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "complete",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "replay",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20,
+      "same_job": true
+    },
+    {
+      "case": "conflict",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20,
+      "conflict": true
+    },
+    {
+      "case": "duplicate",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "restart_checkpoint",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 2,
+      "checkpoint_at_stop": 1,
+      "result_rows": 1,
+      "pending": 0,
+      "process_exits": [
+        75,
+        0
+      ],
+      "virtual_ms": 110
+    },
+    {
+      "case": "restart_result",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 1,
+      "checkpoint_at_stop": 2,
+      "result_rows": 1,
+      "pending": 0,
+      "process_exits": [
+        75,
+        0
+      ],
+      "virtual_ms": 100
+    },
+    {
+      "case": "retry",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 2,
+      "completed_steps": 2,
+      "has_result": true,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 220
+    },
+    {
+      "case": "dead_letter",
+      "language": "en-US",
+      "state": "failed",
+      "attempts": 3,
+      "completed_steps": 0,
+      "has_result": false,
+      "result_rows": 0,
+      "pending": 0,
+      "virtual_ms": 600
+    },
+    {
+      "case": "cancelled",
+      "language": "en-US",
+      "state": "cancelled",
+      "attempts": 0,
+      "completed_steps": 0,
+      "has_result": false,
+      "result_rows": 0,
+      "pending": 0,
+      "virtual_ms": 0
+    },
+    {
+      "case": "expired",
+      "language": "en-US",
+      "state": "expired",
+      "attempts": 0,
+      "completed_steps": 0,
+      "has_result": false,
+      "result_rows": 0,
+      "pending": 0,
+      "virtual_ms": 20
+    },
+    {
+      "case": "revoked_read",
+      "language": "en-US",
+      "state": "succeeded",
+      "attempts": 1,
+      "completed_steps": 2,
+      "has_result": false,
+      "result_rows": 1,
+      "pending": 0,
+      "virtual_ms": 20
+    }
+  ],
+  "measurement": "SQLite commits and controlled process restarts; synthetic virtual time, no external services"
+}

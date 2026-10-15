@@ -1,0 +1,70 @@
+{
+  "kind": "offline controlled ingestion scenarios",
+  "scenarios": [
+    {
+      "scenario": "same_intent",
+      "passed": true,
+      "observed": "same job"
+    },
+    {
+      "scenario": "key_conflict",
+      "passed": true,
+      "observed": "Conflict"
+    },
+    {
+      "scenario": "staging_hidden",
+      "passed": true,
+      "observed": "version 1"
+    },
+    {
+      "scenario": "batch_rollback",
+      "passed": true,
+      "observed": 0
+    },
+    {
+      "scenario": "checkpoint_resume",
+      "passed": true,
+      "observed": [
+        2,
+        2
+      ]
+    },
+    {
+      "scenario": "stale_writer",
+      "passed": true,
+      "observed": "LostLease"
+    },
+    {
+      "scenario": "atomic_activation",
+      "passed": true,
+      "observed": 2
+    },
+    {
+      "scenario": "projection_lag",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "generation_visible",
+      "passed": true,
+      "observed": 3
+    },
+    {
+      "scenario": "tenant_isolation",
+      "passed": true,
+      "observed": "zen: version 1"
+    },
+    {
+      "scenario": "revocation_preserved",
+      "passed": true,
+      "observed": "obsolete"
+    },
+    {
+      "scenario": "invalid_source",
+      "passed": true,
+      "observed": "quarantined"
+    }
+  ],
+  "passed": 12,
+  "total": 12
+}

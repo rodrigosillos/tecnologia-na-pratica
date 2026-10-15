@@ -1,0 +1,64 @@
+CAPÍTULO 11 - ROTEAMENTO E FALLBACK COM CRITÉRIOS EXPLÍCITOS
+R01 | 15/10/2026 | Rodrigo Sillos | Tecnologia na Prática
+
+PRÉ-REQUISITOS E EXECUÇÃO
+Python 3.10+ com sqlite3. Somente biblioteca padrão; sem pip, rede,
+credenciais ou chamadas a modelos. Abra um terminal nesta pasta:
+
+python -m unittest discover -v
+python routing_scenarios.py
+python routing_exercises.py
+
+São 227 testes: 176 herdados do capítulo 10 e 51 novos.
+O programa de cenários grava results/scenarios.json; o de exercícios,
+results/exercises.json. Os resultados são reprodutíveis.
+Os módulos antigos e seus comandos permanecem disponíveis: experiments.py
+e exercises.py pertencem ao capítulo 9; job_scenarios.py e job_exercises.py
+ao capítulo 10. Os relatórios de mesmo nome são substituídos apenas quando
+você executa esses programas; os resultados deste capítulo vêm prontos.
+
+O QUE FOI IMPLEMENTADO
+routing.py: cadastro fictício, aprovação por revisão/tarefa/idioma,
+elegibilidade, orçamento compartilhado, limite de chamadas, validação de
+comparações, retorno parcial e revalidação de fontes.
+routing_scenarios.py: 14 cenários em cada idioma, 28 execuções. Uma coorte
+adicional de 10 solicitações compara duas estratégias, 20 execuções.
+routing_exercises.py: exercícios 21 e 22 resolvidos.
+test_routing.py: 51 testes da nova camada.
+
+DADOS E RESULTADOS
+Os dois manuais do capítulo 10 usam 45/30 dias para devolução e 3/3 para
+postagem. O delta é B menos A. A extração é por padrões fixos, não por LLM.
+compact: 20 unidades, timeout 60 ms; large: 70 unidades, timeout 140 ms;
+remote: 10 unidades, timeout 40 ms, destino externo proibido por padrão.
+Os três nomes são simulados; não representam produtos comerciais.
+Tempos efetivos programados: 40, 90 e 20 ms virtuais, respectivamente.
+Finalização: 20 ms virtuais. Cada chamada consome sua reserva integral,
+mesmo em falha. Unidades são permissões fictícias, não reais ou dólares.
+
+Normal: full, compact, 1 chamada, 20 u, 60 ms.
+Fallback transitório: full, compact + large, 2 chamadas, 90 u, 150 ms.
+Parcial com teto 20: partial, somente returns, missing=['shipping'].
+Recusa: abstain, sem tentativa em outro modelo.
+Coorte programada: cascade 12 chamadas / 340 u / 780 ms somados;
+large_only 10 chamadas / 700 u / 1100 ms somados. Dez respostas completas
+em cada estratégia. Não são medições de desempenho ou qualidade de LLMs.
+
+EXERCÍCIOS
+21: teto 89, compact falha. Sobram 69; large exige 70. remote é proibido.
+Resultado: abstain, ['compact'], 20 unidades.
+22: teto 20, compact retorna apenas devolução validada.
+Resultado: partial, missing=['shipping'], delta=-15, 20 unidades.
+
+LIMITES
+O registro de aprovação é uma fixture, não uma avaliação empírica.
+Contexto é limitado em bytes UTF-8 do envelope capturado, não em tokens.
+O timeout virtual não prova interrupção de computação remota nem cobrança.
+Não há HTTP, streaming, redirecionamento de tráfego, cache, roteador treinado,
+reserva concorrente global, atualização automática de saúde ou medição de carga.
+O exemplo reutiliza captura/autorização do capítulo 10, mas não instala o
+roteador no worker durável: isso exigiria persistir as reservas de tentativas.
+Os testes herdados de reinício criam uma subpasta própria em scratch e a
+removem após fechar os bancos; os dados editoriais não são alterados.
+Adaptações reais devem validar destino, retenção, contrato, tokens, preços,
+limites de saída, custos incertos e qualidade por tarefa, versão e idioma.

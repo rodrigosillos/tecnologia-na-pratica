@@ -1,0 +1,16 @@
+{
+  "exercise29": {
+    "same_payload_hash": true,
+    "unapproved_state": "pending",
+    "wrong_preview": "preview_mismatch",
+    "effects": 1
+  },
+  "exercise30": {
+    "before": "unknown",
+    "after": "succeeded",
+    "effects": 1,
+    "create_calls": 1,
+    "lookups": 1,
+    "reason": "reconciled"
+  }
+}

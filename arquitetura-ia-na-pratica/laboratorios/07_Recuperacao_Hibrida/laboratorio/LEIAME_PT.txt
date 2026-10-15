@@ -1,0 +1,35 @@
+LABORATÓRIO DO CAPÍTULO 7 — RECUPERAÇÃO HÍBRIDA
+Python 3.10+ com sqlite3, somente biblioteca padrão. Na pasta laboratorio:
+python -m unittest discover -v
+python scenarios.py
+python solutions.py
+
+42 testes; 24 casos bilíngues em 12 pares; 3 variantes; exercícios 13 e 14.
+Cada variante avalia 14 perguntas com resposta e 10 negativas/ambíguas.
+Os comandos de cenários e soluções gravam results/. É preciso poder
+escrever nessa pasta. O banco é em memória; não usa dados pessoais.
+corpus.json e cases.json são cópias legíveis das constantes de fixtures.py.
+Para alterar o experimento executável, edite fixtures.py e preserve
+uma cópia da configuração antes de comparar os resultados.
+
+Integração: pipeline.py, ingestion.sql e base/ são cópias sem alterações
+do capítulo 6. Todas as fontes passam pela ingestão e ativação.
+Novidade: retrieval.py implementa BM25, vetores de conceitos, cosseno,
+RRF, orçamento de contexto, extração e validação de citações.
+São 7 documentos Acme e 1 Zen, dois idiomas: 16 fragmentos; Alice
+pode consultar 6 fragmentos por idioma e não pode acessar a folha.
+
+RESULTADOS E LIMITES
+Lexical e vetorial: 12/14 respostas corretas; híbrido: 14/14.
+As três variantes: 10/10 decisões negativas/ambíguas esperadas;
+zero violações de integridade referencial nas citações verificadas.
+Suite sintética feita junto com a representação, sem conjunto reservado.
+Não é um benchmark de embeddings treinados nem evidência de generalização.
+Vetor de 6 conceitos manuais; busca exata; sem ANN ou modelo externo.
+Gerador extrativo por padrões; não interpreta condições ou negações
+arbitrárias. Citação íntegra não prova validade semântica universal.
+Até 4 candidatos por recuperador; até 3 fragmentos de documentos distintos
+em 1100 caracteres do contexto JSON, não tokens. Conflito verificado
+apenas entre candidatos recuperados. Métodos administrativos confiáveis;
+nenhum endpoint HTTP, nenhuma ação externa, nenhum custo de API.
+Para rastrear a validação, veja ../Verificacao.json.

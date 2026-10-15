@@ -1,0 +1,61 @@
+LABORATÓRIO 01 - COPILOTO DE CONHECIMENTO
+Rodrigo Sillos | Tecnologia na Prática | Piloto R01, 14/10/2026
+
+REQUISITOS
+Python 3.10 ou superior. Somente biblioteca padrão. Sem instalação de
+dependências, chaves, rede ou APIs. Todos os dados são sintéticos.
+Abra um terminal nesta pasta. No Windows, python pode ser py -3;
+em outros sistemas, pode ser python3. Os comandos são equivalentes.
+
+EXECUÇÃO
+python --version
+python -m unittest -v
+python copilot.py --policy naive --out results/naive.json
+python copilot.py --policy guarded --out results/guarded.json
+python copilot.py --policy candidate --out results/candidate.json
+python copilot.py --policy abstain --out results/abstain.json
+python solutions.py
+
+Os testes devem terminar com OK (16 testes). solutions.py executa os
+dois exercícios resolvidos e o experimento com limites ampliados.
+Pode também executar diretamente:
+python copilot.py --policy candidate --latency-ms 5000 --budget-microusd 2000
+
+RESULTADOS ESPERADOS
+Política   Aceitas/elegíveis  Abstenções corretas  Exposições  Suíte
+naive      5/8               2/4                  2           reprova
+guarded    8/8               4/4                  0           aprova
+candidate  3/8               3/4                  1           reprova
+abstain    0/8               4/4                  0           reprova
+Com limites de 5.000 ms e 2.000 microdólares, candidate aceita 5/8,
+mas continua reprovado. Seu custo total simulado é 6.800 microdólares.
+
+COMO INVESTIGAR
+Leia os casos individuais nos JSONs de results. Diferencie correct_answer,
+on_time, within_budget e accepted_task. A taxa principal usa as oito
+perguntas elegíveis, não todas as doze solicitações. Nenhum resultado é
+benchmark de provedor. O replay do candidato é uma sequência autoral
+controlada, não uma execução de IA. Os 20 ms das consultas também são
+entradas simuladas. Custo zero significa zero API no cenário, não custo
+operacional total zero. 1.000.000 microdólares = US$ 1.
+
+CONTRATO E LIMITES
+Snapshot: 2026-10-14, intervalo de validade [início, fim).
+O assunto já vem classificado. Identidade e papel são confiáveis no teste.
+O resultado não contém prosa gerada. fact_id representa um fato fechado;
+expected_fact pertence somente ao avaliador. As organizações e os manuais
+são fictícios. Há 13 documentos e 12 casos de desenvolvimento, sem holdout.
+O detector de exposição cobre as citações deste contrato, não texto livre.
+Não há HTTP, execução de ações, fila, banco de dados ou controle real de
+gastos. A suíte local aprovada não certifica produção.
+
+ARQUIVOS
+copilot.py - implementação e terminal
+fixtures.json - dados bilíngues, gabarito e eventos sintéticos
+test_copilot.py - 16 testes de comportamento e fronteiras
+solutions.py - exercícios e experimento executáveis
+results/ - execução de referência; os comandos podem sobrescrever relatórios
+
+Se o resultado divergir, confira a versão do Python e preserve a mensagem
+de falha. Não mude o gabarito para aprovar o código. Para testar novos dados,
+use uma cópia e mantenha corpus, caso e expectativa coerentes e versionados.

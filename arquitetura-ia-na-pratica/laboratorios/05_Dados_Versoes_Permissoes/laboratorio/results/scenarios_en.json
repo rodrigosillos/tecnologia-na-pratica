@@ -1,0 +1,73 @@
+{
+  "kind": "offline deterministic lifecycle scenarios",
+  "scenarios": [
+    {
+      "scenario": "tenant_isolation",
+      "passed": true,
+      "observed": [
+        "Window: 30 days.",
+        "Window: 7 days."
+      ]
+    },
+    {
+      "scenario": "unknown_membership",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "role_denied",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "authorized_cache_hit",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "scenario": "language_separated",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "scenario": "index_lag_blocks",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "published_version",
+      "passed": true,
+      "observed": 2
+    },
+    {
+      "scenario": "old_event_no_rollback",
+      "passed": true,
+      "observed": 2
+    },
+    {
+      "scenario": "revoke_before_release",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "cached_answer_after_revoke",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "late_event_after_delete",
+      "passed": true,
+      "observed": "unavailable"
+    },
+    {
+      "scenario": "retention_deadline",
+      "passed": true,
+      "observed": [
+        0,
+        1
+      ]
+    }
+  ],
+  "passed": 12,
+  "total": 12
+}

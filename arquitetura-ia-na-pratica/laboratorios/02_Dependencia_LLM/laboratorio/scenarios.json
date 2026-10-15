@@ -1,0 +1,206 @@
+{
+  "notice": "All envelopes, chunks, counts and durations are authored fixtures; no model run.",
+  "scenarios": [
+    {
+      "id": "s01",
+      "label": "valid_answer",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\": \"answer\", \"fact_id\": \"re",
+          "turn_30d\", \"citation\": \"acme-returns-v2\", \"reason\": null}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 50
+        }
+      }
+    },
+    {
+      "id": "s02",
+      "label": "truncated_json",
+      "case_id": "a01",
+      "event": {
+        "state": "incomplete",
+        "chunks": [
+          "{\"status\":\"answer\",",
+          ""
+        ],
+        "first_ms": 80,
+        "end_ms": 700,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 20
+        }
+      }
+    },
+    {
+      "id": "s03",
+      "label": "malformed_json",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\":\"answer\"",
+          ""
+        ],
+        "first_ms": 80,
+        "end_ms": 500,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 45
+        }
+      }
+    },
+    {
+      "id": "s04",
+      "label": "wrong_field_type",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\": \"answer\", \"fact_id\": [\"r",
+          "eturn_30d\"], \"citation\": \"acme-returns-v2\", \"reason\": null}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 50
+        }
+      }
+    },
+    {
+      "id": "s05",
+      "label": "unsupported_fact",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\": \"answer\", \"fact_id\": \"re",
+          "turn_999d\", \"citation\": \"acme-returns-v2\", \"reason\": null}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 50
+        }
+      }
+    },
+    {
+      "id": "s06",
+      "label": "invented_citation",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\": \"answer\", \"fact_id\": \"re",
+          "turn_30d\", \"citation\": \"invented-source\", \"reason\": null}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 50
+        }
+      }
+    },
+    {
+      "id": "s07",
+      "label": "stale_citation",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\": \"answer\", \"fact_id\": \"re",
+          "turn_15d\", \"citation\": \"acme-returns-v1\", \"reason\": null}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 50
+        }
+      }
+    },
+    {
+      "id": "s08",
+      "label": "provider_refusal",
+      "case_id": "a01",
+      "event": {
+        "state": "refused",
+        "chunks": [
+          "",
+          ""
+        ],
+        "first_ms": null,
+        "end_ms": 180,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 8
+        }
+      }
+    },
+    {
+      "id": "s09",
+      "label": "timeout_unknown_usage",
+      "case_id": "a01",
+      "event": {
+        "state": "unavailable",
+        "chunks": [
+          "",
+          ""
+        ],
+        "first_ms": null,
+        "end_ms": 2500,
+        "usage": null
+      }
+    },
+    {
+      "id": "s10",
+      "label": "other_tenant_citation",
+      "case_id": "a02",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\"status\": \"answer\", \"fact_id\": \"re",
+          "fund_2d\", \"citation\": \"zen-refund-v1\", \"reason\": null}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 50
+        }
+      }
+    },
+    {
+      "id": "s11",
+      "label": "same_meaning_different_bytes",
+      "case_id": "a01",
+      "event": {
+        "state": "completed",
+        "chunks": [
+          "{\n  \"reason\": null,\n  \"citation\": \"",
+          "acme-returns-v2\",\n  \"fact_id\": \"return_30d\",\n  \"status\": \"answer\"\n}"
+        ],
+        "first_ms": 80,
+        "end_ms": 240,
+        "usage": {
+          "input_tokens": 180,
+          "output_tokens": 52
+        }
+      }
+    },
+    {
+      "id": "s12",
+      "label": "missing_business_evidence",
+      "case_id": "u02",
+      "event": null
+    }
+  ]
+}

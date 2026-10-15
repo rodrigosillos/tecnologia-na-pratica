@@ -1,0 +1,17 @@
+{
+  "exercise21": {
+    "state": "abstain",
+    "calls": [
+      "compact"
+    ],
+    "units": 20
+  },
+  "exercise22": {
+    "state": "partial",
+    "missing": [
+      "shipping"
+    ],
+    "delta": -15,
+    "units": 20
+  }
+}

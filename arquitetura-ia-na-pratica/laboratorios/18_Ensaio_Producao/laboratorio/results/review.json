@@ -1,0 +1,30 @@
+{
+  "evidence": {
+    "containment": {
+      "status": "pass",
+      "reference": "scenarios.json:runs[case=malicious_document]"
+    },
+    "capacity": {
+      "status": "pass",
+      "reference": "scenarios.json:runs[case=queue_saturation]"
+    },
+    "recovery": {
+      "status": "pass",
+      "reference": "scenarios.json:runs[case=provider_recovery]"
+    },
+    "live_quality": {
+      "status": "unmeasured",
+      "reference": ""
+    },
+    "operations": {
+      "status": "unmeasured",
+      "reference": ""
+    }
+  },
+  "decision": "hold",
+  "failed": [],
+  "unmeasured": [
+    "live_quality",
+    "operations"
+  ]
+}

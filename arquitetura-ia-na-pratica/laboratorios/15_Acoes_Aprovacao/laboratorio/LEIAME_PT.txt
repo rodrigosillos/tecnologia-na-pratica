@@ -1,0 +1,67 @@
+CAPÍTULO 15 - AÇÕES EXTERNAS E APROVAÇÃO HUMANA
+Rodrigo Sillos | Tecnologia na Prática | R01 | 15/10/2026
+
+REQUISITOS
+Python 3.11+ e biblioteca padrão com sqlite3. Nenhum SDK ou credencial.
+Abra um terminal nesta pasta laboratorio e execute:
+
+python -m unittest discover -v
+python action_scenarios.py
+python action_exercises.py
+
+460 testes: 400 herdados e 60 novos. 36 cenários: 18 por idioma.
+action_scenarios.py grava results/scenarios.json; action_exercises.py imprime
+os exercícios resolvidos. results/exercises.json já acompanha a entrega.
+Comandos de capítulos anteriores continuam presentes e podem sobrescrever
+results/scenarios.json com seus próprios cenários. Execute action_scenarios.py
+novamente para reproduzir os resultados do capítulo 15.
+
+ARQUIVOS
+actions.py: parser, intenção, prévia, decisão, persistência, executor,
+reconciliação e destino simulado em outro banco SQLite.
+action_scenarios.py: fixtures, falhas, 18 situações PT/EN.
+action_exercises.py: exercícios 29 e 30 completos.
+test_actions.py: 60 testes novos; demais módulos/testes preservados.
+
+COMO FUNCIONA
+Alice solicita; Carol revisa. Ambas pertencem ao tenant fictício acme.
+A proposta só aceita tool=prepare_task, project=ops e tópico autorizado.
+O workflow do capítulo 14 compara os manuais. Devoluções: 45 -> 30 dias.
+Postagem: 3 -> 3, sem divergência; o tópico shipping não gera tarefa.
+Preview e envio usam o mesmo payload estruturado e operação versionada.
+Aprovação vincula ID e hash, revisor e instante; TTL padrão 30 s virtuais.
+Grant é administração confiável da fixture; Actor não é autenticação real.
+A revisora pode ver a projeção de fatos de ops; não ganha acesso ao corpo.
+Fontes e permissões são revalidadas antes de agir.
+
+ESTADOS E RECUPERAÇÃO
+pending -> approved/rejected; approved -> dispatching após verificações.
+Resposta comprovada -> succeeded; timeout/erro ambíguo -> unknown.
+Cancelar só antes do despacho. Expiração/revogação bloqueiam novos envios.
+Consulta de comprovante pode reconhecer efeito antigo após revogação.
+Retry usa a mesma chave, parâmetros idênticos e limite de duas tentativas.
+O destino guarda chaves permanentemente nesta simulação, por tenant.
+Duas intenções separadamente aprovadas podem gerar tarefas iguais:
+deduplicação técnica não equivale a deduplicação de negócio.
+recover só deve ser usado quando o executor antigo comprovadamente parou.
+
+RESULTADOS
+Normal: 1 tentativa, 1 chamada, 1 efeito.
+Timeout após commit: unknown, 1 efeito; consulta conclui sem novo envio.
+Timeout antes: unknown, 0 efeitos; retry válido: 2 chamadas, 1 efeito.
+Crash antes da chamada: 2 tentativas assumidas, 1 chamada, 1 efeito.
+Reinício depois do commit: 1 chamada e 1 efeito, recibo reconciliado.
+Ex29: hashes iguais, segunda intenção pending, hash errado recusado, 1 efeito.
+Ex30: unknown -> succeeded após expiração/revogação; 1 chamada e 1 consulta.
+
+LIMITES
+Dados fictícios. Tempo virtual; não é benchmark. Não há rede ou efeitos reais.
+Execução serial, sem leases, fencing distribuído, broker ou worker contínuo.
+Reinício fecha/reabre conexões, mantendo a fixture documental em memória.
+Não há atomicidade entre revalidação documental e commit no destino.
+Hash não é assinatura; banco/administração/código Python são confiáveis.
+Auditoria transacional não é imutável; recusas de decisão não são auditadas.
+Capturas no banco exigiriam proteção e retenção em produção.
+Módulos cumulativos de custo/fila/telemetria não estão automaticamente ligados.
+Os bancos temporários são criados sob scratch e removidos ao terminar.
+Nenhum anúncio, publicação, e-mail ou serviço externo é alterado.

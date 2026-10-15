@@ -1,0 +1,599 @@
+{
+  "cases": 36,
+  "language_pairs": 18,
+  "runs": [
+    {
+      "case": "pending",
+      "language": "pt-BR",
+      "state": "pending",
+      "reason": null,
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending"
+      ]
+    },
+    {
+      "case": "success",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "reason": "receipt",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 0,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "human_reject",
+      "language": "pt-BR",
+      "state": "rejected",
+      "reason": "human",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "rejected"
+      ]
+    },
+    {
+      "case": "cancelled",
+      "language": "pt-BR",
+      "state": "cancelled",
+      "reason": "user",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "cancelled"
+      ]
+    },
+    {
+      "case": "wrong_hash",
+      "language": "pt-BR",
+      "state": "pending",
+      "reason": "preview_mismatch",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending"
+      ]
+    },
+    {
+      "case": "self_approval",
+      "language": "pt-BR",
+      "state": "pending",
+      "reason": "reviewer",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending"
+      ]
+    },
+    {
+      "case": "expired",
+      "language": "pt-BR",
+      "state": "expired",
+      "reason": "expired",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "expired"
+      ]
+    },
+    {
+      "case": "requester_revoked",
+      "language": "pt-BR",
+      "state": "invalidated",
+      "reason": "requester_revoked",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "reviewer_revoked",
+      "language": "pt-BR",
+      "state": "invalidated",
+      "reason": "reviewer_revoked",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "source_revoked",
+      "language": "pt-BR",
+      "state": "invalidated",
+      "reason": "stale",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "revised",
+      "language": "pt-BR",
+      "state": "invalidated",
+      "reason": "stale",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "timeout_before",
+      "language": "pt-BR",
+      "state": "unknown",
+      "reason": "ambiguous",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown"
+      ]
+    },
+    {
+      "case": "timeout_after",
+      "language": "pt-BR",
+      "state": "unknown",
+      "reason": "ambiguous",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 0,
+      "effects": 1,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown"
+      ]
+    },
+    {
+      "case": "reconcile_after",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "reason": "reconciled",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "retry_before",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "reason": "receipt",
+      "attempts": 2,
+      "create_calls": 2,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "dispatching",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "crash_before",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "reason": "receipt",
+      "attempts": 2,
+      "create_calls": 1,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "dispatching",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "restart_after",
+      "language": "pt-BR",
+      "state": "succeeded",
+      "reason": "reconciled",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "attempt_limit",
+      "language": "pt-BR",
+      "state": "unknown",
+      "reason": "attempt_limit",
+      "attempts": 2,
+      "create_calls": 2,
+      "lookups": 1,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "dispatching",
+        "unknown"
+      ]
+    },
+    {
+      "case": "pending",
+      "language": "en-US",
+      "state": "pending",
+      "reason": null,
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending"
+      ]
+    },
+    {
+      "case": "success",
+      "language": "en-US",
+      "state": "succeeded",
+      "reason": "receipt",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 0,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "human_reject",
+      "language": "en-US",
+      "state": "rejected",
+      "reason": "human",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "rejected"
+      ]
+    },
+    {
+      "case": "cancelled",
+      "language": "en-US",
+      "state": "cancelled",
+      "reason": "user",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "cancelled"
+      ]
+    },
+    {
+      "case": "wrong_hash",
+      "language": "en-US",
+      "state": "pending",
+      "reason": "preview_mismatch",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending"
+      ]
+    },
+    {
+      "case": "self_approval",
+      "language": "en-US",
+      "state": "pending",
+      "reason": "reviewer",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending"
+      ]
+    },
+    {
+      "case": "expired",
+      "language": "en-US",
+      "state": "expired",
+      "reason": "expired",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "expired"
+      ]
+    },
+    {
+      "case": "requester_revoked",
+      "language": "en-US",
+      "state": "invalidated",
+      "reason": "requester_revoked",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "reviewer_revoked",
+      "language": "en-US",
+      "state": "invalidated",
+      "reason": "reviewer_revoked",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "source_revoked",
+      "language": "en-US",
+      "state": "invalidated",
+      "reason": "stale",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "revised",
+      "language": "en-US",
+      "state": "invalidated",
+      "reason": "stale",
+      "attempts": 0,
+      "create_calls": 0,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "invalidated"
+      ]
+    },
+    {
+      "case": "timeout_before",
+      "language": "en-US",
+      "state": "unknown",
+      "reason": "ambiguous",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 0,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown"
+      ]
+    },
+    {
+      "case": "timeout_after",
+      "language": "en-US",
+      "state": "unknown",
+      "reason": "ambiguous",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 0,
+      "effects": 1,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown"
+      ]
+    },
+    {
+      "case": "reconcile_after",
+      "language": "en-US",
+      "state": "succeeded",
+      "reason": "reconciled",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "retry_before",
+      "language": "en-US",
+      "state": "succeeded",
+      "reason": "receipt",
+      "attempts": 2,
+      "create_calls": 2,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "dispatching",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "crash_before",
+      "language": "en-US",
+      "state": "succeeded",
+      "reason": "receipt",
+      "attempts": 2,
+      "create_calls": 1,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "dispatching",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "restart_after",
+      "language": "en-US",
+      "state": "succeeded",
+      "reason": "reconciled",
+      "attempts": 1,
+      "create_calls": 1,
+      "lookups": 1,
+      "effects": 1,
+      "has_receipt": true,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "succeeded"
+      ]
+    },
+    {
+      "case": "attempt_limit",
+      "language": "en-US",
+      "state": "unknown",
+      "reason": "attempt_limit",
+      "attempts": 2,
+      "create_calls": 2,
+      "lookups": 1,
+      "effects": 0,
+      "has_receipt": false,
+      "events": [
+        "pending",
+        "approved",
+        "dispatching",
+        "unknown",
+        "dispatching",
+        "unknown"
+      ]
+    }
+  ],
+  "measurement": "Local SQLite intent and separate simulated destination; virtual integer seconds, no external effects or network. Serial execution; restart closes and reopens connections. Not a production benchmark."
+}

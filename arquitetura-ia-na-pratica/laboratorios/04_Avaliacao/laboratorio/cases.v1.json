@@ -1,0 +1,501 @@
+{
+  "version": "cases.v1",
+  "snapshot": "2026-10-14",
+  "provenance": "original synthetic cases",
+  "review_status": "authored fixture; no independent human annotation study",
+  "split_note": "All cases are visible regression cases; no held-out generalization claim.",
+  "cases": [
+    {
+      "id": "returns_pt-BR",
+      "group": "returns",
+      "category": "version",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "returns",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A devolução pode ser solicitada em até 30 dias corridos.",
+        "citations": [
+          "acme-returns-v2"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "returns_en-US",
+      "group": "returns",
+      "category": "version",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "returns",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A return may be requested within 30 calendar days.",
+        "citations": [
+          "acme-returns-v2"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "refund_acme_pt-BR",
+      "group": "refund_acme",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "refund",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "O reembolso ocorre em até 5 dias úteis após a aprovação.",
+        "citations": [
+          "acme-refund-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "refund_acme_en-US",
+      "group": "refund_acme",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "refund",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A refund is issued within 5 business days of approval.",
+        "citations": [
+          "acme-refund-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "retention_pt-BR",
+      "group": "retention",
+      "category": "version",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "retention",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "Os registros operacionais são retidos por 90 dias.",
+        "citations": [
+          "acme-retention-v2"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "retention_en-US",
+      "group": "retention",
+      "category": "version",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "retention",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "Operational records are retained for 90 days.",
+        "citations": [
+          "acme-retention-v2"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "p1_pt-BR",
+      "group": "p1",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "p1",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "Incidentes P1 devem ser reconhecidos em até 15 minutos.",
+        "citations": [
+          "acme-p1-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "p1_en-US",
+      "group": "p1",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "p1",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "P1 incidents must be acknowledged within 15 minutes.",
+        "citations": [
+          "acme-p1-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "safety_pt-BR",
+      "group": "safety",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "safety",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A abertura do gabinete exige a presença de duas pessoas autorizadas.",
+        "citations": [
+          "acme-safety-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "safety_en-US",
+      "group": "safety",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "safety",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "Opening the cabinet requires two authorized people to be present.",
+        "citations": [
+          "acme-safety-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "limit_pt-BR",
+      "group": "limit",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "limit",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A aprovação de compras por um supervisor está limitada a 5.000 unidades monetárias.",
+        "citations": [
+          "acme-limit-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "limit_en-US",
+      "group": "limit",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "limit",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A supervisor may approve purchases up to 5,000 currency units.",
+        "citations": [
+          "acme-limit-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "refund_zen_pt-BR",
+      "group": "refund_zen",
+      "category": "tenant",
+      "split": "regression",
+      "input": {
+        "tenant": "zen",
+        "role": "operator",
+        "topic": "refund",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "O reembolso ocorre em até 2 dias úteis após a aprovação.",
+        "citations": [
+          "zen-refund-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "refund_zen_en-US",
+      "group": "refund_zen",
+      "category": "tenant",
+      "split": "regression",
+      "input": {
+        "tenant": "zen",
+        "role": "operator",
+        "topic": "refund",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "A refund is issued within 2 business days of approval.",
+        "citations": [
+          "zen-refund-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "hours_pt-BR",
+      "group": "hours",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "hours",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "O suporte atende das 08h às 18h nos dias úteis, no horário de São Paulo.",
+        "citations": [
+          "acme-hours-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "hours_en-US",
+      "group": "hours",
+      "category": "answer",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "hours",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "Support operates from 08:00 to 18:00 on business days, São Paulo time.",
+        "citations": [
+          "acme-hours-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "payroll_admin_pt-BR",
+      "group": "payroll_admin",
+      "category": "access",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "payroll_admin",
+        "topic": "payroll",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "O processamento da folha ocorre no dia 20.",
+        "citations": [
+          "acme-payroll-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "payroll_admin_en-US",
+      "group": "payroll_admin",
+      "category": "access",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "payroll_admin",
+        "topic": "payroll",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "answer",
+        "answer": "Payroll is processed on the 20th.",
+        "citations": [
+          "acme-payroll-v1"
+        ],
+        "reason": null
+      },
+      "rationale": "Canonical current fact, authorized for this principal; synthetic label."
+    },
+    {
+      "id": "denied_pt-BR",
+      "group": "denied",
+      "category": "access",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "payroll",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "abstain",
+        "answer": null,
+        "citations": [],
+        "reason": "insufficient_evidence"
+      },
+      "rationale": "Do not answer: access, absence, or unresolved source conflict; synthetic label."
+    },
+    {
+      "id": "denied_en-US",
+      "group": "denied",
+      "category": "access",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "payroll",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "abstain",
+        "answer": null,
+        "citations": [],
+        "reason": "insufficient_evidence"
+      },
+      "rationale": "Do not answer: access, absence, or unresolved source conflict; synthetic label."
+    },
+    {
+      "id": "missing_pt-BR",
+      "group": "missing",
+      "category": "missing",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "sunday",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "abstain",
+        "answer": null,
+        "citations": [],
+        "reason": "insufficient_evidence"
+      },
+      "rationale": "Do not answer: access, absence, or unresolved source conflict; synthetic label."
+    },
+    {
+      "id": "missing_en-US",
+      "group": "missing",
+      "category": "missing",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "sunday",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "abstain",
+        "answer": null,
+        "citations": [],
+        "reason": "insufficient_evidence"
+      },
+      "rationale": "Do not answer: access, absence, or unresolved source conflict; synthetic label."
+    },
+    {
+      "id": "conflict_pt-BR",
+      "group": "conflict",
+      "category": "conflict",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "emergency",
+        "language": "pt-BR"
+      },
+      "expected": {
+        "decision": "human_review",
+        "answer": null,
+        "citations": [],
+        "reason": "conflicting_evidence"
+      },
+      "rationale": "Do not answer: access, absence, or unresolved source conflict; synthetic label."
+    },
+    {
+      "id": "conflict_en-US",
+      "group": "conflict",
+      "category": "conflict",
+      "split": "regression",
+      "input": {
+        "tenant": "acme",
+        "role": "operator",
+        "topic": "emergency",
+        "language": "en-US"
+      },
+      "expected": {
+        "decision": "human_review",
+        "answer": null,
+        "citations": [],
+        "reason": "conflicting_evidence"
+      },
+      "rationale": "Do not answer: access, absence, or unresolved source conflict; synthetic label."
+    }
+  ]
+}

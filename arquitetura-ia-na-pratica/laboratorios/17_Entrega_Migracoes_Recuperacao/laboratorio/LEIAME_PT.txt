@@ -1,0 +1,50 @@
+CAPÍTULO 17 - ENTREGA, MIGRAÇÕES E RECUPERAÇÃO OPERACIONAL
+Rodrigo Sillos | Tecnologia na Prática | R01 | 15/10/2026
+
+EXECUTAR (Python 3.11+, biblioteca padrão, sem credenciais nem rede)
+Abra o terminal nesta pasta laboratorio e execute:
+python -m unittest discover -s .
+python -m unittest test_releases -v
+python release_scenarios.py
+python -c "from release_exercises import exercise33,exercise34; print(exercise33()); print(exercise34())"
+
+ENTREGA
+602 testes: 532 herdados e 70 novos. 20 cenários em PT/EN = 40 execuções.
+results/scenarios.json: estados reproduzíveis; results/exercises.json: soluções 33/34.
+Os comandos imprimem resultados, sem substituir os JSONs de referência.
+
+ARQUIVOS NOVOS
+releases.py: manifesto, avaliação, migração, promoção/rollback, trabalho vinculado,
+backup pela API SQLite e restauração com liberação explícita.
+release_scenarios.py: fixtures, relógio virtual, arquivos temporários e matriz.
+release_exercises.py: soluções verificáveis dos exercícios 33/34.
+test_releases.py: falhas, integridade, duas conexões, recuperação e compatibilidade.
+
+CONTRATOS
+r1/v1: status e texto; schema 1 ou 2.
+r2/v2: acrescenta proveniência na resposta e coluna opcional; exige schema 2.
+broken: regressão sintética devolve 999; passa 4 de 6 verificações, não é promovida.
+Avaliação: três casos por idioma, seis ao todo; validade de 15 unidades virtuais.
+Promoção: manifesto/código/índice vigentes, avaliação 6/6, schema compatível e época esperada.
+Rollback: release previamente ativa, mesmas verificações; época avança, schema 2 permanece.
+Trabalhos: release fixada na admissão; resultado salvo revalida as fontes atuais.
+Backup: apenas o registro local, mais digest lógico em JSON; não inclui fontes nem destinos externos.
+Restore: destino novo, nunca sobrescreve; inicia em recovery. Avalie e use resume antes de atender.
+
+LIMITES E INTERPRETAÇÃO
+Não há LLM: prompts são inventário; respostas e falhas são determinísticas.
+index_digest cobre projeções de chunks locais, não um índice vetorial remoto.
+CORE lista os módulos cobertos pelo digest; não é assinatura completa de dependências.
+Há migração SQLite real, mas não backfill em massa nem etapa destrutiva de contração.
+Não há cluster, canário real, worker distribuído, fencing externo, identidade real ou cofre de secrets.
+Operador, código e armazenamento são confiáveis. Hash não substitui autenticação de artefato.
+Registro e fonte estão em bases diferentes; não existe atomicidade distribuída entre elas.
+Exceções antes/depois do commit e reabertura de conexão não são testes de pane física.
+Restaurar volta também a época do backup; workers antigos precisariam ser isolados em produção.
+O cenário restore perde uma admissão posterior. Não mede RPO/RTO temporal de produção.
+Rollback não desfaz efeitos externos. A restauração não recupera automaticamente permissões atuais.
+A fonte em memória permanece durante o exercício; somente o registro é restaurado.
+Os módulos herdados estão preservados, mas sua integração não é automática.
+
+Arquivos temporários: scratch, __pycache__. Nenhum serviço real é modificado.
+Guias anteriores permanecem nas pastas dos respectivos capítulos.

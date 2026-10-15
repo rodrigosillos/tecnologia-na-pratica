@@ -1,0 +1,98 @@
+[
+  {
+    "case_id": "returns_pt-BR",
+    "A": "baseline"
+  },
+  {
+    "case_id": "returns_en-US",
+    "A": "baseline"
+  },
+  {
+    "case_id": "refund_acme_pt-BR",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "refund_acme_en-US",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "retention_pt-BR",
+    "A": "baseline"
+  },
+  {
+    "case_id": "retention_en-US",
+    "A": "baseline"
+  },
+  {
+    "case_id": "p1_pt-BR",
+    "A": "baseline"
+  },
+  {
+    "case_id": "p1_en-US",
+    "A": "baseline"
+  },
+  {
+    "case_id": "safety_pt-BR",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "safety_en-US",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "limit_pt-BR",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "limit_en-US",
+    "A": "baseline"
+  },
+  {
+    "case_id": "refund_zen_pt-BR",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "refund_zen_en-US",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "hours_pt-BR",
+    "A": "baseline"
+  },
+  {
+    "case_id": "hours_en-US",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "payroll_admin_pt-BR",
+    "A": "baseline"
+  },
+  {
+    "case_id": "payroll_admin_en-US",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "denied_pt-BR",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "denied_en-US",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "missing_pt-BR",
+    "A": "baseline"
+  },
+  {
+    "case_id": "missing_en-US",
+    "A": "baseline"
+  },
+  {
+    "case_id": "conflict_pt-BR",
+    "A": "fast_unsafe"
+  },
+  {
+    "case_id": "conflict_en-US",
+    "A": "fast_unsafe"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "cases": 14,
+  "measurement": "Deterministic in-process contract scenarios, not network or LLM benchmarks",
+  "runs": [
+    {
+      "case": "complete",
+      "language": "pt-BR",
+      "state": "completed",
+      "outcome": "complete",
+      "answers": 2,
+      "progress_events": 2
+    },
+    {
+      "case": "partial",
+      "language": "pt-BR",
+      "state": "completed",
+      "outcome": "partial",
+      "answers": 1,
+      "progress_events": 2
+    },
+    {
+      "case": "clarify",
+      "language": "pt-BR",
+      "state": "completed",
+      "outcome": "no_answer",
+      "answers": 0,
+      "progress_events": 2
+    },
+    {
+      "case": "cancelled",
+      "language": "pt-BR",
+      "state": "cancelled",
+      "outcome": null,
+      "answers": 0,
+      "progress_events": 2
+    },
+    {
+      "case": "revoked",
+      "language": "pt-BR",
+      "state": "completed",
+      "outcome": "partial",
+      "answers": 1,
+      "progress_events": 2
+    },
+    {
+      "case": "error",
+      "language": "pt-BR",
+      "state": "failed",
+      "outcome": null,
+      "answers": 0,
+      "progress_events": 1
+    },
+    {
+      "case": "truncated",
+      "language": "pt-BR",
+      "state": "protocol_error",
+      "outcome": null,
+      "answers": 0,
+      "progress_events": null
+    },
+    {
+      "case": "complete",
+      "language": "en-US",
+      "state": "completed",
+      "outcome": "complete",
+      "answers": 2,
+      "progress_events": 2
+    },
+    {
+      "case": "partial",
+      "language": "en-US",
+      "state": "completed",
+      "outcome": "partial",
+      "answers": 1,
+      "progress_events": 2
+    },
+    {
+      "case": "clarify",
+      "language": "en-US",
+      "state": "completed",
+      "outcome": "no_answer",
+      "answers": 0,
+      "progress_events": 2
+    },
+    {
+      "case": "cancelled",
+      "language": "en-US",
+      "state": "cancelled",
+      "outcome": null,
+      "answers": 0,
+      "progress_events": 2
+    },
+    {
+      "case": "revoked",
+      "language": "en-US",
+      "state": "completed",
+      "outcome": "partial",
+      "answers": 1,
+      "progress_events": 2
+    },
+    {
+      "case": "error",
+      "language": "en-US",
+      "state": "failed",
+      "outcome": null,
+      "answers": 0,
+      "progress_events": 1
+    },
+    {
+      "case": "truncated",
+      "language": "en-US",
+      "state": "protocol_error",
+      "outcome": null,
+      "answers": 0,
+      "progress_events": null
+    }
+  ]
+}

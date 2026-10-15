@@ -1,0 +1,6 @@
+English edition, R04
+Run python -m unittest discover -v for the shared regression suite.
+Run python solutions_en.py for the English exercises.
+These entry points reuse the original implementation and bilingual fixtures.
+Portuguese entry points and historical reports are preserved.
+English outputs are in results/*_en.json.

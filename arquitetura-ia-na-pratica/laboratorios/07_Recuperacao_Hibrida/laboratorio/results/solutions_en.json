@@ -1,0 +1,20 @@
+{
+  "exercise13": {
+    "POL-RET-01": {
+      "lexical": "answer",
+      "vector": "abstain",
+      "hybrid": "answer"
+    },
+    "Exchange?": {
+      "lexical": "abstain",
+      "vector": "answer",
+      "hybrid": "answer"
+    }
+  },
+  "exercise14": {
+    "before": "answer",
+    "during": "abstain",
+    "after": "abstain",
+    "released_citations": 0
+  }
+}

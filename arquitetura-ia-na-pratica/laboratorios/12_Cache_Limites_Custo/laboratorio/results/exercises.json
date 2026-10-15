@@ -1,0 +1,34 @@
+{
+  "exercise23": {
+    "states": [
+      "full",
+      "full",
+      "abstain"
+    ],
+    "calls": [
+      1,
+      0,
+      0
+    ],
+    "spent": 28
+  },
+  "exercise24": {
+    "admissions": [
+      "admitted",
+      "admitted",
+      "budget"
+    ],
+    "before": {
+      "cap": 200,
+      "spent": 24,
+      "held": 94,
+      "available": 82
+    },
+    "after": {
+      "cap": 200,
+      "spent": 98,
+      "held": 0,
+      "available": 102
+    }
+  }
+}

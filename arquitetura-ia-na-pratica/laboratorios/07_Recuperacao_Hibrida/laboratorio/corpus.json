@@ -1,0 +1,30 @@
+{
+  "returns": [
+    "[POL-RET-01] Devolução: prazo de 45 dias. Exige comprovante de compra.",
+    "[POL-RET-01] Returns: window of 45 days. Proof of purchase is required."
+  ],
+  "shipping": [
+    "[POL-SHIP-01] Postagem: despacho em 3 dias. Consulte o rastreio no portal.",
+    "[POL-SHIP-01] Shipping: dispatch in 3 days. Track the parcel in the portal."
+  ],
+  "reset": [
+    "[POL-AUTH-01] Redefinição de senha: link válido por 15 minutos. Não compartilhe o link.",
+    "[POL-AUTH-01] Password reset: link valid for 15 minutes. Do not share the link."
+  ],
+  "backup": [
+    "[POL-BAK-01] Backup: retenção de 30 dias. A restauração exige autorização.",
+    "[POL-BAK-01] Backup: retention of 30 days. Restore requires authorization."
+  ],
+  "rate": [
+    "[POL-API-01] Erro 429: aguarde 60 segundos antes de repetir. Respeite o limite da API.",
+    "[POL-API-01] Error 429: wait 60 seconds before retry. Respect the API rate limit."
+  ],
+  "support": [
+    "[POL-SUP-01] Suporte: resposta em até 24 horas. Use o canal de atendimento.",
+    "[POL-SUP-01] Support: response within 24 hours. Use the helpdesk channel."
+  ],
+  "payroll": [
+    "Folha: pagamento confidencial no dia 20. Apenas administradores.",
+    "Payroll: confidential payment on day 20. Administrators only."
+  ]
+}

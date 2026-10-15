@@ -1,0 +1,205 @@
+{
+  "measurement_kind": "synthetic_replay_not_model_benchmark",
+  "snapshot": "2026-10-14",
+  "summary": {
+    "scenarios": 12,
+    "attempted": 11,
+    "decisions": {
+      "accepted": 2,
+      "business_abstention": 1,
+      "incomplete": 1,
+      "invalid_json": 1,
+      "invalid_schema": 1,
+      "refused": 1,
+      "unavailable": 1,
+      "unsupported": 4
+    },
+    "known_cost_microusd": 6150,
+    "unmetered_attempts": 1,
+    "total_cost_microusd": null,
+    "microusd_per_accepted": null
+  },
+  "rows": [
+    {
+      "id": "s01",
+      "case_id": "a01",
+      "decision": "accepted",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": {
+        "status": "answer",
+        "fact_id": "return_30d",
+        "citation": "acme-returns-v2",
+        "reason": null
+      },
+      "cost_microusd": 660,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": true
+    },
+    {
+      "id": "s02",
+      "case_id": "a01",
+      "decision": "incomplete",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 480,
+      "first_ms": 80,
+      "end_ms": 700,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s03",
+      "case_id": "a01",
+      "decision": "invalid_json",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 630,
+      "first_ms": 80,
+      "end_ms": 500,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s04",
+      "case_id": "a01",
+      "decision": "invalid_schema",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 660,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s05",
+      "case_id": "a01",
+      "decision": "unsupported",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 660,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s06",
+      "case_id": "a01",
+      "decision": "unsupported",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 660,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s07",
+      "case_id": "a01",
+      "decision": "unsupported",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 660,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s08",
+      "case_id": "a01",
+      "decision": "refused",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": 408,
+      "first_ms": null,
+      "end_ms": 180,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s09",
+      "case_id": "a01",
+      "decision": "unavailable",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": null,
+      "cost_microusd": null,
+      "first_ms": null,
+      "end_ms": 2500,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s10",
+      "case_id": "a02",
+      "decision": "unsupported",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-refund-v1"
+      ],
+      "response": null,
+      "cost_microusd": 660,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": null
+    },
+    {
+      "id": "s11",
+      "case_id": "a01",
+      "decision": "accepted",
+      "attempted": true,
+      "sent_document_ids": [
+        "acme-returns-v2"
+      ],
+      "response": {
+        "reason": null,
+        "citation": "acme-returns-v2",
+        "fact_id": "return_30d",
+        "status": "answer"
+      },
+      "cost_microusd": 672,
+      "first_ms": 80,
+      "end_ms": 240,
+      "oracle_correct_if_accepted": true
+    },
+    {
+      "id": "s12",
+      "case_id": "u02",
+      "decision": "business_abstention",
+      "attempted": false,
+      "sent_document_ids": [],
+      "response": {
+        "status": "abstain",
+        "fact_id": null,
+        "citation": null,
+        "reason": "insufficient_evidence"
+      },
+      "cost_microusd": 0,
+      "first_ms": null,
+      "end_ms": 0,
+      "oracle_correct_if_accepted": null
+    }
+  ]
+}

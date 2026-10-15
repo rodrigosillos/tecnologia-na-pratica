@@ -1,0 +1,13 @@
+{
+  "exercise19": {
+    "jobs": 1,
+    "deliveries": 2,
+    "result_rows": 1,
+    "pending": 0
+  },
+  "exercise20": {
+    "saved_stage": 1,
+    "state": "failed",
+    "result": null
+  }
+}

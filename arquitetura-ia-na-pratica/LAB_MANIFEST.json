@@ -1,0 +1,2464 @@
+{
+  "source": "book consolidation R04",
+  "date": "2026-10-15",
+  "chapters": [
+    {
+      "chapter": 1,
+      "folder": "01_Piloto",
+      "pt": "LEIA-ME-PT.txt",
+      "en": "README-EN.txt"
+    },
+    {
+      "chapter": 2,
+      "folder": "02_Dependencia_LLM",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 3,
+      "folder": "03_Arquitetura_Minima",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 4,
+      "folder": "04_Avaliacao",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 5,
+      "folder": "05_Dados_Versoes_Permissoes",
+      "pt": "LEIAME_PT.txt",
+      "en": "ENGLISH_EDITION_R04.txt"
+    },
+    {
+      "chapter": 6,
+      "folder": "06_Ingestao_Recuperavel",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 7,
+      "folder": "07_Recuperacao_Hibrida",
+      "pt": "LEIAME_PT.txt",
+      "en": "ENGLISH_EDITION_R04.txt"
+    },
+    {
+      "chapter": 8,
+      "folder": "08_Contratos_Saida",
+      "pt": "LEIAME_PT.txt",
+      "en": "ENGLISH_EDITION_R04.txt"
+    },
+    {
+      "chapter": 9,
+      "folder": "09_Prazos_Retries_Circuit_Breakers",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 10,
+      "folder": "10_Trabalhos_Assincronos",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 11,
+      "folder": "11_Roteamento_Fallback",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 12,
+      "folder": "12_Cache_Limites_Custo",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 13,
+      "folder": "13_Observabilidade",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 14,
+      "folder": "14_Fluxo_Workflow_Agente",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 15,
+      "folder": "15_Acoes_Aprovacao",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 16,
+      "folder": "16_Seguranca_Alem_Prompt",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 17,
+      "folder": "17_Entrega_Migracoes_Recuperacao",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    },
+    {
+      "chapter": 18,
+      "folder": "18_Ensaio_Producao",
+      "pt": "LEIAME_PT.txt",
+      "en": "README_EN.txt"
+    }
+  ],
+  "files": [
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/copilot.py",
+      "sha256": "0ab01afe3a0c87be9a0a6ff05632f1dc1cb289fed24d55d99a28db9d87bf7862"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/fixtures.json",
+      "sha256": "e226a879ef3be2aa5e4cce465eba024e55123112b9063b7ca7247fe1594c1fde"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/LEIA-ME-PT.txt",
+      "sha256": "d620126a350e6ca4250305ac0780a1c979718e41e0b0efeabae875eb74e92d8c"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/README-EN.txt",
+      "sha256": "b894e56f92b75682ebbdae054c2130d3f78b5d8a403177c95cdc20f4741e5e2a"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/results/abstain.json",
+      "sha256": "a6b46abf8c4f7b1a067b12848b3f697388e6a1e1b8e10f1bb3988c80a2239d0e"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/results/candidate.json",
+      "sha256": "01f4ed18f671441acfe752336c5b064cd6fb4e58327cbaa79001cb5b6e188c90"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/results/guarded.json",
+      "sha256": "96b97d67bf8c45be16931ec74a477dcf9f5f3e13e32aebb468e1fdc6550bf1c7"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/results/naive.json",
+      "sha256": "e0517dd57c2e35c0f921c24c3e840b1d60278b57a9c197a6c85dd115321d5dc2"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/results/relaxed.json",
+      "sha256": "9239438c59f5d45c33edd6da3ab18b95a5735190ef99bd2d0c1f6166237c3ac4"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/results/solutions.json",
+      "sha256": "4cb20b84dcf8fad79918fb2433812de7ddd7063759b5f8f8c87f04264299ca17"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/solutions-run.txt",
+      "sha256": "a57f9ac66a3800cfc68cfbfa75bed65bbb1fa7941c9b6430b2aed543c89c026d"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/solutions.py",
+      "sha256": "96306453eb7cf80bf1d1b9c53f1e9ed4f3d65bd4461f01717255f5101e4e3aa1"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/test-run.txt",
+      "sha256": "981921292d599f2bdfaaadfae08860841caf0ed415d01ff8f93547a749547abd"
+    },
+    {
+      "path": "laboratorios/01_Piloto/laboratorio/test_copilot.py",
+      "sha256": "f5a5565c9d6d8f5f19b12944c7d418fce092835c8be6ef6185561a165902ad32"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/boundary.py",
+      "sha256": "43acf6609858bae8255b132d395b03305b991312865c76505afd82d099619604"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/chapter1.py",
+      "sha256": "0ab01afe3a0c87be9a0a6ff05632f1dc1cb289fed24d55d99a28db9d87bf7862"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/fixtures.json",
+      "sha256": "e226a879ef3be2aa5e4cce465eba024e55123112b9063b7ca7247fe1594c1fde"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/LEIAME_PT.txt",
+      "sha256": "7d454507744a44c27ff921cf1fd0f0ea5872047347cdc2d62908dc7a5cbaefa8"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/README_EN.txt",
+      "sha256": "1aa9cb1b99218f76a6bea5c1bb8fd1eb10abb22f2cc0e1b9fbba633b0dd64d23"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/results/boundary.json",
+      "sha256": "260e4148d20c5d34e03b542f37325db62538a8f76ea41d8c3f7e861cb72b1221"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/results/exercises.json",
+      "sha256": "70e85a7352abf91404c6d2dcadb8e04b7d322a1c93fdfcc363d3dd31ac456a6b"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/scenarios.json",
+      "sha256": "db335fa96c34c74ea9171629e9455635a9641acc13c084b8ad4b139329d1efd3"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/solutions.py",
+      "sha256": "03fd5ea1943929ee5ad626c63ee00a4cfa37b5212c95ffd9c49c14e6acfab8dd"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/test_boundary.py",
+      "sha256": "72cf27736888be14037ad7a5b71ba2450a8878a675bacdcbca8c848540292d94"
+    },
+    {
+      "path": "laboratorios/02_Dependencia_LLM/laboratorio/test_chapter1.py",
+      "sha256": "9f004aee2dd1453ec78fd41b2711a9a62323df10b615e749205789fa470a0ef7"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/adapters.py",
+      "sha256": "3b06b7bd50a208ea845eadead2d2315bcaf98d01710604da38a4c72f52f442fc"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/bootstrap.py",
+      "sha256": "d2c9e0a2cd7f40f27bb1ae832111b050e41c7b5d7932715e3ece05dd02042df2"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/client.py",
+      "sha256": "d49aa688338295dbee4c57bfdeb8a94beeaae64563adedfcc8be74c2898333e3"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/contracts.py",
+      "sha256": "e35a853f202a691850e2cdb5fb64e8b192ef81ca00ff3046b38577947878d042"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/documents.json",
+      "sha256": "daa6c3c470319205355edc356e54f42544d7a4d54de9c1450f22be54b660553a"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/experiments.py",
+      "sha256": "0e76b65be93c6d0f2202a8a02c29a5d7454dfa5b3b86d97f016d21d62a37f39d"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/http_api.py",
+      "sha256": "e96d94308e7bf669639627bff1de7443aee899ea27a3ec8f8a0dc3a4b2597ce3"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/LEIAME_PT.txt",
+      "sha256": "60e11cbb575310ddc812f225682f5da23300b594c09d14c51f7a40ba75a30299"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/policy.py",
+      "sha256": "00cd9b891e35c09ffdeac087fd741d32281bd077a7490f2197191dd07e9888c7"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/ports.py",
+      "sha256": "f978a5670dad2caca7f0c315abd4973d2bcc395e9cde3ca96fa7b60affb62249"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/README_EN.txt",
+      "sha256": "af133d8bf7b43c061c7ca79b01c6c591603d89df999cc00a2f1058f7090508f4"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/results/exercises.json",
+      "sha256": "2afee00d791185659ed365893dd5ae20f3a8280c27e8ddd90883429c8ac1bcac"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/results/experiments.json",
+      "sha256": "61a013d6451edafb5aa90620650e4e4e4988c31284da97bf04a9664743ce31fb"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/service.py",
+      "sha256": "960dc69d330e19372382afd1e61c437265de622a58814f7dbfad7edb395cd778"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/settings.py",
+      "sha256": "21d33e3b9969c2d3bc15174ad417386b7ef0b319ebd458e85594b9fad31d06b3"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/solutions.py",
+      "sha256": "07eced65d4dfa036301457914d3951d67826bfc6ae9a52a38bbbca4b1eacdc68"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/test_architecture.py",
+      "sha256": "6ea88fd4c8db8837e483601eea3fb9f50f00433d92d7d4cd1326f8f5cf647cf3"
+    },
+    {
+      "path": "laboratorios/03_Arquitetura_Minima/laboratorio/test_http.py",
+      "sha256": "ceaa515cf49cabbc91cb86792fef4a4181676ddc28d3a438afede0430f04e55b"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/adapters.py",
+      "sha256": "3b06b7bd50a208ea845eadead2d2315bcaf98d01710604da38a4c72f52f442fc"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/contracts.py",
+      "sha256": "e35a853f202a691850e2cdb5fb64e8b192ef81ca00ff3046b38577947878d042"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/documents.json",
+      "sha256": "daa6c3c470319205355edc356e54f42544d7a4d54de9c1450f22be54b660553a"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/policy.py",
+      "sha256": "00cd9b891e35c09ffdeac087fd741d32281bd077a7490f2197191dd07e9888c7"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/ports.py",
+      "sha256": "f978a5670dad2caca7f0c315abd4973d2bcc395e9cde3ca96fa7b60affb62249"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/service.py",
+      "sha256": "960dc69d330e19372382afd1e61c437265de622a58814f7dbfad7edb395cd778"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/app/settings.py",
+      "sha256": "21d33e3b9969c2d3bc15174ad417386b7ef0b319ebd458e85594b9fad31d06b3"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/cases.v1.json",
+      "sha256": "def79807d9c2ececa15873530bf0440f0a2bc4bc62ecfc79455f3d97d44ba23e"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/evaluation.py",
+      "sha256": "c55e5fca3ca17aae97761bb35e29078cd9be7f156c9326bc818a3f249637d03c"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/LEIAME_PT.txt",
+      "sha256": "f69692f44b6abb1684fb2f383860c1a350dd964ecd1ea8cc8e2d86c46ce04e65"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/policy.v1.json",
+      "sha256": "21f7f1d7495d64ea7cd1d6ffe7a22436aa35bbf7dec0433c932a9e73f05b987b"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/README_EN.txt",
+      "sha256": "b030ae5d182e005f1fd049fd95fa4ea742f8471c81d803d0e542e4cac1387325"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/results/chave_revisao.json",
+      "sha256": "ad2ed124daa5da2548e9ae60a19a20905f3f007232d95cc529e2df1e5d4bc046"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/results/evaluation.json",
+      "sha256": "4b6df76eac2c45a3a5881119f6b8c709a194e745c57be4d8cc7905d3c6c6cc62"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/results/exercises.json",
+      "sha256": "78c0efbf7ea306c21e1eaf48c946f9946dcff83a795bd84765524ebd0b9a29d4"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/solutions.py",
+      "sha256": "db47bec5a4b5b2efda673c23f079467bbbd07d15c2300ff1a59ec5b0dc59b6bb"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/systems.py",
+      "sha256": "0fc911291364ffc49312d705cad895bae8dfca08eed839e51e1cd8231195668e"
+    },
+    {
+      "path": "laboratorios/04_Avaliacao/laboratorio/test_evaluation.py",
+      "sha256": "e30f7d85e9c30cebdc4667ac5b5a483187370c7f060a2bb79e03112f3b32c9c6"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/ENGLISH_EDITION_R04.txt",
+      "sha256": "6877f076e2d35eda6bf7f3f452d711421a40eb52c51f055a1405b9f8b6cecc34"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/LEIAME_PT.txt",
+      "sha256": "c9d42a29ace47371ef97ce1e349f45f6c764df6401164e3197164a9a5749538c"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/README_EN.txt",
+      "sha256": "c8c02976a67abca5651b895642daafe3c880a2cfd11e6ec8995c90772b6fc103"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/results/exercises.json",
+      "sha256": "a5cb3a09c1f5dc838fcaead4657934a9da7146f92a889806b3d52e44bbf2a0b8"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/results/scenarios.json",
+      "sha256": "598b78201f655608f13f148fb844dba6b1bee34e2e349b89174fab5e9a053ed7"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/results/scenarios_en.json",
+      "sha256": "dc2136a2af50540953a8cb4ec3b0955af9833f21ce03e6c5cde552189dbf4d50"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/results/solutions_en.json",
+      "sha256": "a5cb3a09c1f5dc838fcaead4657934a9da7146f92a889806b3d52e44bbf2a0b8"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/scenarios.py",
+      "sha256": "91ffedf4d45e4b9fd4ad82d7b7c5c2e533e90dd651878216c2c29aa7177026da"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/scenarios_en.py",
+      "sha256": "fa2d1d06f250fda06e0f721eb1ecd897e81c780940c74ef14bd0216f9f94171b"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/solutions.py",
+      "sha256": "7245be5abb5384014428496e14c1e1ea700a82fb7a944fa0c77cbb61f105dcc3"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/solutions_en.py",
+      "sha256": "1ba7a2b1598b7d3c60294706ead5c194c86fde270235f59b3d31df7dcaabf2ef"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/05_Dados_Versoes_Permissoes/laboratorio/test_store.py",
+      "sha256": "c0d037e949f86b639f2e775568cacf6423e452bc0db9ce6e912a7f639532dfa6"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/LEIAME_PT.txt",
+      "sha256": "3375279803d1efcd12e3f66f28661dd2bda1ce53e93057ae2434f04caea5df72"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/README_EN.txt",
+      "sha256": "9ec42de03d09ec1403fc36ae5db3093346dc0d7938734e466db5b2ee63620278"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/results/exercises.json",
+      "sha256": "f3eaae73f76de7d7169caad0a527224b4a7c3192166cc15e0497009df78275dc"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/results/scenarios.json",
+      "sha256": "e1e463b1ac90c9b20467ad89e072abb19d17756abb6423051e7669f3139609c7"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/scenarios.py",
+      "sha256": "88f3b3a1a8cd15eb2b658111b6db3da751d378582a0207640edff6c2c203bb33"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/solutions.py",
+      "sha256": "c5355385ed24f2a390b06a7e94bae10ce58a97243020f8c9abe04788e69992fe"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/source.json",
+      "sha256": "e8036d0b22fecc1076ed4d5abd0736ff71fe49666898ddec19a54bbd1557d279"
+    },
+    {
+      "path": "laboratorios/06_Ingestao_Recuperavel/laboratorio/test_ingestion.py",
+      "sha256": "e1d4ade7aa47bb3b0b4913a1d6fa116c6723a38b5ea03c67ff29e468643e3e2c"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/cases.json",
+      "sha256": "c563ba1ea3498632846a261cf1f72b25e6262b98dbce4ac11fa4468fe56ba60f"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/corpus.json",
+      "sha256": "52b0a951c7b5aca64f16a8c96c45220a35e0c144506d29d0cb9c239f8a2913f1"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/ENGLISH_EDITION_R04.txt",
+      "sha256": "3db8a5a3fe11586bc8774a2ee0f69d52e7dd11c12c48a855c5b1c6b8e4834342"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/LEIAME_PT.txt",
+      "sha256": "e6cf3d1d933e38b657f15efa67ed05050919477e41e5ffc87791158158a40c5b"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/README_EN.txt",
+      "sha256": "681fb6b26df0b89cf531d1987a3de3d167a7461d6a6b3629acc61211c9019f60"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/results/exercises.json",
+      "sha256": "9b790dc8290839ad3b6c6627f1a968217d94608ecfbedee5534cd75537727bb8"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/results/scenarios.json",
+      "sha256": "acd6827e154549f5295f45c7faf12b3df99389de20d7330e09b04b8354e1c7d0"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/results/solutions_en.json",
+      "sha256": "ee27ac78e79e3d7d095d8c72fa1573d4216fe9ae1a706f1b1743b5960bef5b85"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/scenarios.py",
+      "sha256": "dbc730674c010ac953420ae05490b1e2addeb0fe0d58027f2615547e2487f61d"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/solutions_en.py",
+      "sha256": "966b9ee8f371958fc1da8bb174e662ff3fdff8a3ff24b68531d3a95cee9ee89b"
+    },
+    {
+      "path": "laboratorios/07_Recuperacao_Hibrida/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/ENGLISH_EDITION_R04.txt",
+      "sha256": "3db8a5a3fe11586bc8774a2ee0f69d52e7dd11c12c48a855c5b1c6b8e4834342"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/LEIAME_PT.txt",
+      "sha256": "65d2c6c09efa4822dd5dbb1287d4156998dd9f45ccbe60aa6c8efc49d2880c97"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/README_EN.txt",
+      "sha256": "abb37a9ff63509b488fb7350db8678de78dc59693591cf2a17466f17864dcf47"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/results/exercises.json",
+      "sha256": "865f5bc63627ae45f2a248ec7e4438933f65ef7c2989e03cecbf87e01abe7d69"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/results/scenarios.json",
+      "sha256": "12a11de5c2ff0e6fac682e9bfa4f3edc13f25c84dee90cb98c2ddf091ae85ad4"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/results/solutions_en.json",
+      "sha256": "4b1c7ed5c62df5c4429e9617103fb6f48d7b3f8a8e6f22300b99a2094a2ce4f6"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/solutions_en.py",
+      "sha256": "6af72bbbccefbe7caa74171c5b7c152fa7944a73c376f9f6b94f9b53b9961a88"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/08_Contratos_Saida/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/LEIAME_PT.txt",
+      "sha256": "23985496d9a9e5b173ee0c67aa6631e70029140222e4b0a51dd0e42d0504835a"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/README_EN.txt",
+      "sha256": "cf2094504b2c9f398bf2ad0c5191619f842368561e15f7aa52545679857c5ea5"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/results/exercises.json",
+      "sha256": "a423fe0dcdb8982fdd343d60fdd98160c41a6b146eb6a0273b55ff8070575d77"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/results/scenarios.json",
+      "sha256": "236c1b5ce08154669f5ecdd04fbebcef5a06e2ebd255be6f3057727c87683d9c"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/09_Prazos_Retries_Circuit_Breakers/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/LEIAME_PT.txt",
+      "sha256": "3dac636bdc8e344cccfff808877f6451185e45540ef021ce84aeb68a0c01d786"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/README_EN.txt",
+      "sha256": "3a805476e14ec7790fddc20d3f6f0cf8c672dd71d42b15372857726b91cf0db9"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/results/exercises.json",
+      "sha256": "85a296f929d3e06f123b412eec40b8f1e81b125a48d005712b9c269ed41de007"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/results/scenarios.json",
+      "sha256": "8acccfbaffc53958daab0d55bda2f71164106706e1e63cbfaa77b7f0b8817c33"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/10_Trabalhos_Assincronos/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/LEIAME_PT.txt",
+      "sha256": "b39dacdbf2a899143db75e2b3b2f9f81d981b7b1bf344bcd99c7e7c551f38dac"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/README_EN.txt",
+      "sha256": "7171194133f8e7042fa14689e994e994c9950a7f27fc167978fdf9880d04da71"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/results/exercises.json",
+      "sha256": "1cf1d54e098ae2753e9fa6bd9c95d1eaae8f1a21280854863fdd1194094214c5"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/results/scenarios.json",
+      "sha256": "6a5dea46854132afa31d9eca1515794968f0913ea0435cf2d9edf22dea51367d"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/11_Roteamento_Fallback/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/LEIAME_PT.txt",
+      "sha256": "b648cb8870c65ae1fb6d63c05e7b5f78cfd4e9e3a56b51b846bc458b50287e69"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/README_EN.txt",
+      "sha256": "fbd8a842398fe4815f657161cc4fda6ff0cceab1c017a574fbc4f9d69af46497"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/results/exercises.json",
+      "sha256": "690677e7cb46caed53207bbca9030a90de2955caa38cff57ecd0b0d94d6e7897"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/results/scenarios.json",
+      "sha256": "cb379ec9931e70cf258c43b49bcdfe143ae72c57b667f3e26cb4254af14e8f25"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/12_Cache_Limites_Custo/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/LEIAME_PT.txt",
+      "sha256": "80419eeb07d0ce3feb349f856e1ba1ba9872c84c95792e4368774ba0557161cb"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/observability.py",
+      "sha256": "81dec42fd66623b1a3b9e65da8b40389032980200c5c21999125b78a5b993686"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/observe_exercises.py",
+      "sha256": "379f4ad75b0db3319990eb020c7d335c4cc935d3843ecab63a1ad37e7dd984ce"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/observe_scenarios.py",
+      "sha256": "6833311a2e14630c631bf3ba40da3316d474575552835d64ec08099002a1c1bc"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/README_EN.txt",
+      "sha256": "8ca4078f4176a7ffaf4cc6ffb9c14767e63b6e8156402f1742f764e8d252bf83"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/results/example_trace.json",
+      "sha256": "30e6091092c064d63b6182591c21a863e1374f608fe335988b8acad90938051a"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/results/exercises.json",
+      "sha256": "7e342ad6e75442a9a80e462294863e83356d490609018dbb086b28ca25a7fee3"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/results/scenarios.json",
+      "sha256": "400ad2dc23eb3d09fddd702294e962a3c6b4141a71bcb6e11c2158d8bda1919d"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_observability.py",
+      "sha256": "0a12a3da060a9b9a9d07ce2ff396d77787d05cccadce2a5af4a79a304f35462a"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/13_Observabilidade/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/control.py",
+      "sha256": "02aa90e182e7caceb6166163693fcf3ba8d57bf443bf175313dadf2e4cca706e"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/control_exercises.py",
+      "sha256": "66b7a0d24a89609b060551cb7870034a82cca0d9dfc73292eef11ffd8cb77971"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/control_scenarios.py",
+      "sha256": "a3a6bd5f3290d27059ae85643a59ac962365f7ff408b76c4fd81fc2008bdae0a"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/LEIAME_PT.txt",
+      "sha256": "e7599ca06e2b524d3feb84c480bc9383b19e6efdf88d246b72c3e5c999dc3c56"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/observability.py",
+      "sha256": "81dec42fd66623b1a3b9e65da8b40389032980200c5c21999125b78a5b993686"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/observe_exercises.py",
+      "sha256": "379f4ad75b0db3319990eb020c7d335c4cc935d3843ecab63a1ad37e7dd984ce"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/observe_scenarios.py",
+      "sha256": "6833311a2e14630c631bf3ba40da3316d474575552835d64ec08099002a1c1bc"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/README_EN.txt",
+      "sha256": "bf79d39f4241fd11ec36dd624018830f22a5961e61ec7decac742da296df6bf1"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/results/exercises.json",
+      "sha256": "fe0ad224c8be8538cf65e2dcc610813875963ae0ba15ac399e6be299c1181837"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/results/scenarios.json",
+      "sha256": "8f58c0c16941be68a9af664e75dff49c69a95ca6ecac9076aae58ddb31427622"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_control.py",
+      "sha256": "2acc506b42304fd1c77699908945ced95548cffd170aac190ba8e9d85417babe"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_observability.py",
+      "sha256": "0a12a3da060a9b9a9d07ce2ff396d77787d05cccadce2a5af4a79a304f35462a"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/14_Fluxo_Workflow_Agente/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/action_exercises.py",
+      "sha256": "40c869155548d6fc69ea89f67c9d3d3b678f6765e9e78d9dcf36dd2a3814de59"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/action_scenarios.py",
+      "sha256": "a3eb43bf53646ff73288278c671ae9a6563bc6a7be3248d513c5bfad6374892e"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/actions.py",
+      "sha256": "fe6fca81415fb75d9ddfc942eb9b3c0e464157bbefba8dba284bd5d1316e67e7"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/control.py",
+      "sha256": "02aa90e182e7caceb6166163693fcf3ba8d57bf443bf175313dadf2e4cca706e"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/control_exercises.py",
+      "sha256": "66b7a0d24a89609b060551cb7870034a82cca0d9dfc73292eef11ffd8cb77971"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/control_scenarios.py",
+      "sha256": "a3a6bd5f3290d27059ae85643a59ac962365f7ff408b76c4fd81fc2008bdae0a"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/LEIAME_PT.txt",
+      "sha256": "f0a6e97eb3210483c30f270e5683cd5b843698b3a8b6f24ffa691a09227dbea6"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/observability.py",
+      "sha256": "81dec42fd66623b1a3b9e65da8b40389032980200c5c21999125b78a5b993686"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/observe_exercises.py",
+      "sha256": "379f4ad75b0db3319990eb020c7d335c4cc935d3843ecab63a1ad37e7dd984ce"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/observe_scenarios.py",
+      "sha256": "6833311a2e14630c631bf3ba40da3316d474575552835d64ec08099002a1c1bc"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/README_EN.txt",
+      "sha256": "f7975fdd5e2153cbd27fe9c9786abc00a45ba0245795e5e510f61dc88f5293f9"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/results/exercises.json",
+      "sha256": "854ceca9969dc496c9db809e7ed615dd10d44d5ce8773faf7236e1558561b7fd"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/results/scenarios.json",
+      "sha256": "5ddd33844c02de8942845fd9e3892261921e57661939e9a0c52e71459f82676f"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_actions.py",
+      "sha256": "3b6d4fb298daaf7ac3958ddfb4799f691a48bc94ceae29bdc92488196c32520d"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_control.py",
+      "sha256": "2acc506b42304fd1c77699908945ced95548cffd170aac190ba8e9d85417babe"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_observability.py",
+      "sha256": "0a12a3da060a9b9a9d07ce2ff396d77787d05cccadce2a5af4a79a304f35462a"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/15_Acoes_Aprovacao/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/action_exercises.py",
+      "sha256": "40c869155548d6fc69ea89f67c9d3d3b678f6765e9e78d9dcf36dd2a3814de59"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/action_scenarios.py",
+      "sha256": "a3eb43bf53646ff73288278c671ae9a6563bc6a7be3248d513c5bfad6374892e"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/actions.py",
+      "sha256": "fe6fca81415fb75d9ddfc942eb9b3c0e464157bbefba8dba284bd5d1316e67e7"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/control.py",
+      "sha256": "02aa90e182e7caceb6166163693fcf3ba8d57bf443bf175313dadf2e4cca706e"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/control_exercises.py",
+      "sha256": "66b7a0d24a89609b060551cb7870034a82cca0d9dfc73292eef11ffd8cb77971"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/control_scenarios.py",
+      "sha256": "a3a6bd5f3290d27059ae85643a59ac962365f7ff408b76c4fd81fc2008bdae0a"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/LEIAME_PT.txt",
+      "sha256": "0fa00eb365fe00d3da4225003f6b045d37efc53fb21a81e88d0eabc8f191b7d6"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/observability.py",
+      "sha256": "81dec42fd66623b1a3b9e65da8b40389032980200c5c21999125b78a5b993686"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/observe_exercises.py",
+      "sha256": "379f4ad75b0db3319990eb020c7d335c4cc935d3843ecab63a1ad37e7dd984ce"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/observe_scenarios.py",
+      "sha256": "6833311a2e14630c631bf3ba40da3316d474575552835d64ec08099002a1c1bc"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/README_EN.txt",
+      "sha256": "0c74a6ccf321a005a55dc7af09b100001b6784185bbcdb41e9d8f15385bfe41f"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/results/exercises.json",
+      "sha256": "bea36b74b681b7d2e146ab9117aac8fa0da5a802ed500139431556e116fa987d"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/results/scenarios.json",
+      "sha256": "ed66ac941b1af6945352478902d4c4f848c713de632a368dfa71dca0e4b24868"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/security_exercises.py",
+      "sha256": "69cc319dd09cee9ed513e89e390aa5cd6f5ad19c661356bf29df1f3eb4e3d76c"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/security_gate.py",
+      "sha256": "d9f02734eae4fae2059474fabb060bf8ca9e2e5163580382ec30c32d10faf093"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/security_scenarios.py",
+      "sha256": "1dee69e7657037cc0822ecd14e309a9061702a8d641eea6a61586b3594cc5d98"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_actions.py",
+      "sha256": "3b6d4fb298daaf7ac3958ddfb4799f691a48bc94ceae29bdc92488196c32520d"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_control.py",
+      "sha256": "2acc506b42304fd1c77699908945ced95548cffd170aac190ba8e9d85417babe"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_observability.py",
+      "sha256": "0a12a3da060a9b9a9d07ce2ff396d77787d05cccadce2a5af4a79a304f35462a"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/test_security.py",
+      "sha256": "3f9f7066d9fc157daad338dd8b9f6350f652ea12d2fcaeced7c4f1e0a0f9c262"
+    },
+    {
+      "path": "laboratorios/16_Seguranca_Alem_Prompt/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/action_exercises.py",
+      "sha256": "40c869155548d6fc69ea89f67c9d3d3b678f6765e9e78d9dcf36dd2a3814de59"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/action_scenarios.py",
+      "sha256": "a3eb43bf53646ff73288278c671ae9a6563bc6a7be3248d513c5bfad6374892e"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/actions.py",
+      "sha256": "fe6fca81415fb75d9ddfc942eb9b3c0e464157bbefba8dba284bd5d1316e67e7"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/control.py",
+      "sha256": "02aa90e182e7caceb6166163693fcf3ba8d57bf443bf175313dadf2e4cca706e"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/control_exercises.py",
+      "sha256": "66b7a0d24a89609b060551cb7870034a82cca0d9dfc73292eef11ffd8cb77971"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/control_scenarios.py",
+      "sha256": "a3a6bd5f3290d27059ae85643a59ac962365f7ff408b76c4fd81fc2008bdae0a"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/LEIAME_PT.txt",
+      "sha256": "b08b84cc3f99553e2a7f0d4ee606859ac69fba757aeae761c4b1f9fc5813b39b"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/observability.py",
+      "sha256": "81dec42fd66623b1a3b9e65da8b40389032980200c5c21999125b78a5b993686"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/observe_exercises.py",
+      "sha256": "379f4ad75b0db3319990eb020c7d335c4cc935d3843ecab63a1ad37e7dd984ce"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/observe_scenarios.py",
+      "sha256": "6833311a2e14630c631bf3ba40da3316d474575552835d64ec08099002a1c1bc"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/README_EN.txt",
+      "sha256": "e30aad1358e9252c651849f0fdd0887ebb68f4cd11bacb684efdb6f0fbe5b3ba"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/release_exercises.py",
+      "sha256": "22c01b9f7501cbccbf186257e67157450482839ae695d42b26ea12b951436328"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/release_scenarios.py",
+      "sha256": "5166e201e164c266cc3cf4dadfcff908f2ee2daf29653822b862fb7727bd00f1"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/releases.py",
+      "sha256": "4885e27664e646613c449689d50a44234a253dee6875dfadf87f9a4b092fb1ee"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/results/exercises.json",
+      "sha256": "0850ff036533f9551aeaa88f71cff757122122d53be8c55c800382a37bb9e701"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/results/scenarios.json",
+      "sha256": "4a349958200b048c5556ea9b7f3106c28bf4c04a637e2e0973b4289ff6ffec9f"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/security_exercises.py",
+      "sha256": "69cc319dd09cee9ed513e89e390aa5cd6f5ad19c661356bf29df1f3eb4e3d76c"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/security_gate.py",
+      "sha256": "d9f02734eae4fae2059474fabb060bf8ca9e2e5163580382ec30c32d10faf093"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/security_scenarios.py",
+      "sha256": "1dee69e7657037cc0822ecd14e309a9061702a8d641eea6a61586b3594cc5d98"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_actions.py",
+      "sha256": "3b6d4fb298daaf7ac3958ddfb4799f691a48bc94ceae29bdc92488196c32520d"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_control.py",
+      "sha256": "2acc506b42304fd1c77699908945ced95548cffd170aac190ba8e9d85417babe"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_observability.py",
+      "sha256": "0a12a3da060a9b9a9d07ce2ff396d77787d05cccadce2a5af4a79a304f35462a"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_releases.py",
+      "sha256": "67b5d823b42698b9f4949be166137e88db760ead2dd1d1bf14657a65fd902aa7"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/test_security.py",
+      "sha256": "3f9f7066d9fc157daad338dd8b9f6350f652ea12d2fcaeced7c4f1e0a0f9c262"
+    },
+    {
+      "path": "laboratorios/17_Entrega_Migracoes_Recuperacao/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/action_exercises.py",
+      "sha256": "40c869155548d6fc69ea89f67c9d3d3b678f6765e9e78d9dcf36dd2a3814de59"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/action_scenarios.py",
+      "sha256": "a3eb43bf53646ff73288278c671ae9a6563bc6a7be3248d513c5bfad6374892e"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/actions.py",
+      "sha256": "fe6fca81415fb75d9ddfc942eb9b3c0e464157bbefba8dba284bd5d1316e67e7"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/async_jobs.py",
+      "sha256": "67374755b18371db8d244f9d482418e9013d5408435d2d3b41e5ac630503d07b"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/base/schema.sql",
+      "sha256": "9369d59f909cab69986bbd76802f2278028d18e99d3bdcb5d414c9d182067085"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/base/store.py",
+      "sha256": "419bbb4dc1a2f63fe06c982a9f683eb8653a5a8dc7b80eb3f5898151ad29e053"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/cache_cost.py",
+      "sha256": "d931a86479f421fb06fa123b2c9aa2be3ce254977986275129b87ae534c51c12"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/cache_exercises.py",
+      "sha256": "0b6221d633e94989ff15d5ed3b93ba5d5f52b8fe88d5681608d5ceceaffed080"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/cache_scenarios.py",
+      "sha256": "3d5cbe302000871151ef403a15b67c5b40df633836ff8767e48ac6b182219461"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/client.py",
+      "sha256": "beebee235d13099516c04737bd1e0c62aca100c85a83e467183e3b744a255822"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/contract.py",
+      "sha256": "aee9a51bb2a70182a0c2e0dd324655977a9103ab7366a786f9d5db35d55cc5c7"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/control.py",
+      "sha256": "02aa90e182e7caceb6166163693fcf3ba8d57bf443bf175313dadf2e4cca706e"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/control_exercises.py",
+      "sha256": "66b7a0d24a89609b060551cb7870034a82cca0d9dfc73292eef11ffd8cb77971"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/control_scenarios.py",
+      "sha256": "a3a6bd5f3290d27059ae85643a59ac962365f7ff408b76c4fd81fc2008bdae0a"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/exercises.py",
+      "sha256": "f197fb6b80d22c19c1342a58f1c0cbc9d632ba9cc58afa74f9dee292eceab855"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/experiments.py",
+      "sha256": "9fb127eff887b66236f933ec919bec6f71a52dc0b2276ed1098543f585239c26"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/fixtures.py",
+      "sha256": "a89ff5e75afd499ae5a6632e604d378634405cfc4914c26c4b76776f279ea04c"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/ingestion.sql",
+      "sha256": "d53f5b6b2c0e3befbfa9f95e9e0a9558f95812132839435773a1de9ff886c499"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/integration.py",
+      "sha256": "f5e1f0d9e670b3c53e9c646b8d529764c21e489cc6f67aad7830337e29648431"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/job_exercises.py",
+      "sha256": "e2b7f6d8f46bca7fe72559e714d0d53fb0fd067d1fb255b359615fefe8ef6579"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/job_scenarios.py",
+      "sha256": "a0bf5c88e7213ad99df2d9cfdc7ca67ee31e81a1ec47a27ca22fbfd02ec9eb9a"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/job_worker.py",
+      "sha256": "adfb9d285d5588b408ee9267399148e26d1ec92af1093f71583971e371ae0b7f"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/jobs.sql",
+      "sha256": "7867f3b5eeca544a98a05c47bb35ffa744dae6214352cbabcf242cc1052525ce"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/LEIAME_PT.txt",
+      "sha256": "b756c5c3ed6bc4270a11d4990ffc78f34dd552467cdd3f70bbeb5747772b5b6b"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/observability.py",
+      "sha256": "81dec42fd66623b1a3b9e65da8b40389032980200c5c21999125b78a5b993686"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/observe_exercises.py",
+      "sha256": "379f4ad75b0db3319990eb020c7d335c4cc935d3843ecab63a1ad37e7dd984ce"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/observe_scenarios.py",
+      "sha256": "6833311a2e14630c631bf3ba40da3316d474575552835d64ec08099002a1c1bc"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/pipeline.py",
+      "sha256": "3a26256ade63bac1e9be8f92bb752e2bc4397644472a1f71385e817236c47646"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/previous_solutions.py",
+      "sha256": "fed147bccb7018950ec9bff924e40a313d20078820ec4aa69fe8cff62d372592"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/readiness.py",
+      "sha256": "a1b46dbd066b38f86e8c832609fe5cfb4bc6a633354f22a7a70db80e0e78f9d7"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/readiness_exercises.py",
+      "sha256": "c54bdf1b968c3fc36071caa5954aeca07a103c41659d9ab8695ff54f8cf10c66"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/readiness_scenarios.py",
+      "sha256": "25dde1122e1ab3ee9e55d26a88dc86d7261cc8ea6d06211e2b587bf53a348715"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/README_EN.txt",
+      "sha256": "24783ef10f8d94433b5f213521d05f9a8b870276a925a1bb9402c99ae84aa408"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/release_exercises.py",
+      "sha256": "22c01b9f7501cbccbf186257e67157450482839ae695d42b26ea12b951436328"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/release_scenarios.py",
+      "sha256": "5166e201e164c266cc3cf4dadfcff908f2ee2daf29653822b862fb7727bd00f1"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/releases.py",
+      "sha256": "4885e27664e646613c449689d50a44234a253dee6875dfadf87f9a4b092fb1ee"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/resilience.py",
+      "sha256": "e3adc5bfaf18a361a41762cab090f9d738e3b23c35f30ede7a98254f71643ed3"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/results/exercises.json",
+      "sha256": "4e82401d173c534b2dfa7ffc56acfa47526bd76bc1d7a3fd28bd5f1e243f3665"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/results/review.json",
+      "sha256": "f6fa0a6402a2ef0b59b0bbb5a8237a91e931cdbc49c681ec1183b70794c93541"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/results/scenarios.json",
+      "sha256": "ffb94d83fb3eeea33d6a7af3eda8f885f8e590e8cae1c185f3e7a86637de6e09"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/retrieval.py",
+      "sha256": "ec5c5fb202cac592440953b271768ef187afbd24a0a48054d5cb4370c982a607"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/routing.py",
+      "sha256": "ebe2b19e3d32018d8668a3747105b8a33c530873d7895e98626f9a22f5e99130"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/routing_exercises.py",
+      "sha256": "fd1087e68e07797b8d1216990a103f459779070e7f31dba456a201d5f0644235"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/routing_scenarios.py",
+      "sha256": "58dbbf61f9e457dcabc0a774f058bea0a2538ffc7a6d184accfe4bec1bdaf7aa"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/scenarios.py",
+      "sha256": "c11854efb68c0a0b8b46e2b953dd94bcde3325c07430d47a9db9f2d2667dccea"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/schemas/event.schema.json",
+      "sha256": "4c065c738e7465e330e19b20deb6a652eca563f258efc420a12e196761a3ebd4"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/schemas/request.schema.json",
+      "sha256": "cbb5b91e62dd334bb10f5b52ce2581e41b41129599fce3089d9ff1c06f5c8026"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/security_exercises.py",
+      "sha256": "69cc319dd09cee9ed513e89e390aa5cd6f5ad19c661356bf29df1f3eb4e3d76c"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/security_gate.py",
+      "sha256": "d9f02734eae4fae2059474fabb060bf8ca9e2e5163580382ec30c32d10faf093"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/security_scenarios.py",
+      "sha256": "1dee69e7657037cc0822ecd14e309a9061702a8d641eea6a61586b3594cc5d98"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/service.py",
+      "sha256": "6884cd609d490a78f38449cdbddf9ec75c8732cbfb9c7fa3fb1473734ba62249"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/solutions.py",
+      "sha256": "7b973c1f5abc18f623b216f415a9dbaf7c7b98df2632de8a8d82157e027c4781"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_actions.py",
+      "sha256": "3b6d4fb298daaf7ac3958ddfb4799f691a48bc94ceae29bdc92488196c32520d"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_cache_cost.py",
+      "sha256": "e4bdca6bae788e5bbabadd35f521fc19498baaf25d5409db7ddc7c67627c41f1"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_contract.py",
+      "sha256": "36f39ae47965b16f43cc60d51297ffef5755bb4df838a971214c69a4b9af57cd"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_control.py",
+      "sha256": "2acc506b42304fd1c77699908945ced95548cffd170aac190ba8e9d85417babe"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_jobs.py",
+      "sha256": "30a128b0067b701507e5eb13aad31832e3b3e6f6a554f9c2aa562ad61026977d"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_observability.py",
+      "sha256": "0a12a3da060a9b9a9d07ce2ff396d77787d05cccadce2a5af4a79a304f35462a"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_readiness.py",
+      "sha256": "79695e8e4a47e935fe9caeafc9d596d7230b9f184c135e4ae2d519ed11161c20"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_releases.py",
+      "sha256": "67b5d823b42698b9f4949be166137e88db760ead2dd1d1bf14657a65fd902aa7"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_resilience.py",
+      "sha256": "7e3fc801e01f17304de93f2dee8404a0ba4cda89dd405829da3cf9fbadc0cf04"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_retrieval.py",
+      "sha256": "b68d159cfeb14f08bf67a8a85299125a706226d64526031563624a9bcf43db9e"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_routing.py",
+      "sha256": "cb16a683fa56f79e2be4025a4eae5f2205fb019e3fbafd47ff917d017ca0505d"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/test_security.py",
+      "sha256": "3f9f7066d9fc157daad338dd8b9f6350f652ea12d2fcaeced7c4f1e0a0f9c262"
+    },
+    {
+      "path": "laboratorios/18_Ensaio_Producao/laboratorio/worker_cli.py",
+      "sha256": "85305143ab6809e64248a362a7c1f257aac2cf7d666b0db362ef8450295ed7bc"
+    }
+  ]
+}

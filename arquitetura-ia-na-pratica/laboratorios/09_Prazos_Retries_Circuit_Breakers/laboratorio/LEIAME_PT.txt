@@ -1,0 +1,58 @@
+CAPÍTULO 9 — PRAZOS, RETRIES E CIRCUIT BREAKERS
+R01 | Python 3.10+ com sqlite3 | Somente biblioteca padrão
+
+Abra um terminal nesta pasta laboratorio e execute:
+  python -m unittest discover -v
+  python experiments.py
+  python exercises.py
+
+São 131 testes: 89 herdados, sem alterações, e 42 novos.
+experiments.py grava results/scenarios.json: dez experimentos de controle,
+oito integrações (quatro por idioma), além dos exercícios e da árvore
+de amplificação. exercises.py grava results/exercises.json (17 e 18).
+Os arquivos results são recriados; nenhum arquivo de usuário é necessário.
+
+ARQUIVOS NOVOS
+resilience.py: relógio virtual, política, provedor roteirizado, cota de
+retries, circuit breaker e controlador de tentativas.
+integration.py: liga o controlador ao contrato preservado do capítulo 8.
+experiments.py: cenários reproduzíveis; exercises.py: exercícios resolvidos.
+test_resilience.py: testes de fronteira, falhas, cancelamento e integração.
+
+CONTINUIDADE
+Os módulos dos capítulos anteriores permanecem para comparação e regressão.
+scenarios.py e solutions.py são do capítulo 8; previous_solutions.py é do 7.
+Execute experiments.py e exercises.py para os resultados deste capítulo.
+service.py e client.py preservam os eventos e as regras do capítulo 8.
+Não altere nomes nem remova base/ ou schemas/.
+
+POLÍTICA DO EXPERIMENTO
+Prazo total 1200 ms; tentativa até 300 ms; reserva 100 ms; mínimo útil 50 ms.
+Máximo de três tentativas, incluindo a primeira. Full jitter inteiro:
+0..min(400,100*2^(r-1)), em ms; semente 7, apenas para repetibilidade.
+Retry-After entra já normalizado em ms e é um piso, nunca encurtado.
+Cota padrão: duas repetições, sem reposição. Circuito: três falhas de
+disponibilidade, cooldown 500 ms e uma sonda em half-open. Exercício 18
+usa limiar dois. Os experimentos explicitam alterações de prazo e cota.
+Um Controller representa uma operação; seu deadline não é reiniciado.
+Várias operações podem compartilhar CircuitBreaker e RetryBudget.
+
+LIMITES IMPORTANTES
+Os milissegundos são virtuais. Não há espera real, HTTP, LLM, credenciais,
+cobranças nem medição de desempenho. O provedor só simula status e duração;
+a resposta fundamentada continua extrativa, com os dados fictícios anteriores.
+A integração compartilha o prazo entre perguntas, mas o custo real da busca,
+serialização e transporte não é modelado. A reserva é um parâmetro pedagógico.
+O circuito usa contagem consecutiva de falhas elegíveis, não janela móvel.
+429, erro de contrato e cancelamento são neutros para a saúde neste exemplo.
+Half-open neutro reabre conservadoramente. Permissões antigas não fecham uma
+geração nova do circuito. Operação síncrona de uma thread; não é segura para
+concorrência real sem sincronização nem coordenação entre processos.
+Cancelamento é observado em checkpoints; não prova interrupção no servidor.
+read_only=False proíbe repetir uma operação com efeito desconhecido; não
+implementa escrita nem idempotência. A cota não limita primeiras tentativas.
+
+CONSULTAR
+results/ contém a execução de referência; o capítulo explica os cálculos,
+as decisões e o que ainda precisa ser implementado em produção.
+Nenhum valor de timeout deste laboratório é recomendação universal.

@@ -1,0 +1,39 @@
+CAPÍTULO 8 - CONTRATOS DE SAÍDA E APIs CONSUMÍVEIS
+Python 3.10+ com sqlite3. Somente biblioteca padrão, sem rede ou serviços pagos.
+
+Na pasta laboratorio:
+python -m unittest discover -v
+python scenarios.py
+python solutions.py
+
+89 testes (42 herdados + 47 novos). 14 cenários (7 por idioma).
+Os cenários e exercícios escrevem JSON na pasta results local.
+Dados fictícios em SQLite na memória; nenhuma alteração nos capítulos anteriores.
+Entrada em scenarios.request; exemplos em solutions.exercise15 e exercise16.
+
+ARQUIVOS
+contract.py: validações explícitas, codificação JSON e enquadramento de eventos.
+service.py: adaptador em memória, autenticação fornecida pelo chamador confiável.
+client.py: leitor de bytes, correlação, máquina de estados, detecção de truncamento.
+schemas/: JSON Schema 2020-12 estrutural para integração. O laboratório não depende
+de um validador JSON Schema externo; regras relacionais/temporais ficam no código.
+retrieval.py, fixtures.py, pipeline.py, ingestion.sql e base/: recuperação do capítulo 7.
+previous_solutions.py: exercícios antigos para os testes de regressão.
+
+PERFIL
+1 a 3 perguntas de 1 a 400 caracteres, corpo de até 4096 bytes UTF-8.
+application/json exato. request_id correlaciona; não autentica nem deduplica.
+Eventos accepted, progress, result, error, cancelled; sequência 1..32 consecutiva.
+SSE restrito: três linhas (event, id, data), separador LF, JSON em uma linha,
+linha vazia final. Máximo 16384 bytes por quadro e 131072 por fluxo.
+Não aceita comentários, CRLF, retry, várias linhas data ou retomada EventSource.
+Não é um servidor HTTP, parser SSE geral, sistema distribuído nem cliente de modelo.
+consume lê um fluxo finito; Client atualiza estado a cada quadro.
+
+complete/partial/no_answer medem cobertura de perguntas independentes.
+Abstenção e esclarecimento não carregam texto nem citações. Uma falha inesperada
+descarta toda a operação; ela não vira uma abstenção por item.
+Cancelamento é cooperativo, observado em pontos específicos; não recupera custo
+nem desfaz conteúdo já entregue. Acesso é rechecado antes da liberação, sem prova
+de linearização entre verificação e entrega de rede.
+Não foram medidos latência, carga, LLMs, proxies, sockets ou clientes reais.

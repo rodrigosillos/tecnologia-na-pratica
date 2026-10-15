@@ -1,0 +1,14 @@
+{
+  "exercise11": {
+    "checkpoint": 2,
+    "chunks": 6,
+    "duplicates": 0,
+    "version": 2
+  },
+  "exercise12": {
+    "stale_worker_blocked": true,
+    "state": "obsolete",
+    "active_version": 1,
+    "answer": "unavailable"
+  }
+}

@@ -1,0 +1,38 @@
+CAPÍTULO 18 - ENSAIO DE PRODUÇÃO E REVISÃO DA ARQUITETURA
+Python 3.11+; biblioteca padrão; execução offline; sem credenciais.
+
+Na pasta laboratorio:
+  python -m unittest discover -s .
+  python -m unittest test_readiness -v
+  python readiness_scenarios.py
+  python -c "from readiness_exercises import exercise35,exercise36; print(exercise35()); print(exercise36())"
+
+669 testes cumulativos: 602 anteriores, 67 novos. Matriz: 18 casos x 2 idiomas.
+Exercícios 35 e 36 resolvidos. results/scenarios.json, exercises.json e review.json
+contêm os resultados reproduzidos na entrega. Os comandos acima não substituem
+esses arquivos. Casos anteriores permanecem nos módulos de seus capítulos.
+
+Integração: admissão limitada + jobs/outbox/fila + controlador da dependência +
+fronteira de segurança + captura/comparação + revalidação na leitura.
+Novos arquivos: readiness.py, readiness_scenarios.py, readiness_exercises.py,
+test_readiness.py. Os módulos anteriores não foram alterados.
+
+O provedor só simula estado e duração; as candidatas de saída são roteirizadas.
+Não há LLM real, rede, preço, token ou ação externa. Tempo e falhas são sintéticos.
+O limite global vale para trabalhos não terminados, não para mensagens do broker.
+Todos os produtores desse caminho precisam usar BoundedJobs. Não há justiça
+entre tenants. Pausar admissões não cancela jobs aceitos.
+
+SQLite executa commits reais; o relógio e rastro de eventos ficam em memória.
+O cenário restart reabre conexões: não reinicia o processo, não restaura backup,
+e preserva em memória fonte, circuito, relógio e rastro. Não é teste de desastre.
+As bases ficam temporariamente em scratch e são removidas ao fim de cada caso.
+
+O cenário poisoned_fact passa ao demonstrar uma limitação: uma fonte falsa com
+formato permitido produz resposta fiel, mas incorreta para a política esperada.
+release_decision organiza referências declaradas, não verifica sua veracidade
+e não autoriza implantação. O relatório entregue mantém hold, com qualidade
+real e operação não medidas. A suíte é evidência local, não certificação.
+
+As integrações de cache, roteamento, ações e registro de releases continuam
+separadas deste worker, embora seus testes sejam preservados na suíte.

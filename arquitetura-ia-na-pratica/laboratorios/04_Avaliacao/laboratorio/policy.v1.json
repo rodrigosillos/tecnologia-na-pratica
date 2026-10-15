@@ -1,0 +1,26 @@
+{
+  "version": "policy.v1",
+  "expected_cases": 24,
+  "minimum": {
+    "task_success": 0.9,
+    "answer_recall": 0.9,
+    "slice_success": 0.85
+  },
+  "required_slices": [
+    "language:pt-BR",
+    "language:en-US",
+    "tenant:acme",
+    "tenant:zen",
+    "category:answer",
+    "category:access",
+    "category:version",
+    "category:tenant",
+    "category:missing",
+    "category:conflict"
+  ],
+  "maximum": {
+    "p95_ms": 2500,
+    "cost_per_correct_answer": 1000
+  },
+  "note": "Didactic thresholds chosen before comparison; not universal production criteria."
+}

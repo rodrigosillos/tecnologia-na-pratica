@@ -1,0 +1,15 @@
+{
+  "exercise33": {
+    "commit_survived": true,
+    "stale_rejected": true,
+    "rollback_epoch": 3,
+    "schema_after_rollback": 2
+  },
+  "exercise34": {
+    "old_job": "r1",
+    "new_job": "r2",
+    "restore_release": "r1",
+    "lost_jobs": 1,
+    "external_effects_reversed": false
+  }
+}

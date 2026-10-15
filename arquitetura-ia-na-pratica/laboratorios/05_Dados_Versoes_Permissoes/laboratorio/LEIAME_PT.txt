@@ -1,0 +1,57 @@
+CAPÍTULO 5 - DADOS, VERSÕES E PERMISSÕES
+Rodrigo Sillos | Tecnologia na Prática | 14/10/2026 | R01
+
+Requer Python 3.10 ou posterior com sqlite3. Validado no Python 3.12.14.
+Sem dependências adicionais, credenciais, rede ou modelos pagos.
+Na pasta laboratorio, execute:
+
+python -m unittest discover -v
+python scenarios.py
+python solutions.py
+
+Esperado: 32 testes aprovados, 12/12 observações, exercícios 9 e 10 sem
+erro de asserção. scenarios.py substitui results/scenarios.json. Copie
+seus relatórios antes de reexecutar se precisar guardar comparações.
+
+ARQUIVOS
+schema.sql: oito tabelas; identidades e relacionamentos por organização.
+store.py: publicação, permissão, projeção, cache e ciclo de exclusão.
+scenarios.py: dados fictícios, sequência controlada e relatório.
+solutions.py: publicação interrompida; revogação e purga.
+test_store.py: verificações de comportamento, inclusive duas conexões.
+results/: resultados observados e verificados da entrega.
+
+O banco dos cenários fica em memória. O teste de duas conexões cria um
+arquivo temporário dentro desta pasta, fecha as conexões e remove os
+arquivos temporários ao terminar. Nenhum banco externo é acessado.
+
+RESULTADOS PRINCIPAIS
+Acme e Zen usam o mesmo doc_id, mas têm textos diferentes.
+Alice pertence à Acme; Bob, à Zen. Não há associação Alice/Zen.
+Nova revisão: a leitura bloqueia até a projeção acompanhar a publicação.
+Evento antigo: o consumidor lê o estado atual; não retrocede a versão.
+Revogação entre preparação e entrega: resposta bloqueada.
+Exclusão no dia lógico 10, retenção didática de 2 dias: purga no dia 12.
+
+EXERCÍCIOS
+9: injetar falha antes do commit; verificar rollback; repetir comando
+com a mesma chave; observar versão 2 e ausência de publicação duplicada.
+10: preencher cache; revogar durante a solicitação; excluir; repetir
+evento antigo; verificar limite da purga e limpar cache explicitamente.
+
+LIMITES
+Actor é fixture confiável; autenticação e APIs administrativas não são
+implementadas. Os métodos de escrita exigem um chamador confiável.
+Copilot é um gerador extrativo, sem LLM, embeddings ou busca semântica.
+Não é integração pronta com o servidor HTTP do capítulo 3. Continua a
+responsabilidade de repositório e os casos negativos do capítulo 4.
+Índice e outbox compartilham a transação local, sem fila externa.
+O teste com duas conexões não é ensaio de carga nem prova de concorrência.
+Snapshot é verificado antes da entrega, sem atomicidade com rede ou
+streaming. Não há garantia contra revogação posterior à última checagem.
+As versões são imutáveis pela API oferecida, não contra SQL administrativo.
+Hash não autentica autoria. A ACL é atual; não há permissão histórica.
+Purga remove linhas de versões, ACL e projeção. Tombstones, eventos e
+registros de comandos permanecem. Cache RAM exige limpeza separada.
+Não há apagamento seguro de disco, backups, logs ou cópias externas.
+O prazo lógico de 2 dias é didático, não recomendação legal de retenção.

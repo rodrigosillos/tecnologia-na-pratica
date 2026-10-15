@@ -1,0 +1,51 @@
+{
+  "exercise17": {
+    "fits": {
+      "reason": "success",
+      "attempts": 2,
+      "elapsed_ms": 520,
+      "operation_elapsed_ms": 520,
+      "waits_ms": [
+        400
+      ],
+      "circuit": "closed",
+      "retry_tokens": 1,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "429",
+          "allowance_ms": 300,
+          "at_ms": 40
+        },
+        {
+          "attempt": 2,
+          "status": "ok",
+          "allowance_ms": 300,
+          "at_ms": 520
+        }
+      ]
+    },
+    "too_late": {
+      "reason": "deadline",
+      "attempts": 1,
+      "elapsed_ms": 40,
+      "operation_elapsed_ms": 40,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "429",
+          "allowance_ms": 300,
+          "at_ms": 40
+        }
+      ]
+    }
+  },
+  "exercise18": {
+    "after_stale": "open",
+    "second_probe": "blocked",
+    "final": "closed"
+  }
+}

@@ -1,0 +1,61 @@
+CAPÍTULO 10 - TRABALHOS ASSÍNCRONOS, FILAS E IDEMPOTÊNCIA
+R01 | Python 3.10+ com sqlite3 | Somente biblioteca padrão
+
+Na pasta laboratorio, execute:
+  python -m unittest discover -v
+  python job_scenarios.py
+  python job_exercises.py
+
+176 testes: 131 herdados sem alterações e 45 novos. São 22 cenários
+(11 por idioma). Os resultados são gravados em results/scenarios.json e
+results/exercises.json. Os exercícios deste capítulo são 19 e 20.
+
+ARQUIVOS NOVOS
+async_jobs.py + jobs.sql: submissão, chave de idempotência, outbox, leases,
+fencing, checkpoints, resultado, cancelamento e quarentena local.
+job_worker.py: comparação extrativa dos dois manuais fictícios.
+worker_cli.py: uma entrega executada em um novo processo Python.
+job_scenarios.py: cenários e reinicializações controladas.
+job_exercises.py: soluções. test_jobs.py: 45 testes novos.
+
+EXECUÇÃO E ARQUIVOS TEMPORÁRIOS
+A maioria dos cenários usa bancos em memória. Os cenários de reinício criam
+bancos SQLite de jobs, fila e fontes em uma subpasta única de scratch/.
+Um processo worker termina com código 75 após o checkpoint ou o resultado;
+outro processo reabre os bancos e continua. Código 75 é intencional.
+As conexões são fechadas e apenas essa subpasta temporária é removida.
+Nenhum arquivo pessoal é lido. A pasta do laboratório precisa permitir escrita.
+Dois testes usam conexões independentes e threads para disputar submissão
+e aquisição; não são testes de carga nem ensaios de múltiplos servidores.
+
+CONTRATO DO MODELO
+Operação compare-manuals-v1; payload language + dois documents ordenados.
+Chave única por tenant, usuário, operação e chave de intenção.
+Mesmo conteúdo/chave devolve o job existente; conteúdo diferente conflita.
+Jobs e outbox são atômicos em um banco; a fila é outro banco SQLite.
+O relay pode publicar duas vezes; o worker confere o estado persistido.
+Máximo de três aquisições; lease e visibilidade 100 ms; validade 2000 ms.
+Falha transitória agenda nova aquisição após 200 ms. Tempo sempre virtual.
+Cada captura consome 10 ms simulados. A fila não reinicia a validade do job.
+Checkpoint e contador de progresso são atômicos; resultado e sucesso também.
+ACK só ocorre depois da transação de resultado ou de um estado terminal.
+
+LIMITES
+Não há HTTP, broker remoto, rede, LLM, credenciais ou chamadas pagas.
+Os códigos 202/200 e Location representam um adaptador local, não servidor.
+A comparação reconhece duas frases fixas (devolução e postagem) em cada idioma.
+Não é comparação semântica de documentos arbitrários nem benchmark.
+Parada controlada de processo não é teste de queda de energia ou disco.
+Garantia de resultado único é local ao banco, não execução exatamente uma vez.
+Cancelamento impede novas gravações do worker; não prova que trabalho remoto
+parou. Um resultado concluído pode ficar indisponível após revogação ou
+mudança das fontes. Autorização é reavaliada no snapshot de leitura.
+IDs incrementais não são segredos; identidade vem de um chamador confiável.
+Sem TTL de deduplicação, limpeza de resultados, redrive automático, renovação
+automática da visibilidade, scheduler periódico ou justiça entre tenants.
+dead_letters é uma tabela de quarentena, não uma DLQ de um serviço externo.
+
+CONTINUIDADE
+Os módulos anteriores permanecem intactos para regressão. experiments.py e
+exercises.py são do capítulo 9; scenarios.py e solutions.py são do 8.
+Para este capítulo, use os comandos job_scenarios.py e job_exercises.py.

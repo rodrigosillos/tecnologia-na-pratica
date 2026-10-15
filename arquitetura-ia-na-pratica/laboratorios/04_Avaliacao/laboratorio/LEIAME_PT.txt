@@ -1,0 +1,52 @@
+LABORATÓRIO DO CAPÍTULO 4 - AVALIAÇÃO ANTES DA OTIMIZAÇÃO
+Python 3.10+; validado no Python 3.12.14. Somente biblioteca padrão.
+Extraia o pacote e abra um terminal nesta pasta. Não instale dependências.
+Não é necessário servidor, rede, chave ou conta de provedor.
+
+1. Execute: python -m unittest discover -v
+   Resultado esperado: 26 testes, OK.
+2. Execute: python evaluation.py
+   baseline: 24/24; fast_unsafe: 14/24; refuse_all: 4/24;
+   missing_meter: 24/24, mas bloqueado por consumo desconhecido.
+3. Execute: python solutions.py
+   Exercícios 7 e 8, com asserções e resultados completos.
+4. Abra results/evaluation.json para examinar casos, fatias, critérios,
+   comparação pareada e hashes. Os tempos e custos são sintéticos.
+
+cases.v1.json: 24 casos autorais, 12 grupos, duas versões linguísticas.
+Todos pertencem à regressão visível; não existe conjunto cego neste pacote.
+policy.v1.json: critérios didáticos fixados antes da comparação.
+systems.py: versões do sistema; recebe apenas Request, sem gabarito.
+app/: módulos do capítulo 3 e 13 documentos sintéticos, preservados.
+evaluation.py: avaliador externo ao sistema, métricas e manifesto.
+solutions.py: exercícios resolvidos 7 e 8.
+
+REVISÃO HUMANA
+O comando cria results/revisao_humana_pt.csv e human_review_en.csv,
+com 12 pares por idioma, sem pareceres preenchidos. Leia a rubrica no
+capítulo e use cases.v1.json e app/documents.json como referência factual.
+Preencha verdict (A, B, tie ou insufficient), evidence (trecho e motivo),
+severity (critical, major ou minor) e reviewer (identificador local).
+Revise independentemente antes de discutir divergências. A chave A/B está
+separada em results/chave_revisao.json; não a abra antes do parecer.
+Custos e durações não aparecem nos pares. Ainda é um exercício de revisão,
+não um estudo humano cego comprovado. Nenhum humano ou LLM avaliou os pares
+como parte desta entrega. O campo human_review é decisão de encaminhamento;
+não cria fila, tarefa nem contato com uma pessoa.
+
+ATENÇÃO AO REEXECUTAR
+evaluation.py substitui os relatórios na pasta de saída. Para preservar
+pareceres preenchidos, copie-os ou use outra pasta:
+python evaluation.py --out results/nova_execucao
+O manifesto registra bytes dos dados, critérios e código. Hash não prova
+correção do gabarito. Não ajuste critérios após ver resultados sem criar
+uma revisão nova e comparar novamente com a referência.
+
+INTERPRETAÇÃO
+As 24 linhas contêm 12 grupos de fatos relacionados. Não trate traduções
+como observações independentes. O bootstrap reamostra grupos, 2.000 vezes,
+semente 7. A diferença fast_unsafe menos baseline é -41,67 pontos percentuais;
+intervalo percentil descritivo de -66,67 a -16,67 pontos. É uma demonstração
+sobre dados sintéticos, não uma estimativa da qualidade em tráfego real.
+Não há juiz LLM, benchmark de modelo ou cobrança. Exact match é deliberado
+para fatos fechados e textos canônicos; não avalia paráfrases abertas.

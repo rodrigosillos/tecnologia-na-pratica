@@ -1,0 +1,35 @@
+LABORATÓRIO DO CAPÍTULO 6 — INGESTÃO RECUPERÁVEL
+Python 3.10+ com sqlite3. Somente biblioteca padrão. Dados fictícios.
+Validação executada no Python indicado em ../Verificacao.json.
+Na pasta laboratorio, execute:
+python -m unittest discover -v
+python scenarios.py
+python solutions.py
+
+41 testes; 12 cenários; exercícios 11 e 12. Os dois últimos comandos
+registram resultados em results/. O exercício 11 usa um banco temporário
+dentro desta pasta e o remove ao terminar. É preciso permissão de escrita.
+source.json é uma cópia legível dos textos de scenarios.py; o cenário
+executável usa SOURCE daquele módulo. Para experimentar uma entrada
+do arquivo, passe Path('source.json').read_bytes() ao argumento raw.
+
+base/store.py e base/schema.sql são cópias integrais do capítulo 5.
+Pipeline usa o mesmo repositório e Copilot. Não é um servidor HTTP.
+Métodos administrativos exigem chamador confiável. Tempos são lógicos.
+Nenhuma chamada de rede, modelo, tradução, OCR ou embedding é realizada.
+
+GARANTIAS OBSERVADAS
+Lote e cursor na mesma transação; retomada com nova conexão; fencing
+por token; ativação inteira com manifesto, versão e época; leitura
+autorizada e recusa quando a projeção atrasa; purga do staging de
+documentos excluídos. A ativação repetida é confirmação histórica.
+
+LIMITES
+JSON UTF-8 bilíngue de até 8192 bytes, até 6000 caracteres por idioma.
+Janelas de caracteres, não tokens; exemplos não medem qualidade de RAG.
+Três aquisições por trabalho, sem backoff, jitter ou agendador real.
+SQLite local com escritor único; nenhuma prova de concorrência distribuída.
+Relógio de teste confiável, parser pequeno dentro da transação.
+Sem cotas globais, sandbox, autenticação HTTP ou índice vetorial externo.
+Quarentenas órfãs precisam de coletor adicional. Purga não apaga backups,
+cache remoto ou páginas físicas do banco. Manifesto não é assinatura.

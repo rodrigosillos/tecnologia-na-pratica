@@ -1,0 +1,61 @@
+{
+  "exercise5": {
+    "adapters_equivalent": true,
+    "outcomes": [
+      {
+        "status": "answer",
+        "answer": "A refund is issued within 5 business days of approval.",
+        "citation": "acme-refund-v1",
+        "reason": null,
+        "cost_microusd": 660,
+        "elapsed_ms": 0
+      },
+      {
+        "status": "answer",
+        "answer": "A refund is issued within 2 business days of approval.",
+        "citation": "zen-refund-v1",
+        "reason": null,
+        "cost_microusd": 660,
+        "elapsed_ms": 0
+      }
+    ]
+  },
+  "exercise6": {
+    "late": {
+      "outcome": {
+        "status": "error",
+        "answer": null,
+        "citation": null,
+        "reason": "deadline_exceeded",
+        "cost_microusd": 660,
+        "elapsed_ms": 2501
+      },
+      "calls": 1,
+      "received_remaining_ms": 900
+    },
+    "exact": {
+      "outcome": {
+        "status": "answer",
+        "answer": "A devolu\u00e7\u00e3o pode ser solicitada em at\u00e9 30 dias corridos.",
+        "citation": "acme-returns-v2",
+        "reason": null,
+        "cost_microusd": 660,
+        "elapsed_ms": 2500
+      },
+      "calls": 1,
+      "received_remaining_ms": 900
+    },
+    "exhausted": {
+      "outcome": {
+        "status": "error",
+        "answer": null,
+        "citation": null,
+        "reason": "deadline_exceeded",
+        "cost_microusd": 0,
+        "elapsed_ms": 2500
+      },
+      "calls": 0,
+      "received_remaining_ms": null
+    }
+  }
+}

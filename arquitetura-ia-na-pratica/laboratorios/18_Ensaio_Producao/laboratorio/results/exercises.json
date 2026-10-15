@@ -1,0 +1,18 @@
+{
+  "exercise35": {
+    "offered": 3,
+    "accepted": 2,
+    "completed": 2,
+    "completion_among_accepted": 1.0,
+    "completion_among_offered": 0.6666666666666666
+  },
+  "exercise36": {
+    "poisoned_delta": -69,
+    "decision": "hold",
+    "missing": [
+      "live_quality",
+      "operations"
+    ],
+    "source_truth_proven": false
+  }
+}

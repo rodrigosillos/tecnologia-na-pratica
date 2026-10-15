@@ -1,0 +1,190 @@
+{
+  "cases": [
+    [
+      "pt-id",
+      "pt-BR",
+      "POL-RET-01",
+      "returns",
+      "answer"
+    ],
+    [
+      "en-id",
+      "en-US",
+      "POL-RET-01",
+      "returns",
+      "answer"
+    ],
+    [
+      "pt-alias",
+      "pt-BR",
+      "Arrependimento?",
+      "returns",
+      "answer"
+    ],
+    [
+      "en-alias",
+      "en-US",
+      "Exchange?",
+      "returns",
+      "answer"
+    ],
+    [
+      "pt-ship",
+      "pt-BR",
+      "Prazo de postagem?",
+      "shipping",
+      "answer"
+    ],
+    [
+      "en-ship",
+      "en-US",
+      "Shipping days?",
+      "shipping",
+      "answer"
+    ],
+    [
+      "pt-reset",
+      "pt-BR",
+      "Validade da senha?",
+      "reset",
+      "answer"
+    ],
+    [
+      "en-reset",
+      "en-US",
+      "Password reset minutes?",
+      "reset",
+      "answer"
+    ],
+    [
+      "pt-backup",
+      "pt-BR",
+      "Tempo de backup?",
+      "backup",
+      "answer"
+    ],
+    [
+      "en-backup",
+      "en-US",
+      "Backup retention days?",
+      "backup",
+      "answer"
+    ],
+    [
+      "pt-rate",
+      "pt-BR",
+      "429 segundos?",
+      "rate",
+      "answer"
+    ],
+    [
+      "en-rate",
+      "en-US",
+      "429 seconds?",
+      "rate",
+      "answer"
+    ],
+    [
+      "pt-support",
+      "pt-BR",
+      "Suporte horas?",
+      "support",
+      "answer"
+    ],
+    [
+      "en-support",
+      "en-US",
+      "Support hours?",
+      "support",
+      "answer"
+    ],
+    [
+      "pt-ambiguous",
+      "pt-BR",
+      "Qual o prazo?",
+      null,
+      "clarify"
+    ],
+    [
+      "en-ambiguous",
+      "en-US",
+      "What window?",
+      null,
+      "clarify"
+    ],
+    [
+      "pt-multiple",
+      "pt-BR",
+      "Prazo de devolução e postagem?",
+      null,
+      "clarify"
+    ],
+    [
+      "en-multiple",
+      "en-US",
+      "Returns and shipping?",
+      null,
+      "clarify"
+    ],
+    [
+      "pt-unknown",
+      "pt-BR",
+      "Feriados municipais?",
+      null,
+      "abstain"
+    ],
+    [
+      "en-unknown",
+      "en-US",
+      "Office holidays?",
+      null,
+      "abstain"
+    ],
+    [
+      "pt-unsupported",
+      "pt-BR",
+      "Devolução sem comprovante?",
+      null,
+      "abstain"
+    ],
+    [
+      "en-unsupported",
+      "en-US",
+      "Returns without receipt?",
+      null,
+      "abstain"
+    ],
+    [
+      "pt-payroll",
+      "pt-BR",
+      "Folha pagamento?",
+      null,
+      "abstain"
+    ],
+    [
+      "en-payroll",
+      "en-US",
+      "Confidential payroll?",
+      null,
+      "abstain"
+    ]
+  ],
+  "gold_claims": {
+    "pt-BR": {
+      "returns": "Devolução: prazo de 45 dias.",
+      "shipping": "Postagem: despacho em 3 dias.",
+      "reset": "Redefinição de senha: link válido por 15 minutos.",
+      "backup": "Backup: retenção de 30 dias.",
+      "rate": "Erro 429: aguarde 60 segundos antes de repetir.",
+      "support": "Suporte: resposta em até 24 horas."
+    },
+    "en-US": {
+      "returns": "Returns: window of 45 days.",
+      "shipping": "Shipping: dispatch in 3 days.",
+      "reset": "Password reset: link valid for 15 minutes.",
+      "backup": "Backup: retention of 30 days.",
+      "rate": "Error 429: wait 60 seconds before retry.",
+      "support": "Support: response within 24 hours."
+    }
+  }
+}

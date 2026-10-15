@@ -1,0 +1,1545 @@
+{
+  "cases": 36,
+  "language_pairs": 18,
+  "measurement": "Local SQLite transitions, scripted provider responses and virtual milliseconds. No live model, money, network or load benchmark.",
+  "runs": [
+    {
+      "case": "baseline",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "provider_outage",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 3,
+      "virtual_ms": 635,
+      "circuit": "open",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 25,
+          "stage": "provider",
+          "reason": "attempt_limit",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "provider",
+          "reason": "circuit_open",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "provider_recovery",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 3,
+      "virtual_ms": 355,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 25,
+          "stage": "provider",
+          "reason": "attempt_limit",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 355,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "queue_saturation",
+      "language": "pt-BR",
+      "admitted": 2,
+      "rejected": 1,
+      "replays": 0,
+      "peak_pending": 2,
+      "states": {
+        "succeeded": 2
+      },
+      "result_rows": 2,
+      "visible_results": 2,
+      "return_deltas": [
+        -15,
+        -15
+      ],
+      "provider_calls": 2,
+      "virtual_ms": 360,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 2
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "capacity",
+          "job": null
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        },
+        {
+          "at_ms": 340,
+          "stage": "provider",
+          "reason": "success",
+          "job": 2
+        },
+        {
+          "at_ms": 360,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 2
+        }
+      ]
+    },
+    {
+      "case": "paused_admission",
+      "language": "pt-BR",
+      "admitted": 0,
+      "rejected": 1,
+      "replays": 0,
+      "peak_pending": 0,
+      "states": {},
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 0,
+      "virtual_ms": 0,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "paused",
+          "job": null
+        }
+      ]
+    },
+    {
+      "case": "replay_full",
+      "language": "pt-BR",
+      "admitted": 2,
+      "rejected": 1,
+      "replays": 1,
+      "peak_pending": 2,
+      "states": {
+        "succeeded": 2
+      },
+      "result_rows": 2,
+      "visible_results": 2,
+      "return_deltas": [
+        -15,
+        -15
+      ],
+      "provider_calls": 2,
+      "virtual_ms": 360,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 2
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "capacity",
+          "job": null
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "replay",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        },
+        {
+          "at_ms": 340,
+          "stage": "provider",
+          "reason": "success",
+          "job": 2
+        },
+        {
+          "at_ms": 360,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 2
+        }
+      ]
+    },
+    {
+      "case": "replay_paused",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 1,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "replay",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "conflict",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ],
+      "conflict": true
+    },
+    {
+      "case": "expired_queue",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "expired": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 0,
+      "virtual_ms": 100,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "malicious_document",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 10,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "forged_approval",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 10,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "source_revoked",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "poisoned_fact",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -69
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "duplicate_delivery",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 330,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "source_changed",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "source_changed",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "combined",
+      "language": "pt-BR",
+      "admitted": 2,
+      "rejected": 1,
+      "replays": 0,
+      "peak_pending": 2,
+      "states": {
+        "failed": 2
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 4,
+      "virtual_ms": 645,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 2
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "capacity",
+          "job": null
+        },
+        {
+          "at_ms": 25,
+          "stage": "provider",
+          "reason": "attempt_limit",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 1
+        },
+        {
+          "at_ms": 645,
+          "stage": "provider",
+          "reason": "success",
+          "job": 2
+        },
+        {
+          "at_ms": 645,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 2
+        }
+      ]
+    },
+    {
+      "case": "tenant_isolation",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 0,
+      "virtual_ms": 0,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "result",
+          "reason": "source_access",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "restart",
+      "language": "pt-BR",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "baseline",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "provider_outage",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 3,
+      "virtual_ms": 635,
+      "circuit": "open",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 25,
+          "stage": "provider",
+          "reason": "attempt_limit",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "provider",
+          "reason": "circuit_open",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "provider_recovery",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 3,
+      "virtual_ms": 355,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 25,
+          "stage": "provider",
+          "reason": "attempt_limit",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 355,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "queue_saturation",
+      "language": "en-US",
+      "admitted": 2,
+      "rejected": 1,
+      "replays": 0,
+      "peak_pending": 2,
+      "states": {
+        "succeeded": 2
+      },
+      "result_rows": 2,
+      "visible_results": 2,
+      "return_deltas": [
+        -15,
+        -15
+      ],
+      "provider_calls": 2,
+      "virtual_ms": 360,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 2
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "capacity",
+          "job": null
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        },
+        {
+          "at_ms": 340,
+          "stage": "provider",
+          "reason": "success",
+          "job": 2
+        },
+        {
+          "at_ms": 360,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 2
+        }
+      ]
+    },
+    {
+      "case": "paused_admission",
+      "language": "en-US",
+      "admitted": 0,
+      "rejected": 1,
+      "replays": 0,
+      "peak_pending": 0,
+      "states": {},
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 0,
+      "virtual_ms": 0,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "paused",
+          "job": null
+        }
+      ]
+    },
+    {
+      "case": "replay_full",
+      "language": "en-US",
+      "admitted": 2,
+      "rejected": 1,
+      "replays": 1,
+      "peak_pending": 2,
+      "states": {
+        "succeeded": 2
+      },
+      "result_rows": 2,
+      "visible_results": 2,
+      "return_deltas": [
+        -15,
+        -15
+      ],
+      "provider_calls": 2,
+      "virtual_ms": 360,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 2
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "capacity",
+          "job": null
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "replay",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        },
+        {
+          "at_ms": 340,
+          "stage": "provider",
+          "reason": "success",
+          "job": 2
+        },
+        {
+          "at_ms": 360,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 2
+        }
+      ]
+    },
+    {
+      "case": "replay_paused",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 1,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "replay",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "conflict",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ],
+      "conflict": true
+    },
+    {
+      "case": "expired_queue",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "expired": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 0,
+      "virtual_ms": 100,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "malicious_document",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 10,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "forged_approval",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 10,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "source_revoked",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "poisoned_fact",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -69
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "duplicate_delivery",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 330,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "source_changed",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "source_changed",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "combined",
+      "language": "en-US",
+      "admitted": 2,
+      "rejected": 1,
+      "replays": 0,
+      "peak_pending": 2,
+      "states": {
+        "failed": 2
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 4,
+      "virtual_ms": 645,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 2
+        },
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "capacity",
+          "job": null
+        },
+        {
+          "at_ms": 25,
+          "stage": "provider",
+          "reason": "attempt_limit",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 335,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 1
+        },
+        {
+          "at_ms": 645,
+          "stage": "provider",
+          "reason": "success",
+          "job": 2
+        },
+        {
+          "at_ms": 645,
+          "stage": "result",
+          "reason": "security:invalid_candidate",
+          "job": 2
+        }
+      ]
+    },
+    {
+      "case": "tenant_isolation",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "failed": 1
+      },
+      "result_rows": 0,
+      "visible_results": 0,
+      "return_deltas": [],
+      "provider_calls": 0,
+      "virtual_ms": 0,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 0,
+          "stage": "result",
+          "reason": "source_access",
+          "job": 1
+        }
+      ]
+    },
+    {
+      "case": "restart",
+      "language": "en-US",
+      "admitted": 1,
+      "rejected": 0,
+      "replays": 0,
+      "peak_pending": 1,
+      "states": {
+        "succeeded": 1
+      },
+      "result_rows": 1,
+      "visible_results": 1,
+      "return_deltas": [
+        -15
+      ],
+      "provider_calls": 1,
+      "virtual_ms": 30,
+      "circuit": "closed",
+      "pending_messages": 0,
+      "events": [
+        {
+          "at_ms": 0,
+          "stage": "admission",
+          "reason": "accepted",
+          "job": 1
+        },
+        {
+          "at_ms": 10,
+          "stage": "provider",
+          "reason": "success",
+          "job": 1
+        },
+        {
+          "at_ms": 30,
+          "stage": "result",
+          "reason": "succeeded",
+          "job": 1
+        }
+      ]
+    }
+  ]
+}

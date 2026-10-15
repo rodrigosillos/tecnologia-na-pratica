@@ -1,0 +1,32 @@
+{
+  "exercise_1": {
+    "behavior_correct_fraction": 0.8,
+    "accepted_fraction": 0.5833333333333334,
+    "controlled_abstention_fraction": 0.875,
+    "microusd_per_accepted_task": 5714.285714285715,
+    "suite_pass": false,
+    "overlapping_resource_failures_accepted": 8
+  },
+  "exercise_2": {
+    "before": {
+      "status": "abstain",
+      "fact_id": null,
+      "citation": null,
+      "reason": "conflicting_evidence"
+    },
+    "after": {
+      "status": "answer",
+      "fact_id": "call_111",
+      "citation": "acme-conflict-a",
+      "reason": null
+    },
+    "after_reversing_documents": {
+      "status": "answer",
+      "fact_id": "call_111",
+      "citation": "acme-conflict-b",
+      "reason": null
+    }
+  }
+}
+Relaxed accepted tasks: 5
+Relaxed suite pass: False

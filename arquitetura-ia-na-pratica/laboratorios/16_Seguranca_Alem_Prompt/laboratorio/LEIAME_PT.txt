@@ -1,0 +1,53 @@
+CAPÍTULO 16 - SEGURANÇA ALÉM DO PROMPT
+Rodrigo Sillos | Tecnologia na Prática | R01 | 15/10/2026
+
+REQUISITOS
+Python 3.11 ou superior; biblioteca padrão. Sem API, chave ou rede.
+Abra o terminal nesta pasta laboratorio. Use python ou py conforme sua instalação.
+
+EXECUÇÃO
+python -m unittest discover -s .
+python -m unittest test_security -v
+python security_scenarios.py
+python -c "from security_exercises import exercise31,exercise32; print(exercise31()); print(exercise32())"
+
+RESULTADOS DESTA REVISÃO
+532 testes aprovados: 460 herdados e 72 novos.
+20 cenários em dois idiomas = 40 execuções, reproduzidos em results/scenarios.json.
+Por idioma: 3 answered, 15 blocked, 1 abstained, 1 pending.
+Na matriz: zero tarefas no destino, uma intenção pendente por idioma.
+Um teste de integração separado aprova legitimamente e cria uma tarefa sintética.
+Exercícios 31/32: results/exercises.json. Os scripts imprimem JSON; não sobrescrevem os resultados salvos.
+
+ARQUIVOS NOVOS
+security_gate.py: identidade e capacidade do host, contexto mínimo, schema estrito,
+revalidação, fato exato, codificação HTML e proposta pendente no serviço do capítulo 15.
+security_scenarios.py: candidatas adversárias roteirizadas, controles benignos e risco residual.
+security_exercises.py: soluções verificáveis dos exercícios 31 e 32.
+test_security.py: testes de isolamento, campos, revogação, apresentação e aprovação.
+
+CONTRATOS
+Fonte: até 4096 caracteres Python; candidata: até 768 bytes UTF-8.
+Posições: caracteres Unicode Python, início inclusivo/fim exclusivo, não bytes.
+Uma candidata por instância, inclusive inválida. Não é limite global de abuso.
+O modelo pode selecionar um fato, abster-se ou propor quando permitido pelo host.
+Não pode escolher identidade, empresa, destino, projeto, aprovação nem execução.
+context() rotula a fonte, mas o rótulo não é uma fronteira de segurança.
+O processo Python e a administração local são confiáveis no modelo de ameaça.
+
+LIMITES
+Não há inferência: a saída adversária é injetada diretamente no ponto de validação.
+Não é teste da taxa de sucesso de ataques contra um LLM nem benchmark de produção.
+Fonte falsa pode passar: poisoned_fact responde 99 dias. Citação não comprova verdade.
+O regex não compreende negação, exemplos, jurisdição nem vigência em textos gerais.
+render_quote protege contexto de texto HTML, não SQL, shell, JavaScript ou URLs.
+Não há autenticação real, isolamento de processo/rede, auditoria imutável ou quotas globais.
+Revalidação serial não resolve corrida distribuída entre conferência e uso.
+Eventos da fronteira são locais/em memória e não são unidos à telemetria herdada.
+Nenhuma fonte privada real é usada. sink.invalid é apenas texto, nunca acessado.
+
+CONTINUIDADE
+Os módulos e testes anteriores estão preservados; as integrações são explícitas.
+Os guias anteriores estão nas pastas dos respectivos capítulos.
+scratch e __pycache__ podem surgir durante testes. Contêm apenas arquivos locais de execução.
+Prévia editorial, não serviço de segurança pronto para produção.

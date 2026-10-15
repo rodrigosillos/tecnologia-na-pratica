@@ -1,0 +1,42 @@
+CAPÍTULO 2 - FRONTEIRA COM O MODELO
+Rodrigo Sillos | Tecnologia na Prática
+
+Requisitos: Python 3.10 ou superior, apenas biblioteca padrão.
+Não há instalação de pacotes, rede, chave, modelo ou cobrança.
+Abra um terminal nesta pasta (laboratorio) e execute:
+
+python -m unittest discover -v
+python boundary.py --out results/boundary.json
+python solutions.py
+
+36 testes: 16 do capítulo 1 e 20 novos. Execução editorial: Python 3.12.14.
+O relatório deve indicar 12 cenários, 11 tentativas simuladas, 2 respostas
+aceitas, 1 abstenção de negócio e 9 falhas. Custo conhecido: 6150 micro-USD;
+uma tentativa sem medição; custo total e custo por resposta aceita: null.
+Esses valores NÃO são resultados de um modelo nem preços de fornecedor.
+Os tempos, os tokens e os custos vêm de fixtures criadas para ensinar.
+
+ARQUIVOS
+boundary.py: tokenização de brinquedo, orçamento de contexto, cosseno,
+parser estrito, validação da resposta e relatório.
+scenarios.json: 12 cenários autorais de envelope/saída, com pedaços de texto.
+fixtures.json / chapter1.py: dados sintéticos e regras do capítulo 1.
+test_boundary.py: 20 testes da fronteira e das demonstrações.
+test_chapter1.py: 16 testes de regressão.
+solutions.py: resoluções executáveis dos exercícios 3 e 4.
+
+REPRODUZIR SEM ALTERAR O ORIGINAL
+Faça uma cópia de scenarios.json antes de experimentar. Troque s02 para
+completed mantendo o texto truncado: a classe muda para invalid_json.
+Restaure o arquivo e compare o relatório. Não registre dados reais nele.
+
+LIMITES
+Não há modelo, embedding treinado, stream de rede, SDK nem serviço HTTP.
+O assunto já é classificado; a evidência usa identificadores de fatos.
+O gabarito expected_fact só avalia depois da decisão. A validação de
+prosa livre, transporte, autenticação e cancelamento remoto ficam fora.
+O limite de 8192 bytes é aplicado ao texto já reunido; em produção limite
+também o fluxo de entrada antes da alocação. Não é um SDK pronto.
+O snapshot de validade dos documentos é 14/10/2026, não o relógio atual.
+O planejador recebe contagens sintéticas; nunca usa toy_tokens para
+estimar um provedor. Não interpreta esquemas completos de JSON Schema.

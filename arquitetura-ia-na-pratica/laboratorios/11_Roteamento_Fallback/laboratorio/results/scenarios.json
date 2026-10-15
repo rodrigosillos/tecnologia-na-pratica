@@ -1,0 +1,453 @@
+{
+  "cases": 28,
+  "language_pairs": 14,
+  "runs": [
+    {
+      "case": "compact_success",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "transient_fallback",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "invalid_fallback",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "wrong_fallback",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "partial_then_full",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "partial_budget",
+      "language": "pt-BR",
+      "state": "partial",
+      "reason": "budget_or_deadline",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 1,
+      "missing": [
+        "shipping"
+      ]
+    },
+    {
+      "case": "partial_disabled",
+      "language": "pt-BR",
+      "state": "abstain",
+      "reason": "budget_or_deadline",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "refusal",
+      "language": "pt-BR",
+      "state": "abstain",
+      "reason": "refusal",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "private_no_route",
+      "language": "pt-BR",
+      "state": "abstain",
+      "reason": "no_eligible_model",
+      "models": [],
+      "calls": 0,
+      "units": 0,
+      "virtual_ms": 0,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "language_unapproved",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "large"
+      ],
+      "calls": 1,
+      "units": 70,
+      "virtual_ms": 110,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "context_skip",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "large"
+      ],
+      "calls": 1,
+      "units": 70,
+      "virtual_ms": 110,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "deadline",
+      "language": "pt-BR",
+      "state": "partial",
+      "reason": "budget_or_deadline",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 1,
+      "missing": [
+        "shipping"
+      ]
+    },
+    {
+      "case": "timeout_fallback",
+      "language": "pt-BR",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 170,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "revoked",
+      "language": "pt-BR",
+      "state": "abstain",
+      "reason": "source_changed",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "compact_success",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "transient_fallback",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "invalid_fallback",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "wrong_fallback",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "partial_then_full",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 150,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "partial_budget",
+      "language": "en-US",
+      "state": "partial",
+      "reason": "budget_or_deadline",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 1,
+      "missing": [
+        "shipping"
+      ]
+    },
+    {
+      "case": "partial_disabled",
+      "language": "en-US",
+      "state": "abstain",
+      "reason": "budget_or_deadline",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "refusal",
+      "language": "en-US",
+      "state": "abstain",
+      "reason": "refusal",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "private_no_route",
+      "language": "en-US",
+      "state": "abstain",
+      "reason": "no_eligible_model",
+      "models": [],
+      "calls": 0,
+      "units": 0,
+      "virtual_ms": 0,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    },
+    {
+      "case": "language_unapproved",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "large"
+      ],
+      "calls": 1,
+      "units": 70,
+      "virtual_ms": 110,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "context_skip",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "large"
+      ],
+      "calls": 1,
+      "units": 70,
+      "virtual_ms": 110,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "deadline",
+      "language": "en-US",
+      "state": "partial",
+      "reason": "budget_or_deadline",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 1,
+      "missing": [
+        "shipping"
+      ]
+    },
+    {
+      "case": "timeout_fallback",
+      "language": "en-US",
+      "state": "full",
+      "reason": "validated",
+      "models": [
+        "compact",
+        "large"
+      ],
+      "calls": 2,
+      "units": 90,
+      "virtual_ms": 170,
+      "rows": 2,
+      "missing": []
+    },
+    {
+      "case": "revoked",
+      "language": "en-US",
+      "state": "abstain",
+      "reason": "source_changed",
+      "models": [
+        "compact"
+      ],
+      "calls": 1,
+      "units": 20,
+      "virtual_ms": 60,
+      "rows": 0,
+      "missing": [
+        "returns",
+        "shipping"
+      ]
+    }
+  ],
+  "cohort": {
+    "cascade": {
+      "requests": 10,
+      "full": 10,
+      "calls": 12,
+      "units": 340,
+      "total_virtual_ms": 780
+    },
+    "large_only": {
+      "requests": 10,
+      "full": 10,
+      "calls": 10,
+      "units": 700,
+      "total_virtual_ms": 1100
+    }
+  },
+  "measurement": "Authored simulated replies, fictional admission units, virtual milliseconds; no model quality or monetary benchmark"
+}

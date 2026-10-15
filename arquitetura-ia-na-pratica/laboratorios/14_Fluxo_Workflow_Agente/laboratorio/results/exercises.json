@@ -1,0 +1,35 @@
+{
+  "exercise27": {
+    "workflow": {
+      "requests": 10,
+      "complete": 10,
+      "units": 42,
+      "units_per_complete": 4.2,
+      "planning_calls": 0,
+      "tool_calls": 42,
+      "p95_ms": 20
+    },
+    "agent": {
+      "requests": 10,
+      "complete": 10,
+      "units": 126,
+      "units_per_complete": 12.6,
+      "planning_calls": 42,
+      "tool_calls": 42,
+      "p95_ms": 55
+    },
+    "extra_units": 84,
+    "extra_completions": 0,
+    "choice": "workflow_for_this_fixture"
+  },
+  "exercise28": {
+    "repeat_flags": [
+      false,
+      false,
+      true
+    ],
+    "early_reason": "evidence",
+    "revoked_reason": "stale",
+    "outputs_absent": true
+  }
+}

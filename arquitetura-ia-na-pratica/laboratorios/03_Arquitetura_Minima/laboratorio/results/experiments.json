@@ -1,0 +1,198 @@
+{
+  "measurement_kind": "controlled_stubs_virtual_time_not_provider_benchmark",
+  "rows": [
+    {
+      "mode": "good",
+      "topic": "returns",
+      "http_status": 200,
+      "status": "answer",
+      "answer": "A devolução pode ser solicitada em até 30 dias corridos.",
+      "citation": "acme-returns-v2",
+      "reason": null,
+      "cost_microusd": 660,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "good",
+      "topic": "sunday",
+      "http_status": 200,
+      "status": "abstain",
+      "answer": null,
+      "citation": null,
+      "reason": "insufficient_evidence",
+      "cost_microusd": 0,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "good",
+      "topic": "payroll",
+      "http_status": 200,
+      "status": "abstain",
+      "answer": null,
+      "citation": null,
+      "reason": "insufficient_evidence",
+      "cost_microusd": 0,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "good",
+      "topic": "emergency",
+      "http_status": 200,
+      "status": "abstain",
+      "answer": null,
+      "citation": null,
+      "reason": "conflicting_evidence",
+      "cost_microusd": 0,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "malformed",
+      "topic": "returns",
+      "http_status": 502,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "invalid_output",
+      "cost_microusd": 660,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "unsupported",
+      "topic": "returns",
+      "http_status": 502,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "invalid_output",
+      "cost_microusd": 660,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "incomplete",
+      "topic": "returns",
+      "http_status": 502,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "generation_incomplete",
+      "cost_microusd": 660,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "refused",
+      "topic": "returns",
+      "http_status": 502,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "generation_refused",
+      "cost_microusd": 660,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "timeout",
+      "topic": "returns",
+      "http_status": 504,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "dependency_timeout",
+      "cost_microusd": null,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "unavailable",
+      "topic": "returns",
+      "http_status": 503,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "dependency_unavailable",
+      "cost_microusd": null,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "unknown_usage",
+      "topic": "returns",
+      "http_status": 503,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "usage_unknown",
+      "cost_microusd": null,
+      "elapsed_ms": 0
+    },
+    {
+      "mode": "expensive",
+      "topic": "returns",
+      "http_status": 503,
+      "status": "error",
+      "answer": null,
+      "citation": null,
+      "reason": "budget_exceeded",
+      "cost_microusd": 1560,
+      "elapsed_ms": 0
+    }
+  ],
+  "exercises": {
+    "5": {
+      "adapters_equivalent": true,
+      "outcomes": [
+        {
+          "status": "answer",
+          "answer": "A refund is issued within 5 business days of approval.",
+          "citation": "acme-refund-v1",
+          "reason": null,
+          "cost_microusd": 660,
+          "elapsed_ms": 0
+        },
+        {
+          "status": "answer",
+          "answer": "A refund is issued within 2 business days of approval.",
+          "citation": "zen-refund-v1",
+          "reason": null,
+          "cost_microusd": 660,
+          "elapsed_ms": 0
+        }
+      ]
+    },
+    "6": {
+      "late": {
+        "outcome": {
+          "status": "error",
+          "answer": null,
+          "citation": null,
+          "reason": "deadline_exceeded",
+          "cost_microusd": 660,
+          "elapsed_ms": 2501
+        },
+        "calls": 1,
+        "received_remaining_ms": 900
+      },
+      "exact": {
+        "outcome": {
+          "status": "answer",
+          "answer": "A devolução pode ser solicitada em até 30 dias corridos.",
+          "citation": "acme-returns-v2",
+          "reason": null,
+          "cost_microusd": 660,
+          "elapsed_ms": 2500
+        },
+        "calls": 1,
+        "received_remaining_ms": 900
+      },
+      "exhausted": {
+        "outcome": {
+          "status": "error",
+          "answer": null,
+          "citation": null,
+          "reason": "deadline_exceeded",
+          "cost_microusd": 0,
+          "elapsed_ms": 2500
+        },
+        "calls": 0,
+        "received_remaining_ms": null
+      }
+    }
+  }
+}

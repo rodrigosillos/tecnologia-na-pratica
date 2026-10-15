@@ -1,0 +1,57 @@
+CAPÍTULO 13 - OBSERVABILIDADE QUE AJUDA A DECIDIR
+Rodrigo Sillos | Tecnologia na Prática | R01 | 15/10/2026
+
+REQUISITOS E EXECUÇÃO
+Python 3.11+ com biblioteca padrão e sqlite3. Sem API, rede ou chamadas pagas.
+Abra o terminal nesta pasta laboratorio e execute:
+
+python -m unittest discover -v
+python observe_scenarios.py
+python observe_exercises.py
+
+339 testes: 283 herdados e 56 novos. 24 cenários: 12 por idioma.
+Regressão adicional: 3 variantes x 20 solicitações = 60 execuções.
+As saídas reproduzíveis em results são substituídas pelos comandos:
+scenarios.json, exercises.json e example_trace.json.
+Os comandos observe_ pertencem a este capítulo; os anteriores permanecem.
+
+ARQUIVOS NOVOS
+observability.py: rastros próprios, atributos permitidos, métricas,
+percentis, histogramas e observação dos contratos do capítulo 12.
+observe_scenarios.py: cenários PT/EN e comparação causal controlada.
+observe_exercises.py: exercícios 25 e 26, sem envio de alertas.
+test_observability.py: 56 testes de sinais, privacidade e resultados.
+
+RESULTADOS DA COMPARAÇÃO
+Referência: p95 102 ms, 480 u, 20 chamadas, 20/20 boas.
+Regressão: p95 278 ms, 830 u, 25 chamadas, 0/20 boas.
+Somente fila: p95 182 ms, 480 u, 20 chamadas, 0/20 boas.
+Todos os grupos têm 20 respostas completas e 5 rastros exportados.
+As medidas usam todas as solicitações, independentemente da amostragem.
+Bom = elegível, completo, qualidade aprovada e duração <= 150 ms.
+Objetivo de 99% e limiares do exercício são escolhas didáticas.
+
+UNIDADES E TEMPO
+Unidades fictícias: 4 por tarefa admitida, compact 20, large 70.
+Tempo virtual prescrito: fonte 3 ms (12 no caso lento), lookup 2,
+gravação/admissão/reserva/liquidação 1, finalização 20 e tempo do
+modelo simulado. Fila lenta adiciona 80 ms. Não é benchmark real.
+Quente: aquecimento fora da observação final de 23 ms e 4 u.
+Custo desconhecido: 1 tentativa iniciada, 0 u liquidadas e 94 u retidas.
+Reservas observadas são compromissos novos; sua soma não substitui
+o saldo atual do ledger após reconciliações posteriores.
+
+LIMITES
+Formato de rastro próprio; não implementa SDK ou protocolo OpenTelemetry.
+Execução sequencial, sem worker distribuído nem streaming/primeiro token.
+IDs determinísticos são de fixtures internas, não uma anonimização.
+Coletor em memória guarda registros para um ensaio finito; não é backend
+de métricas. Max 64 spans por rastro; amostragem reduz exportação, mas
+não remove a construção local das etapas. Histogramas mesclados devem
+vir das funções locais e ter limites iguais. Qualidade é determinística
+em fatos fechados; desconhecida não conta como boa no SLI conservador.
+Exceções inesperadas do executor podem impedir registro final/exportação.
+Falha do exportador é contida, mas não garante alerta fora do processo.
+page_decision retorna texto; não valida seleção temporal nem envia nada.
+Sem prova de capacidade, disponibilidade, custo comercial ou qualidade
+aberta. Políticas de retenção e coleta em produção exigem outro desenho.

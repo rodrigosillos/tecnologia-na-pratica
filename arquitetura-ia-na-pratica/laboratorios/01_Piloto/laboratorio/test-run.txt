@@ -1,0 +1,21 @@
+test_abstain_all_cannot_game_quality (test_copilot.ContractTests.test_abstain_all_cannot_game_quality) ... ok
+test_access_revocation_changes_result (test_copilot.ContractTests.test_access_revocation_changes_result) ... ok
+test_candidate_replay_exposes_independent_failures (test_copilot.ContractTests.test_candidate_replay_exposes_independent_failures) ... ok
+test_conflict_must_not_depend_on_document_order (test_copilot.ContractTests.test_conflict_must_not_depend_on_document_order) ... ok
+test_empty_dataset_is_not_a_pass (test_copilot.ContractTests.test_empty_dataset_is_not_a_pass) ... ok
+test_expired_evidence_never_accepted (test_copilot.ContractTests.test_expired_evidence_never_accepted) ... ok
+test_guarded_passes_finite_suite (test_copilot.ContractTests.test_guarded_passes_finite_suite) ... ok
+test_invalid_payload_does_not_hide_access_violation (test_copilot.ContractTests.test_invalid_payload_does_not_hide_access_violation) ... ok
+test_limits_are_inclusive (test_copilot.ContractTests.test_limits_are_inclusive) ... ok
+test_naive_is_rejected (test_copilot.ContractTests.test_naive_is_rejected) ... ok
+test_nearest_rank_small_sample (test_copilot.ContractTests.test_nearest_rank_small_sample) ... ok
+test_oracle_not_used_by_lookup (test_copilot.ContractTests.test_oracle_not_used_by_lookup) ... ok
+test_relaxing_budgets_does_not_fix_access (test_copilot.ContractTests.test_relaxing_budgets_does_not_fix_access) ... ok
+test_tenant_change_requires_new_evidence (test_copilot.ContractTests.test_tenant_change_requires_new_evidence) ... ok
+test_unknown_citation_rejected (test_copilot.ContractTests.test_unknown_citation_rejected) ... ok
+test_unknown_fields_rejected (test_copilot.ContractTests.test_unknown_fields_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.033s
+
+OK

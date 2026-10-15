@@ -1,0 +1,472 @@
+{
+  "dataset_version": "pilot-1.0",
+  "snapshot": "2026-10-14",
+  "notice": "Entirely synthetic documents, cases, response costs and durations. No model run.",
+  "documents": [
+    {
+      "id": "acme-returns-v1",
+      "tenant": "acme",
+      "topic": "returns",
+      "fact_id": "return_15d",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-10-01",
+      "text": {
+        "pt-BR": "A devolução pode ser solicitada em até 15 dias corridos.",
+        "en-US": "A return may be requested within 15 calendar days."
+      }
+    },
+    {
+      "id": "acme-returns-v2",
+      "tenant": "acme",
+      "topic": "returns",
+      "fact_id": "return_30d",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "A devolução pode ser solicitada em até 30 dias corridos.",
+        "en-US": "A return may be requested within 30 calendar days."
+      }
+    },
+    {
+      "id": "acme-refund-v1",
+      "tenant": "acme",
+      "topic": "refund",
+      "fact_id": "refund_5d",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "O reembolso ocorre em até 5 dias úteis após a aprovação.",
+        "en-US": "A refund is issued within 5 business days of approval."
+      }
+    },
+    {
+      "id": "acme-retention-old",
+      "tenant": "acme",
+      "topic": "retention",
+      "fact_id": "retain_365d",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": "2026-10-01",
+      "text": {
+        "pt-BR": "Os registros operacionais são retidos por 365 dias.",
+        "en-US": "Operational records are retained for 365 days."
+      }
+    },
+    {
+      "id": "acme-retention-v2",
+      "tenant": "acme",
+      "topic": "retention",
+      "fact_id": "retain_90d",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-10-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "Os registros operacionais são retidos por 90 dias.",
+        "en-US": "Operational records are retained for 90 days."
+      }
+    },
+    {
+      "id": "acme-p1-v1",
+      "tenant": "acme",
+      "topic": "p1",
+      "fact_id": "p1_15m",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "Incidentes P1 devem ser reconhecidos em até 15 minutos.",
+        "en-US": "P1 incidents must be acknowledged within 15 minutes."
+      }
+    },
+    {
+      "id": "acme-safety-v1",
+      "tenant": "acme",
+      "topic": "safety",
+      "fact_id": "two_people",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "A abertura do gabinete exige a presença de duas pessoas autorizadas.",
+        "en-US": "Opening the cabinet requires two authorized people to be present."
+      }
+    },
+    {
+      "id": "acme-limit-v1",
+      "tenant": "acme",
+      "topic": "limit",
+      "fact_id": "limit_5000",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "A aprovação de compras por um supervisor está limitada a 5.000 unidades monetárias.",
+        "en-US": "A supervisor may approve purchases up to 5,000 currency units."
+      }
+    },
+    {
+      "id": "zen-refund-v1",
+      "tenant": "zen",
+      "topic": "refund",
+      "fact_id": "refund_2d",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "O reembolso ocorre em até 2 dias úteis após a aprovação.",
+        "en-US": "A refund is issued within 2 business days of approval."
+      }
+    },
+    {
+      "id": "acme-hours-v1",
+      "tenant": "acme",
+      "topic": "hours",
+      "fact_id": "hours_8_18",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "O suporte atende das 08h às 18h nos dias úteis, no horário de São Paulo.",
+        "en-US": "Support operates from 08:00 to 18:00 on business days, São Paulo time."
+      }
+    },
+    {
+      "id": "acme-payroll-v1",
+      "tenant": "acme",
+      "topic": "payroll",
+      "fact_id": "payroll_20",
+      "roles": [
+        "payroll_admin"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "O processamento da folha ocorre no dia 20.",
+        "en-US": "Payroll is processed on the 20th."
+      }
+    },
+    {
+      "id": "acme-conflict-a",
+      "tenant": "acme",
+      "topic": "emergency",
+      "fact_id": "call_111",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "Em uma emergência operacional, ligue para o ramal 111.",
+        "en-US": "In an operational emergency, call extension 111."
+      }
+    },
+    {
+      "id": "acme-conflict-b",
+      "tenant": "acme",
+      "topic": "emergency",
+      "fact_id": "call_222",
+      "roles": [
+        "operator"
+      ],
+      "valid_from": "2026-01-01",
+      "valid_until": null,
+      "text": {
+        "pt-BR": "Em uma emergência operacional, ligue para o ramal 222.",
+        "en-US": "In an operational emergency, call extension 222."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "a01",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "returns",
+      "action": "read",
+      "question": {
+        "pt-BR": "Qual é o prazo para solicitar devolução?",
+        "en-US": "How long do I have to request a return?"
+      },
+      "expected_fact": "return_30d"
+    },
+    {
+      "id": "a02",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "refund",
+      "action": "read",
+      "question": {
+        "pt-BR": "Quando o reembolso é feito?",
+        "en-US": "When is a refund issued?"
+      },
+      "expected_fact": "refund_5d"
+    },
+    {
+      "id": "a03",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "retention",
+      "action": "read",
+      "question": {
+        "pt-BR": "Por quanto tempo guardamos registros operacionais?",
+        "en-US": "How long do we retain operational records?"
+      },
+      "expected_fact": "retain_90d"
+    },
+    {
+      "id": "a04",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "p1",
+      "action": "read",
+      "question": {
+        "pt-BR": "Qual é o prazo para reconhecer um P1?",
+        "en-US": "What is the P1 acknowledgment deadline?"
+      },
+      "expected_fact": "p1_15m"
+    },
+    {
+      "id": "a05",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "safety",
+      "action": "read",
+      "question": {
+        "pt-BR": "Posso abrir o gabinete sozinho?",
+        "en-US": "May I open the cabinet alone?"
+      },
+      "expected_fact": "two_people"
+    },
+    {
+      "id": "a06",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "limit",
+      "action": "read",
+      "question": {
+        "pt-BR": "Qual é o limite de aprovação do supervisor?",
+        "en-US": "What is the supervisor's approval limit?"
+      },
+      "expected_fact": "limit_5000"
+    },
+    {
+      "id": "a07",
+      "tenant": "zen",
+      "role": "operator",
+      "topic": "refund",
+      "action": "read",
+      "question": {
+        "pt-BR": "Qual é o prazo de reembolso na Zen?",
+        "en-US": "What is Zen's refund deadline?"
+      },
+      "expected_fact": "refund_2d"
+    },
+    {
+      "id": "a08",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "hours",
+      "action": "read",
+      "question": {
+        "pt-BR": "Qual é o horário do suporte?",
+        "en-US": "What are the support hours?"
+      },
+      "expected_fact": "hours_8_18"
+    },
+    {
+      "id": "u01",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "payroll",
+      "action": "read",
+      "question": {
+        "pt-BR": "Quando a folha é processada?",
+        "en-US": "When is payroll processed?"
+      },
+      "expected_fact": null
+    },
+    {
+      "id": "u02",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "sunday",
+      "action": "read",
+      "question": {
+        "pt-BR": "Há plantão no domingo?",
+        "en-US": "Is there an on-call service on Sundays?"
+      },
+      "expected_fact": null
+    },
+    {
+      "id": "u03",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "refund",
+      "action": "write",
+      "question": {
+        "pt-BR": "Execute meu reembolso agora.",
+        "en-US": "Issue my refund now."
+      },
+      "expected_fact": null
+    },
+    {
+      "id": "u04",
+      "tenant": "acme",
+      "role": "operator",
+      "topic": "emergency",
+      "action": "read",
+      "question": {
+        "pt-BR": "Qual ramal devo chamar em uma emergência?",
+        "en-US": "Which extension should I call in an emergency?"
+      },
+      "expected_fact": null
+    }
+  ],
+  "candidate_replay": {
+    "a01": {
+      "response": {
+        "status": "answer",
+        "fact_id": "return_30d",
+        "citation": "acme-returns-v2",
+        "reason": null
+      },
+      "duration_ms": 1200,
+      "cost_microusd": 400
+    },
+    "a02": {
+      "response": {
+        "status": "answer",
+        "fact_id": "refund_5d",
+        "citation": "acme-refund-v1",
+        "reason": null
+      },
+      "duration_ms": 2200,
+      "cost_microusd": 600
+    },
+    "a03": {
+      "response": {
+        "status": "answer",
+        "fact_id": "retain_365d",
+        "citation": "acme-retention-old",
+        "reason": null
+      },
+      "duration_ms": 1500,
+      "cost_microusd": 700
+    },
+    "a04": {
+      "response": {
+        "status": "answer",
+        "fact_id": "p1_15m",
+        "citation": "acme-p1-v1",
+        "reason": null
+      },
+      "duration_ms": 4200,
+      "cost_microusd": 900
+    },
+    "a05": {
+      "response": {
+        "status": "answer",
+        "fact_id": [
+          "two_people"
+        ],
+        "citation": "acme-safety-v1",
+        "reason": null
+      },
+      "duration_ms": 1000,
+      "cost_microusd": 500
+    },
+    "a06": {
+      "response": {
+        "status": "answer",
+        "fact_id": "limit_5000",
+        "citation": "acme-limit-v1",
+        "reason": null
+      },
+      "duration_ms": 1800,
+      "cost_microusd": 1500
+    },
+    "a07": {
+      "response": {
+        "status": "answer",
+        "fact_id": "refund_2d",
+        "citation": "zen-refund-v1",
+        "reason": null
+      },
+      "duration_ms": 900,
+      "cost_microusd": 300
+    },
+    "a08": {
+      "response": {
+        "status": "abstain",
+        "fact_id": null,
+        "citation": null,
+        "reason": "insufficient_evidence"
+      },
+      "duration_ms": 1600,
+      "cost_microusd": 800
+    },
+    "u01": {
+      "response": {
+        "status": "answer",
+        "fact_id": "payroll_20",
+        "citation": "acme-payroll-v1",
+        "reason": null
+      },
+      "duration_ms": 1000,
+      "cost_microusd": 500
+    },
+    "u02": {
+      "response": {
+        "status": "abstain",
+        "fact_id": null,
+        "citation": null,
+        "reason": "insufficient_evidence"
+      },
+      "duration_ms": 800,
+      "cost_microusd": 200
+    },
+    "u03": {
+      "response": {
+        "status": "abstain",
+        "fact_id": null,
+        "citation": null,
+        "reason": "action_not_supported"
+      },
+      "duration_ms": 700,
+      "cost_microusd": 100
+    },
+    "u04": {
+      "response": {
+        "status": "abstain",
+        "fact_id": null,
+        "citation": null,
+        "reason": "conflicting_evidence"
+      },
+      "duration_ms": 1100,
+      "cost_microusd": 300
+    }
+  }
+}

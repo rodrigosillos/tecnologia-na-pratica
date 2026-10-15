@@ -1,0 +1,586 @@
+{
+  "cases": 18,
+  "runs": [
+    {
+      "case": "success",
+      "reason": "success",
+      "attempts": 1,
+      "elapsed_ms": 80,
+      "operation_elapsed_ms": 80,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "ok",
+          "allowance_ms": 300,
+          "at_ms": 80
+        }
+      ]
+    },
+    {
+      "case": "recovered_503",
+      "reason": "success",
+      "attempts": 2,
+      "elapsed_ms": 161,
+      "operation_elapsed_ms": 161,
+      "waits_ms": [
+        41
+      ],
+      "circuit": "closed",
+      "retry_tokens": 1,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 40
+        },
+        {
+          "attempt": 2,
+          "status": "ok",
+          "allowance_ms": 300,
+          "at_ms": 161
+        }
+      ]
+    },
+    {
+      "case": "timeout_recovered",
+      "reason": "success",
+      "attempts": 2,
+      "elapsed_ms": 421,
+      "operation_elapsed_ms": 421,
+      "waits_ms": [
+        41
+      ],
+      "circuit": "closed",
+      "retry_tokens": 1,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "timeout",
+          "allowance_ms": 300,
+          "at_ms": 300
+        },
+        {
+          "attempt": 2,
+          "status": "ok",
+          "allowance_ms": 300,
+          "at_ms": 421
+        }
+      ]
+    },
+    {
+      "case": "permanent_400",
+      "reason": "non_retryable",
+      "attempts": 1,
+      "elapsed_ms": 20,
+      "operation_elapsed_ms": 20,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "400",
+          "allowance_ms": 300,
+          "at_ms": 20
+        }
+      ]
+    },
+    {
+      "case": "invalid_output",
+      "reason": "non_retryable",
+      "attempts": 1,
+      "elapsed_ms": 20,
+      "operation_elapsed_ms": 20,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "invalid",
+          "allowance_ms": 300,
+          "at_ms": 20
+        }
+      ]
+    },
+    {
+      "case": "retry_quota",
+      "reason": "retry_budget",
+      "attempts": 1,
+      "elapsed_ms": 40,
+      "operation_elapsed_ms": 40,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 0,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 40
+        }
+      ]
+    },
+    {
+      "case": "unsafe_operation",
+      "reason": "unsafe_to_retry",
+      "attempts": 1,
+      "elapsed_ms": 40,
+      "operation_elapsed_ms": 40,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 40
+        }
+      ]
+    },
+    {
+      "case": "attempt_limit",
+      "reason": "attempt_limit",
+      "attempts": 3,
+      "elapsed_ms": 109,
+      "operation_elapsed_ms": 109,
+      "waits_ms": [
+        41,
+        38
+      ],
+      "circuit": "open",
+      "retry_tokens": 0,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 10
+        },
+        {
+          "attempt": 2,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 61
+        },
+        {
+          "attempt": 3,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 109
+        }
+      ]
+    },
+    {
+      "case": "cancel_wait",
+      "reason": "cancelled",
+      "attempts": 1,
+      "elapsed_ms": 81,
+      "operation_elapsed_ms": 81,
+      "waits_ms": [
+        41
+      ],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "503",
+          "allowance_ms": 300,
+          "at_ms": 40
+        }
+      ]
+    },
+    {
+      "case": "deadline",
+      "reason": "deadline",
+      "attempts": 2,
+      "elapsed_ms": 550,
+      "operation_elapsed_ms": 550,
+      "waits_ms": [
+        41
+      ],
+      "circuit": "closed",
+      "retry_tokens": 1,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "timeout",
+          "allowance_ms": 300,
+          "at_ms": 300
+        },
+        {
+          "attempt": 2,
+          "status": "timeout",
+          "allowance_ms": 209,
+          "at_ms": 550
+        }
+      ]
+    }
+  ],
+  "integration": [
+    {
+      "case": "complete",
+      "language": "pt-BR",
+      "state": "completed",
+      "outcome": "complete",
+      "provider_calls": 3,
+      "elapsed_ms": 201,
+      "reports": [
+        {
+          "reason": "success",
+          "attempts": 2,
+          "elapsed_ms": 141,
+          "operation_elapsed_ms": 141,
+          "waits_ms": [
+            41
+          ],
+          "circuit": "closed",
+          "retry_tokens": 1,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "503",
+              "allowance_ms": 300,
+              "at_ms": 20
+            },
+            {
+              "attempt": 2,
+              "status": "ok",
+              "allowance_ms": 300,
+              "at_ms": 141
+            }
+          ]
+        },
+        {
+          "reason": "success",
+          "attempts": 1,
+          "elapsed_ms": 60,
+          "operation_elapsed_ms": 201,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 1,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "allowance_ms": 300,
+              "at_ms": 201
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "failure",
+      "language": "pt-BR",
+      "state": "failed",
+      "outcome": null,
+      "provider_calls": 1,
+      "elapsed_ms": 20,
+      "reports": [
+        {
+          "reason": "non_retryable",
+          "attempts": 1,
+          "elapsed_ms": 20,
+          "operation_elapsed_ms": 20,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "400",
+              "allowance_ms": 300,
+              "at_ms": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "cancelled",
+      "language": "pt-BR",
+      "state": "cancelled",
+      "outcome": null,
+      "provider_calls": 1,
+      "elapsed_ms": 61,
+      "reports": [
+        {
+          "reason": "cancelled",
+          "attempts": 1,
+          "elapsed_ms": 61,
+          "operation_elapsed_ms": 61,
+          "waits_ms": [
+            41
+          ],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "503",
+              "allowance_ms": 300,
+              "at_ms": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "shared_deadline",
+      "language": "pt-BR",
+      "state": "failed",
+      "outcome": null,
+      "provider_calls": 2,
+      "elapsed_ms": 350,
+      "reports": [
+        {
+          "reason": "success",
+          "attempts": 1,
+          "elapsed_ms": 290,
+          "operation_elapsed_ms": 290,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "allowance_ms": 300,
+              "at_ms": 290
+            }
+          ]
+        },
+        {
+          "reason": "deadline",
+          "attempts": 1,
+          "elapsed_ms": 60,
+          "operation_elapsed_ms": 350,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "timeout",
+              "allowance_ms": 60,
+              "at_ms": 350
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "complete",
+      "language": "en-US",
+      "state": "completed",
+      "outcome": "complete",
+      "provider_calls": 3,
+      "elapsed_ms": 201,
+      "reports": [
+        {
+          "reason": "success",
+          "attempts": 2,
+          "elapsed_ms": 141,
+          "operation_elapsed_ms": 141,
+          "waits_ms": [
+            41
+          ],
+          "circuit": "closed",
+          "retry_tokens": 1,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "503",
+              "allowance_ms": 300,
+              "at_ms": 20
+            },
+            {
+              "attempt": 2,
+              "status": "ok",
+              "allowance_ms": 300,
+              "at_ms": 141
+            }
+          ]
+        },
+        {
+          "reason": "success",
+          "attempts": 1,
+          "elapsed_ms": 60,
+          "operation_elapsed_ms": 201,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 1,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "allowance_ms": 300,
+              "at_ms": 201
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "failure",
+      "language": "en-US",
+      "state": "failed",
+      "outcome": null,
+      "provider_calls": 1,
+      "elapsed_ms": 20,
+      "reports": [
+        {
+          "reason": "non_retryable",
+          "attempts": 1,
+          "elapsed_ms": 20,
+          "operation_elapsed_ms": 20,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "400",
+              "allowance_ms": 300,
+              "at_ms": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "cancelled",
+      "language": "en-US",
+      "state": "cancelled",
+      "outcome": null,
+      "provider_calls": 1,
+      "elapsed_ms": 61,
+      "reports": [
+        {
+          "reason": "cancelled",
+          "attempts": 1,
+          "elapsed_ms": 61,
+          "operation_elapsed_ms": 61,
+          "waits_ms": [
+            41
+          ],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "503",
+              "allowance_ms": 300,
+              "at_ms": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "shared_deadline",
+      "language": "en-US",
+      "state": "failed",
+      "outcome": null,
+      "provider_calls": 2,
+      "elapsed_ms": 350,
+      "reports": [
+        {
+          "reason": "success",
+          "attempts": 1,
+          "elapsed_ms": 290,
+          "operation_elapsed_ms": 290,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "allowance_ms": 300,
+              "at_ms": 290
+            }
+          ]
+        },
+        {
+          "reason": "deadline",
+          "attempts": 1,
+          "elapsed_ms": 60,
+          "operation_elapsed_ms": 350,
+          "waits_ms": [],
+          "circuit": "closed",
+          "retry_tokens": 2,
+          "trace": [
+            {
+              "attempt": 1,
+              "status": "timeout",
+              "allowance_ms": 60,
+              "at_ms": 350
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "retry_after": {
+    "fits": {
+      "reason": "success",
+      "attempts": 2,
+      "elapsed_ms": 520,
+      "operation_elapsed_ms": 520,
+      "waits_ms": [
+        400
+      ],
+      "circuit": "closed",
+      "retry_tokens": 1,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "429",
+          "allowance_ms": 300,
+          "at_ms": 40
+        },
+        {
+          "attempt": 2,
+          "status": "ok",
+          "allowance_ms": 300,
+          "at_ms": 520
+        }
+      ]
+    },
+    "too_late": {
+      "reason": "deadline",
+      "attempts": 1,
+      "elapsed_ms": 40,
+      "operation_elapsed_ms": 40,
+      "waits_ms": [],
+      "circuit": "closed",
+      "retry_tokens": 2,
+      "trace": [
+        {
+          "attempt": 1,
+          "status": "429",
+          "allowance_ms": 300,
+          "at_ms": 40
+        }
+      ]
+    }
+  },
+  "breaker": {
+    "after_stale": "open",
+    "second_probe": "blocked",
+    "final": "closed"
+  },
+  "amplification": {
+    "three_owners": 27,
+    "one_owner": 3
+  },
+  "measurement": "Virtual milliseconds, synthetic failures; no benchmark"
+}
