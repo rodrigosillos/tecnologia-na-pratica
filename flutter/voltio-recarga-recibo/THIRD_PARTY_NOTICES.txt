@@ -1,0 +1,8 @@
+RECURSOS E PROCEDÊNCIA
+
+1. Código Dart e interface: projeto Tecnologia na Prática / Rodrigo Sillos. Licença MIT (Copyright 2026 Rodrigo Sillos) aplicável somente a esta pasta — ver LICENSE e LICENCA_ESCOPO.md.
+2. Roboto e Roboto Mono: arquivos de fontes preservados com NOTICE.txt e roboto_license.txt (Apache 2.0) em assets/fonts. Não remover esses avisos.
+3. Flutter, Material Icons e cupertino_icons: dependências externas; suas licenças permanecem próprias. Não fazem parte da licença MIT do código autoral deste estudo.
+4. assets/car_blue.png: imagem gerada por IA para esta demonstração. Não é fotografia nem ativo oficial de fabricante automotivo.
+5. Ícones do Dock da Apple: excluídos do pacote público. Os arquivos da produção não devem ser copiados para este pacote pelo Cursor.
+6. Apple Pay, Visa e Mastercard: marcas mencionadas na UI demonstrativa; não há integração, parceria ou processamento de pagamentos. Uma licença do código não transfere direitos sobre essas marcas.

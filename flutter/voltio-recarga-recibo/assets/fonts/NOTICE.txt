@@ -1,0 +1,8 @@
+Roboto and Roboto Mono font files are bundled from the installed Flutter/Dart SDK.
+
+Roboto Mono font metadata:
+Copyright 2015 Google Inc. All Rights Reserved.
+Licensed under the Apache License, Version 2.0.
+http://www.apache.org/licenses/LICENSE-2.0
+
+The Apache License, Version 2.0 is supplied in roboto_license.txt.
