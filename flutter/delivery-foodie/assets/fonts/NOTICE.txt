@@ -1,0 +1,9 @@
+Roboto — regular, medium e bold
+Copyright 2011 Google Inc. All Rights Reserved.
+Licensed under the Apache License, Version 2.0.
+http://www.apache.org/licenses/LICENSE-2.0
+
+The full license text is supplied in roboto_license.txt.
+These unchanged font files were reused from the approved Flutter delivery and originally bundled from the installed Flutter SDK.
+Copyright and license metadata were verified in each included TTF file.
+Roboto Mono is not included in this project.
