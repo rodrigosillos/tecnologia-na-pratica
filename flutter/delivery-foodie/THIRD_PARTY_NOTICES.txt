@@ -1,0 +1,31 @@
+DELIVERY FOODIE — RECURSOS E PROCEDÊNCIA
+
+1. Código e documentação
+Preparados para Rodrigo Sillos / Tecnologia na Prática, 2026.
+MIT, Copyright (c) 2026 Rodrigo Sillos, restrita a flutter/delivery-foodie. Ver LICENSE e LICENCA_ESCOPO.md.
+
+2. Roboto
+Arquivos: assets/fonts/roboto-regular.ttf, roboto-medium.ttf, roboto-bold.ttf.
+Copyright 2011 Google Inc. All Rights Reserved.
+Apache License 2.0, confirmada nos metadados dos três TTFs.
+Texto integral em assets/fonts/roboto_license.txt; aviso em assets/fonts/NOTICE.txt.
+Fontes reaproveitadas da entrega Flutter aprovada, originalmente fornecidas pelo SDK local. Roboto Mono não é incluída.
+
+3. Flutter, Material Icons e plataformas
+Modelo gerado com Flutter 3.41.4 / Dart 3.11.1.
+Copyright 2014 The Flutter Authors. All rights reserved.
+Licença BSD preservada em Flutter_LICENSE.txt. Arquivos Android e web derivados do modelo preservam os direitos de seus titulares.
+Os ícones padrão de desenvolvimento não são o logo aprovado do Tecnologia na Prática.
+Material Icons é fornecido pelo SDK via uses-material-design; mantém sua licença própria. Nenhum arquivo de fonte Material Icons é distribuído neste pacote-fonte.
+Dependências diretas e transitivas registradas em pubspec.yaml e pubspec.lock mantêm suas licenças próprias.
+
+4. Ilustrações
+assets/art/courier.png: entregador em scooter verde.
+assets/art/food_atlas.png: atlas com seis alimentos.
+Dois recursos finais, produzidos por duas gerações iniciais e uma edição de cor pela ferramenta integrada image_gen, em 26/10/2026. Transparência preservada. Prompts e histórico em assets/art/Prompts_e_origem.json.
+Referência visual fornecida por Rodrigo: demonstração Foodie / DailyFlutterUI. Não foram copiados quadros dessa gravação para os recursos do aplicativo; a implementação Flutter é própria.
+Não há alegação de parceria ou endosso do criador da referência, de restaurantes ou dos titulares de marcas.
+
+5. Escopo da demonstração
+Login, carrinho, endereço e pedido são locais e fictícios. Sem autenticação externa, envio a restaurante, cobrança ou entrega. O prazo é ilustrativo. Botões Google e Apple explicam a demonstração e não conectam contas.
+Não contém Dock Apple, composição macOS, vídeos, áudio, APK, binários de Gradle, chaves, senhas reais ou configuração local de SDK.
