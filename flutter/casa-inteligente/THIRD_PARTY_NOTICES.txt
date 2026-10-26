@@ -1,0 +1,24 @@
+CASA INTELIGENTE — RECURSOS E PROCEDÊNCIA
+
+1. Código próprio, testes e ilustração da sala em Dart
+Copyright (c) 2026 Rodrigo Sillos. MIT restrita a flutter/casa-inteligente; ver LICENSE e LICENCA_ESCOPO.md.
+
+2. Fontes Roboto
+Arquivos: assets/fonts/roboto-regular.ttf, roboto-medium.ttf, roboto-bold.ttf.
+Copyright 2011 Google Inc. All Rights Reserved.
+Licença Apache 2.0 confirmada nos metadados internos dos três arquivos (name IDs 0, 13 e 14).
+Texto integral em assets/fonts/roboto_license.txt; aviso em assets/fonts/NOTICE.txt.
+Arquivos reaproveitados da entrega Flutter aprovada, originalmente obtidos do SDK local.
+Roboto Mono não é incluída neste pacote.
+
+3. Flutter e arquivos de plataforma
+Modelo de projeto gerado pelo Flutter 3.41.4 / Dart 3.11.1.
+Copyright 2014 The Flutter Authors. All rights reserved.
+Licença BSD preservada em Flutter_LICENSE.txt.
+Os arquivos Android/Web derivados do modelo e os ícones padrão de desenvolvimento mantêm os direitos de seus titulares. Esses ícones não são o logo aprovado do Tecnologia na Prática.
+Material Icons é resolvido pelo SDK Flutter, via uses-material-design; mantém sua licença própria. Nenhum arquivo de fonte Material Icons é distribuído neste pacote-fonte.
+Dependências diretas e transitivas estão registradas em pubspec.yaml e pubspec.lock e mantêm suas licenças próprias.
+
+4. Arquivos e marcas excluídos
+Não contém ícones Apple do Dock, composição visual de macOS, ativos do Voltio, fotografias ou imagens geradas por IA, vídeo, áudio, APK, binários de Gradle, chaves ou configuração local de SDK.
+Não existe integração com dispositivos, serviço financeiro, conta ou servidor. A demonstração não representa parceria com Apple, Google ou outros titulares de marcas.
